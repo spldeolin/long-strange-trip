@@ -3,6 +3,8 @@ title: 使用Simple Java Mail 5发送邮件
 
 date: 2018-05-26 07:02:00
 
+updated: 2018-05-26 07:02:00
+
 tags:
 - 工具类
 

@@ -3,6 +3,8 @@ title: RedisTemplate集成Protostuff序列化方式
 
 date: 2018-07-25 08:26:00
 
+updated: 2018-07-25 08:26:00
+
 tags:
 - Redis
 - Protostuff

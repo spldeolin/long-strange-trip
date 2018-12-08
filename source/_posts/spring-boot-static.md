@@ -3,6 +3,8 @@ title: Spirng Boot处理静态资源
 
 date: 2018-05-05 06:25:00
 
+updated: 2018-05-05 06:25:00
+
 tags:
 - Spring Boot
 

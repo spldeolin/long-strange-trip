@@ -1,9 +1,20 @@
-"title": "Spring Boot集成MongoDB",
-"date": "2018-04-05 08:10:00",
-"tags": ["Spring Boot", "MongoDB"],
-"categories": "Java",
-"permalink": "spring-boot-mongodb"
-;;;
+---
+title: Spring Boot集成MongoDB
+
+date: 2018-04-05 08:10:00
+
+updated: 2018-04-05 08:10:00
+
+tags: 
+- Spring Boot
+- MongoDB
+
+categories: Java
+
+permalink: spring-boot-mongodb
+---
+
+
 
 ## 简介
 

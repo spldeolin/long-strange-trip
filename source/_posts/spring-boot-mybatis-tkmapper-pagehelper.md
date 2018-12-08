@@ -1,9 +1,18 @@
-"title": "Spring Boot集成Mybatis、通用Mapper和PageHelper",
-"date": "2018/4/1 16:45:25",
-"tags": ["Spring Boot", "Mybatis"],
-"categories": "Java",
-"permalink": "spring-boot-mybatis-tkmapper-pagehelper" 
-;;;
+---
+title: Spring Boot集成Mybatis、通用Mapper和PageHelper
+
+date: 2018-04-01 16:45:25
+
+updated: 2018-04-01 16:45:25
+
+tags:
+- Spring Boot
+- Mybatis
+
+categories: Java
+
+permalink: spring-boot-mybatis-tkmapper-pagehelper
+---
 
 ## pom追加所有的依赖
 

@@ -1,0 +1,117 @@
+---
+title: PRC流程
+
+date: 2018-11-06 11:37:00
+
+tags:
+- Java
+
+categories: Java
+
+permalink: rpc
+
+---
+
+## 流程
+
+1. 客户端调用本地接口的方法
+2. client stub接收到调用，将方法信息、参数等组装成**消息体**
+3. client stub找到服务端地址，发送**消息体**
+4. server stub收到消息，解码
+5. server stub调用生产端的本地接口
+6. 调用结果返回给server stub
+7. server stub将结果组装成**消息体**，发送到消费方
+8. client stub收到消息，解码
+9. 客户端返回返回值对象
+
+对于开发者来说，只希望知道1.和9.，中间的步骤会被RPC框架封装起来
+
+
+
+## 如何让中间步骤被封装起来
+
+使用动态代理，可选的方式是基于JDK和基于字节码。
+
+~~~java
+public class RPCProxyClient implements java.lang.reflect.InvocationHandler{
+
+    private Object target;
+
+    public RPCProxyClient(Object target){
+        this.target = target;
+    }
+
+    public static Object getProxy(Object target) {
+        return java.lang.reflect.Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                target.getClass().getInterfaces(), new RPCProxyClient(target));
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        Object result = null;
+        
+        // ...中间步骤
+        
+        return result;
+    }
+
+}
+~~~
+
+~~~java
+    public void doSomething() {
+        UserService userService = RPCProxyClient.getProxy(new UserService());
+        userService.doSomething();
+    }
+~~~
+
+
+
+## 消息体需要哪些信息
+
+客户端 到 服务端的消息一般需要以下信息：
+
+- 被远程调用的接口名和方法名（用于确定要去调用谁）
+- 参数类型和参数值列表
+- 超时时间
+- requestId
+
+服务端 到 客户端的消息一般需要一下信息：
+
+- 返回值
+- 状态code
+- requestId
+
+为什么需要requestId
+
+客户端往往是异步地给服务端发消息， 然后通过回调来处理服务端的返回消息，所以需要把发送消息前生成的requestId和回调对象绑定起来，将来供服务端回调
+
+
+
+## 消息序列化方案
+
+方案需要满足
+
+- 能支持Map等复杂数据结构
+- 性能好，因为RPC调用非常的基础
+- 数据结构增删字段时，拓展性好
+
+可选的框架有Protobuf、Thrift、Avro
+
+
+
+## 通信方案
+
+选用基于NIO通信模型的Netty更为方便和简单
+
+
+
+## 发布服务
+
+使用Zookeeper充当服务注册表，让多个服务形成集群。客户端通过Zookeeper获取服务地址（ip+端口）。
+
+
+
+---
+
+整理自：[你应该知道的RPC原理](http://www.cnblogs.com/LBSer/p/4853234.html)

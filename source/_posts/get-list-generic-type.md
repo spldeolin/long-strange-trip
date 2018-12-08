@@ -1,0 +1,38 @@
+---
+title: 获取List的泛型对象
+
+date: 2018-06-03 22:21:00
+
+tags:
+- 总结
+
+categories: Java
+
+permalink: get-list-generic-type
+---
+
+
+
+现在有一个`Class<List<E>>对象，怎么获得`Class<E>`对象呢？
+
+
+
+~~~java
+// public class A {
+//     private List<String> strings;   
+// }
+
+// field --- Class<List>
+
+Type genericFieldType = field.getGenericType();
+if (genericFieldType instanceof ParameterizedType) {
+    ParameterizedType parameterizedType = (ParameterizedType) genericFieldType;
+    Class fieldEX = (Class) parameterizedType.getActualTypeArguments()[0];
+}
+
+// fieldEX --- Class<String>
+~~~
+
+
+
+发挥一下想象力，这个功能文档生成器中应该用得到。

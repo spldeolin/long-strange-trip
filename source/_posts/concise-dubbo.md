@@ -1,0 +1,428 @@
+---
+title: 基于注解的Dubbo微服务项目
+
+date: 2018-06-22 07:59:00
+
+tags:
+- Spring Boot
+- Dubbo
+
+categories: Java
+
+permalink: concise-dubbo
+---
+
+
+
+## 简介
+
+这篇POST将会通过一个演示项目，介绍如何**快速**搭建一个Dubbo分布式项目。
+
+演示项目将会引入`dubbo-spring-boot-starter`以简化配置，引入`zookeeper`作为注册中心，配置文件格式选用更为简练的`yaml`。
+
+每个微服务将会用`spring-boot`快速搭建。
+
+
+
+## 模块划分
+
+采用三层架构模式，将业务水平切分成多个模块。
+
+![](/images/concise-dubbo-01.png)
+
+
+
+`WEB`可以调用任何一个`服务`，`服务`之间可以互相调用。
+
+所以，`服务`中每个打算暴露出来的方法，都应该只暴露接口，并且，接口中的自定义类（dto等）都应该封装到一个`api`模块。
+
+`api`应该被`web`和所有的`服务`所依赖，`api`封装业务声明，`服务`封装业务实现。
+
+持久层属于业务具体实现方式（数据怎么取的，数据怎么存的），服务的消费方其实并不关心，所以持久层的接口是不暴露出来的。这样做还有个好处是每个微服务只需要业务所需要的那些库。
+
+至此，整个maven项目是这样的结构
+
+- app.pom
+  - web.pom
+  - common.pom
+  - api.pom
+  - service-a.pom
+  - service-b.pom
+  - ...
+  - service-n.pom
+
+其中，`common`子模块用于封装所有模块共用的代码，往往会是一些全局配置或是基本工具类。
+
+
+
+其实，还有种思路是将为所有的子模块启一个单独的项目，也是可行的。
+
+但是这样一来就没有统一的parent用于声明`dependencyManagement`，第三方依赖的版本可能会不太好管理。
+
+
+
+## maven依赖管理
+
+整个项目既然设计成`父-子模块`的形式，那么完全可以将依赖的`version`声明在父POM中，遍于统一依赖版本
+
+~~~xml
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>com.spldeolin.dubbo</groupId>
+<artifactId>dubbo</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<modules>
+    <module>web</module>
+    <module>api</module>
+    <module>service-a</module>
+    <module>service-b</module>
+</modules>
+<packaging>pom</packaging>
+
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.14.RELEASE</version>
+    <relativePath/>
+</parent>
+
+<properties>
+    <java.version>1.8</java.version>
+</properties>
+
+<dependencyManagement>
+    <dependencies>
+        <!--dubbo-->
+        <dependency>
+            <groupId>com.alibaba.spring.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <!-- zookeeper client -->
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
+        </dependency>
+
+        <!-- 其他的省略 -->
+
+    </dependencies>
+</dependencyManagement>
+~~~
+
+省略部分具体可以参考Deolin的[Maven常用依赖](http://spldeolin.com/posts/maven-dependencies/)
+
+
+
+可以看到父POM只提供依赖指导，而提供依赖本身，每个微服务需要什么依赖由它们自行指定。
+
+
+
+## `web`的POM
+
+`web`提供控制器、切面、过滤器等控制层必要的组件，所以他需要`spring-boot-starter-web`以及内置Servlet容器。
+
+`web`控制器内往往没有业务代码，它一般只接受Http请求，参数绑定后做些简单的参数检验，最后移交给具体的业务微服务，所以他不需要`mybatis`等持久层依赖，但是需要引入上文提到`api`子模块，用于调用分发业务。
+
+`web`是一个可运行的微服务，所以他需要`spring-boot-maven-plugin`用于将本模块打成jar包发布。
+
+
+
+~~~xml
+    <parent>
+        <artifactId>dubbo</artifactId>
+        <groupId>com.spldeolin.dubbo</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>web</artifactId>
+
+    <dependencies>
+        <!--springboot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--springboot log4j2-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!--springboot web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--springboot undertow-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <!--log4j2 yml-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+        </dependency>
+        <!--log adapter-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
+        </dependency>
+        <!--dubbo-->
+        <dependency>
+            <groupId>com.alibaba.spring.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <!--zookeeper client-->
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.spldeolin.dubbo</groupId>
+            <artifactId>api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>web</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+~~~
+
+（Deolin喜欢用Log4j2作为日志实现（性能更好），所以POM中会出现不少`exclusion`和各种日志适配器，如果你打算用默认的Logback，那么示例中关于日志的依赖都是不需要的）
+
+
+
+## `common`和`api`的POM
+
+这两者都不是独立启动，而是作为其他子模块依赖的子模块，所以它们本身基本不需要任何第三方的依赖。
+
+由于不需要独立启动，所以不会有XxxxApplication启动类，那么POM中就不能声明`spring-boot-maven-plugin`了，否则打包时会因为找不到启动类而报错。
+
+
+
+## 业务子模块的POM
+
+这个项目设计成了微服务之间调用是基于RPC而不是HTTP，所以service模块完全不需要依赖`spring-boot-starter-web`，只需要作为一个非Web的Spring Boot应用保持运行就可以了。不依赖`spring-boot-starter-web`，service模块打出来的jar包会比`web`模块小非常多，毕竟它没有内置Servlet容器。
+
+不同的业务子模块负责的业务往往不同，有的负责访问数据库，那么需要依赖mybatis，DB连接池等，有的负责调用二方中间件，有的负责读写缓存，有的负责访问控制...，它们的职责不尽相同，所以它们所需的依赖也是不尽相同的，这算是微服务的特色了。
+
+
+
+## 启动类
+
+每一个能够独立运行的子模块都需要Spring Boot启动类
+
+`web`
+
+~~~java 
+@SpringBootApplication
+public class WebApplication {
+
+    public static void main(String[] args) {
+    	// Dubbo Starter的Banner能难看，如果不能容忍的话可以通过调用这个方法隐藏掉
+        DubboBannerApplicationListener.setBANNER_MODE(Banner.Mode.OFF);
+
+        // 由于是个Spring Boot Web应用，用于接受HTTP请求，所以启动后可以保持运行状态
+        SpringApplication.run(WebApplication.class, args);
+    }
+
+}
+~~~
+
+
+
+`service-a`、`service-b`...`service-n`
+
+~~~java
+@SpringBootApplication
+public class ServiceBApplication implements CommandLineRunner {
+
+    public static void main(String[] args) {
+        DubboBannerApplicationListener.setBANNER_MODE(Banner.Mode.OFF);
+        SpringApplication.run(ServiceBApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        // 非Web的Spring Boot应用需要通过这个方式，保持项目的运行
+        Thread.currentThread().join();
+    }
+
+}
+~~~
+
+
+
+### 项目配置
+
+### application.yml
+
+所有微服务的基本配置都是如此，超时时间、重试数次等需要额外配置
+
+~~~yaml
+server:
+
+  port: 8092								# 应用端口
+
+  context-path: /
+
+spring:
+
+  application:
+    name: dubbo-web							# 应用名
+
+  dubbo:
+    registry: zookeeper://127.0.0.1:2181      # 注册中心
+    protocol:
+      port: 38226                             # Dubbo的端口
+    consumer:
+      check: false           # 即便@Reference实现类所在的模块未启动，也能启动本模块
+~~~
+
+
+
+### 启用注解
+
+在每个需要启动的项目的任意一个`@Component`类上，声明一个`@EnableDubboConfiguration`即可
+
+
+
+## 业务示例
+
+### 业务接口
+
+它在`api`模块中
+
+```java
+public interface GreetService {
+
+    String sayNice2MeetU(String target);
+
+}
+```
+
+
+
+### 业务实现
+
+它在`service-a`模块中
+
+~~~java
+@com.alibaba.dubbo.config.annotation.Service
+@Component
+public class GreetServiceImpl implements GreetService {
+
+    @Override
+    public String sayNice2MeetU(String target) {
+        return "Nice to meet you, " + target + ".";
+    }
+
+}
+~~~
+
+
+
+## 调用业务
+
+它在`web`模块中
+
+~~~java
+@RestController
+@RequestMapping("/")
+public class GreetController {
+
+    @com.alibaba.dubbo.config.annotation.Reference
+    private GreetService greetService;
+
+    @GetMapping("/greet")
+    Object get() {
+        return greetService.sayNice2MeetU("Deolin");
+    }
+
+}
+~~~
+
+
+
+### 启动
+
+![](/images/concise-dubbo-02.png)
+
+
+
+![](/images/concise-dubbo-03.png)
+
+
+
+### 演示
+
+
+![](/images/concise-dubbo-04.png)
+
+
+
+## 打包发布
+
+在项目父POM文件所在的目录，执行Maven命令
+
+~~~shell
+$ clean package
+~~~
+
+
+
+然后去每个子POM的`target`目录找到对应的jar包，通过Java命令即可运行
+
+~~~shell
+$ java -jar web.jar
+~~~
+
+
+
+## 源码
+
+[spldeolin](https://github.com/spldeolin) / [concise-dubbo](https://github.com/spldeolin/concise-dubbo)

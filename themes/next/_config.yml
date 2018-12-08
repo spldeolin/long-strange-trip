@@ -137,8 +137,8 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  icons_only: true
+  transition: true
 
 # Blog rolls
 links_icon: link
@@ -268,7 +268,7 @@ android_chrome_color: "#222"
 #   image: url-of-image   - Images's url
 custom_logo:
   enabled: false
-  image: /images/logo.png
+  image: 
 
 # Code Highlight theme
 # Available value:

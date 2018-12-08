@@ -1,5 +1,3 @@
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
 <div class="copyright">{#
 #}{% set current = date(Date.now(), "YYYY") %}{#
 #}{% if theme.footer.beian.enable %}{#
@@ -61,8 +59,4 @@
   <div class="footer-custom">{#
   #}{{ theme.footer.custom_text }}{#
 #}</div>
-
-<span id="busuanzi_container_page_pv">
-  <span id="busuanzi_value_page_pv"></span>次
-</span>
 {% endif %}

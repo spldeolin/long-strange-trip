@@ -1,16 +1,24 @@
 ---
-title: @RestController和@GetMapping
+title: RestController注解和GetMapping注解
+
 date: 2018-01-04 21:58:00
+
+updated: 2018-01-04 21:58:00
+
 tags:
 - Spring
 - Spring Boot
+
 categories: Java
+
 permalink: restcontroller-getmapping
 ---
 
 ## @RestController
 
 `@RestController`可以代替`@Controller`使用，使用了`@RestController`的控制器默认所有请求方法都用了`@ResponseBody`注解。
+
+
 
 ## @GetMapping
 
@@ -19,6 +27,8 @@ permalink: restcontroller-getmapping
 
 
 为了使代码简洁一点，优先使用`@RestController`和`@GetMapping`。
+
+
 
 ## 特别注意
 

@@ -1,8 +1,11 @@
+---
 title: 最优雅的方式解决@Valid List<E> 无法校验的问题
+
 date: 2018-03-10 17:57:52
 
-tags:
+updated: 2018-03-10 17:57:52
 
+tags:
 - Spring
 
 categories: Java

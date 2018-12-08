@@ -3,6 +3,8 @@ title: 基于Google Thumbnailator类库的图片压缩
 
 date: 2018-11-29 13:42:00
 
+updated: 2018-11-29 13:42:00
+
 tags:
 - 工具类
 

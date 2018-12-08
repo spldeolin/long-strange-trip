@@ -3,6 +3,8 @@ title: 利用CentOS虚拟机搭建本地环境
 
 date: 2018-09-05 09:34:00
 
+updated: 2018-09-05 09:34:00
+
 tags:
 - CentOS
 

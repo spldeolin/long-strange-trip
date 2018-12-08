@@ -1,8 +1,11 @@
+---
 title: 使用lombok
+
 date: 2017-12-20 14:30:00
 
-tags:
+updated: 2017-12-20 14:30:00
 
+tags:
 - Lombok
 - IntelliJ IDEA
 

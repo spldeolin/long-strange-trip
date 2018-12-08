@@ -1,6 +1,12 @@
+---
 title: 初次使用Spring Boot
+
 date: 2018-03-11 06:00:00
+
+updated: 2018-03-11 06:00:00
+
 tags: Spring Boot
+
 categories: Java
 
 permalink: try-spring-boot

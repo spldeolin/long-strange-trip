@@ -3,6 +3,8 @@ title: CentOS常用环境、软件
 
 date: 2018-04-16 17:01:00
 
+updated: 2018-12-08 12:28:00
+
 tags:
 - 总结
 - MySQL
@@ -322,8 +324,8 @@ $ sudo yum update
 2.  npm安装n组件，升级到最新稳定版
 
    ~~~shell
-   $ npm install -g n
-   $ n stable
+   $ sudo npm install -g n
+   $ sudo n stable
    ~~~
 
 3. 安装完成

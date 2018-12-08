@@ -3,6 +3,8 @@ title: 基于注解的Dubbo微服务项目
 
 date: 2018-06-22 07:59:00
 
+updated: 2018-06-22 07:59:00
+
 tags:
 - Spring Boot
 - Dubbo

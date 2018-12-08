@@ -1,10 +1,16 @@
 ---
 title: 切面里的信息向切面外传递
+
 date: 2018-01-07 20:19:00
+
+updated: 2018-01-07 20:19:00
+
 tags:
 - Spring
 - AOP
+
 categories: Java
+
 permalink: aspect-transport-info
 ---
 

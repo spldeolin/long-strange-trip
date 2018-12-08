@@ -3,8 +3,10 @@ title: 搭建Minecraft服务器
 
 date: 2018-06-10 06:55:00
 
+updated: 2018-06-10 06:55:00
+
 tags:
-- 
+- Minecraft
 
 categories: Minecraft
 

@@ -1,5 +1,5 @@
 ---
-title: 初次使用@RestController 时发生的Ambiguous mapping问题
+title: 初次使用RestController注解 时发生的Ambiguous mapping问题
 
 date: 2018-01-07 12:17:00
 

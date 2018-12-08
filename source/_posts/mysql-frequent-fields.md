@@ -1,8 +1,14 @@
 ---
 title: MySQL常用字段类型与对应的Java类型
+
 date: 2018-01-05 15:09:00
+
+updated: 2018-01-05 15:09:00
+
 tags: 
+
 categories: MySQL
+
 permalink: mysql-frequent-fields
 ---
 

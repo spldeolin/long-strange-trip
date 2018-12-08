@@ -3,6 +3,8 @@ title: IntelliJ IDEA文件模板与Velocity语法
 
 date: 2018-05-16 17:21:00
 
+updated: 2018-05-16 17:21:00
+
 tags:
 - IntelliJ IDEA
 - Velocity

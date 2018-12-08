@@ -1,8 +1,14 @@
 ---
 title: Log4j2的yaml配置
+
 date: 2018-04-05 14:28:00
+
+updated: 2018-04-05 14:28:00
+
 tags: Log4j2
+
 categories: Java
+
 permalink: log4j2-yml
 ---
 

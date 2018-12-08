@@ -3,6 +3,8 @@ title: 调用getInputStream()后发生Stream closed的解决方法
 
 date: 2018-12-04 18:22:00
 
+updated: 2018-12-04 18:22:00
+
 tags:
 - 报错
 

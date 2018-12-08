@@ -3,6 +3,8 @@ title: Log4j2基于MDC显示当前登录者的信息
 
 date: 2018-05-06 11:24:00
 
+updated: 2018-05-06 11:24:00
+
 tags:
 - Log4j2
 

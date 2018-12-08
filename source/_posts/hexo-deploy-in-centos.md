@@ -1,7 +1,11 @@
+---
 title: 在CentOS中部署Hexo
-date: 2018-03-27 18:09:00
-tags:
 
+date: 2018-03-27 18:09:00
+
+updated: 2018-03-27 18:09:00
+
+tags:
 - Hexo
 - CentOS
 

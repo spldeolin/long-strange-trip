@@ -3,6 +3,8 @@ title: Nginx常用配置
 
 date: 2018-07-26 08:31:00
 
+updated: 2018-07-26 08:31:00
+
 tags:
 - Nginx
 - 总结

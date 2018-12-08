@@ -124,10 +124,10 @@ scheme: Muse
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 #social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/spldeolin || github
+  E-Mail: mailto:splendid.deolin@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
+  Twitter: https://twitter.com/spldeolin || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -151,7 +151,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -267,8 +267,8 @@ android_chrome_color: "#222"
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
 custom_logo:
-  enabled: false
-  image:
+  enabled: true
+  image: /images/logo.png
 
 # Code Highlight theme
 # Available value:

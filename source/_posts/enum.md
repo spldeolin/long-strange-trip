@@ -1,5 +1,9 @@
+---
 title: 枚举（enum）
+
 date: 2017-11-23 09:05:00
+
+updated: 2017-11-23 09:05:00
 
 categories: Java
 

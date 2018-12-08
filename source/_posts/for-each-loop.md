@@ -1,8 +1,14 @@
 ---
 title: For-Each循环
+
 date: 2017-04-03 07:43:00
+
+updated: 2017-04-03 07:43:00
+
 tags:
+
 categories: Java
+
 permalink: for-each-loop
 ---
 

@@ -3,7 +3,7 @@ title: Maven常用依赖
 
 date: 2018-04-28 21:57:00
 
-updated: 2018-04-28 21:57:00
+updated: 2018-12-12 21:25:00
 
 tags:
 - Maven
@@ -29,18 +29,15 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.1.1.RELEASE</version>
         <relativePath/>
     </parent>
 
     <properties>
         <java.version>1.8</java.version>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-bom -->
-        <log4j2-bom.version>2.11.1</log4j2-bom.version>
-
         <!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-data-redis -->
-        <spring-session.version>2.1.1.RELEASE</spring-session.version>
+        <spring-session.version>2.1.2.RELEASE</spring-session.version>
 
         <!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
         <disruptor.version>3.4.2</disruptor.version>
@@ -51,15 +48,6 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
         <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
         <mybatis-plus.version>3.0.6</mybatis-plus.version>
 
-        <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
-        <pagehelper.version>1.2.10</pagehelper.version>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
-        <shiro.version>1.4.0</shiro.version>
-
-        <!-- https://mvnrepository.com/artifact/org.crazycake/shiro-redis -->
-        <shiro-redis.version>3.2.2</shiro-redis.version>
-
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <swagger.version>2.9.2</swagger.version>
 
@@ -67,7 +55,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
         <commons-lang3.version>3.8.1</commons-lang3.version>
 
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <guava.version>27.0-jre</guava.version>
+        <guava.version>27.0.1-jre</guava.version>
 
         <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <okhttp.version>3.12.0</okhttp.version>
@@ -79,7 +67,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
         <objenesis.version>3.0.1</objenesis.version>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-        <poi.version>4.0.0</poi.version>
+        <poi.version>4.0.1</poi.version>
 
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <commons-io.version>2.6</commons-io.version>
@@ -95,6 +83,12 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 
         <!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
         <pinyin4j.version>2.5.1</pinyin4j.version>
+
+        <!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+        <thumbnailator.version>0.4.8</thumbnailator.version>
+
+        <!-- https://mvnrepository.com/artifact/com.github.penggle/kaptcha -->
+        <kaptcha.version>2.3.2</kaptcha.version>
 
         <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
         <freemarker.version>2.3.28</freemarker.version>
@@ -216,24 +210,6 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-        <!-- pagehelper -->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${pagehelper.version}</version>
-        </dependency>
-        <!-- shiro -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-        <!-- shiro-redis -->
-        <dependency>
-            <groupId>org.crazycake</groupId>
-            <artifactId>shiro-redis</artifactId>
-            <version>${shiro-redis.version}</version>
-        </dependency>
         <!-- swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -320,6 +296,18 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
             <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
             <version>${pinyin4j.version}</version>
+        </dependency>
+        <!-- thumbnailator -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>${thumbnailator.version}</version>
+        </dependency>
+        <!-- kaptcha -->
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>${kaptcha.version}</version>
         </dependency>
 
         <!-- mysql -->

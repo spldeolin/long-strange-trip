@@ -3,7 +3,7 @@ title: Intellij IDEA使用技巧 - 搜索篇
 
 date: 2018-12-16 08:01:00
 
-updated: 2018-12-16 08:01:00
+updated: 2018-12-16 09:30:00
 
 tags:
 - Intellij IDEA
@@ -143,12 +143,12 @@ IDEA本身不提供根据URI检索请求方法，但是我们可以借助`Restfu
 
 |功能名|default快捷键|Eclipse风格的快捷键|
 |:---|:---:|:---:|
-|Main menu \| Navigate \| File...|ctrl + shift + N|ctrl + shift + R|
+|Main menu - Navigate - File...|ctrl + shift + N|ctrl + shift + R|
 | Copy Reference                    | ctrl + alt + shift + C | ctrl + alt + shift + C |
-| Main menu \| Navigate \| Class... | ctrl + N | ctrl + shift + T |
+| Main menu - Navigate - Class... | ctrl + N | ctrl + shift + T |
 | Find in Path...                      | ctrl + shift + F | ctrl + H |
-| Main menu \| Navigate \| Service... | ctrl + \ 或是 ctrl + alt + N | ctrl + \ 或是 ctrl + alt + N |
-| Main menu \| Navigate \| Line/Column | ctrl + G | ctrl + L |
+| Main menu - Navigate - Service... | ctrl + \ 或是 ctrl + alt + N | ctrl + \ 或是 ctrl + alt + N |
+| Main menu - Navigate - Line/Column | ctrl + G | ctrl + L |
 
 
 

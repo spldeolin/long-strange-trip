@@ -1,9 +1,9 @@
 ---
 title: Intellij IDEA使用技巧 - 搜索篇
 
-date: 2018-12-12 10:14:00
+date: 2018-12-16 08:01:00
 
-date: 2018-12-12 10:14:00
+updated: 2018-12-16 08:01:00
 
 tags:
 - Intellij IDEA
@@ -87,19 +87,55 @@ A开发者拿到了B开发者发给自己的全限定名，可以使用**Main me
 
 ## 全文检索
 
-TODO
+IDEA提供了全文检索了，可以通过**Find in path...**打开全文检索界面，
 
 
 
-## 根据URL检索
+![](/images/effective-idea-search-06.png)
 
-TODO
+可以看到，全文检索功能的订制性比较强。
+
+一般输入关键字以后，`Preview`就会显示检索结果了
+
+![](/images/effective-idea-search-07.png)
+
+
+
+
+
+## 根据URI检索
+
+作为一个服务端开发者，与客户端或是前端联调时，如果出现BUG，对方往往会趋向于直接给你 报错的URL，比如`/user/create`。
+
+如果是简短的URI，还能通过`UserController#create()`这样的规律去遇到到控制层，但如果是类似于`/store/order/refundOrder/detail/10001`这样的长URI呢？
+
+
+
+IDEA本身不提供根据URI检索请求方法，但是我们可以借助`RestfulToolkit`来帮助我们。
+
+安装完该插件后，使用**Main menu | Navigate | Service...**便可打开界面
+
+![](/images/effective-idea-search-08.png)
+
+
+
+输入URI，就能定位到具体的方法了
+
+![](/images/effective-idea-search-09.png)
+
+
+
+注意，这里的输入的内容也是支持`*`通配符的
 
 
 
 ## 定位到文件的具体行
 
-TODO
+一般项目中都会有日志打印，而打印出来的每一条日志，一般都会带上行号。
+
+现在我们已经通过上文提到的各种方法，定位到具体类的具体方法了，有没有办法直接定位到行呢？
+
+实际上IDEA为我们提供了这样的功能——**Main menu | Navigate | Line/Column... ** 在打开的对话框中直接输入行号或是行号:列号即可
 
 
 
@@ -107,9 +143,13 @@ TODO
 
 |功能名|default快捷键|Eclipse风格的快捷键|
 |:---|:---:|:---:|
-|Main menu \| Navigate \| File...|||
-| Copy Reference                    |               |                     |
-| Main menu \| Navigate \| Class... |               |                     |
-|                                   |               |                     |
-|                                   |               |                     |
-|                                   |               |                     |
+|Main menu \| Navigate \| File...|ctrl + shift + N|ctrl + shift + R|
+| Copy Reference                    | ctrl + alt + shift + C | ctrl + alt + shift + C |
+| Main menu \| Navigate \| Class... | ctrl + N | ctrl + shift + T |
+| Find in Path...                      | ctrl + shift + F | ctrl + H |
+| Main menu \| Navigate \| Service... | ctrl + \ 或是 ctrl + alt + N | ctrl + \ 或是 ctrl + alt + N |
+| Main menu \| Navigate \| Line/Column | ctrl + G | ctrl + L |
+
+
+
+如果你有自己的一套快捷键策略，你可以打开`File | Settings | Keymap`，通过上表中的`功能名`来检索到当前策略下，该功能的快捷键

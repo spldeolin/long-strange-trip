@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00:39
 
-updated: 2018-02-14 10:00:39
+updated: 2018-12-17 09:45:00
 
 tags:
 - 总结
@@ -51,7 +51,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 云同步
 
-  [One Drive](https://onedrive.live.com/about/zh-cn/download/ "One Drive")
+  [OneDrive](https://onedrive.live.com/about/zh-cn/download/ "OneDrive")
 
 - 垃圾清理
 
@@ -139,7 +139,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [Navicat 11 Premium](https://pan.baidu.com/s/1i7cThoL "Navicat 11 Premium 密码：pj39")　　　　　密码：pj39
 
-  [Redis Desktop Manager](https://redisdesktop.com/ "Redis Desktop Manager")
+  [Medis](https://github.com/x2jia/medis/releases/tag/win "Medis")
 
   [MongoDB Compass](https://www.mongodb.com/download-center#compass)
 
@@ -157,7 +157,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [Typora](https://typora.io/)
 
-- Java Web
+- Web
 
   [Postman](https://www.getpostman.com/ "Postman")
 
@@ -171,7 +171,19 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 ## 开发配置
 
+https://github.com/spldeolin/java-development-config
 
+
+
+## 系统安装相关软件
+
+- PE、驱动、Windows补丁、.net库、vc++库、DX9.0
+
+  [IT天空](https://www.itsk.com/)
+
+- Win10、Win7官方镜像
+
+  [MSDN, 我告诉你](https://msdn.itellyou.cn/)
 
 
 

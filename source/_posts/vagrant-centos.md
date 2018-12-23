@@ -104,7 +104,7 @@ mysql > flush privileges;
 
 由于在上一步中，IP已经被映射到了`192.168.2.2`，所以可以直接用Navicat连接
 
-![](images/vagrant-centos-01.png)
+![](/images/vagrant-centos-01.png)
 
 
 

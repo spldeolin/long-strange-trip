@@ -117,9 +117,9 @@ class JavaBean {
 
 注意这种用法与**绑定请求体**是不同的，对时间类型的格式化注解也是不同的。下面两张图可以直观地反映它们的区别
 
-![](images/spring-mvc-showcase-01.png)
+![](/images/spring-mvc-showcase-01.png)
 
 
 
-![](images/spring-mvc-showcase-02.png)
+![](/images/spring-mvc-showcase-02.png)
 

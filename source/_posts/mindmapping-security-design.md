@@ -17,7 +17,7 @@ permalink: security-design
 
 ## XMind
 
-![](images/mindmapping-security-design-01.png)
+![](/images/mindmapping-security-design-01.png)
 
 
 

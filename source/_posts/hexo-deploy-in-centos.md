@@ -3,7 +3,7 @@ title: 在CentOS中部署Hexo
 
 date: 2018-03-27 18:09:00
 
-updated: 2018-12-27 17:04:58
+updated: 2018-12-27 17:09:58
 
 tags:
 - Hexo
@@ -94,7 +94,9 @@ $ hexo g
 
 ## 安装评论功能
 
-评论的实现方式有多种，Deolin参考了https://www.bluelzy.com/articles/use_valine_for_your_blog.html，并选用`Valine`作为评论功能的实现。
+评论的实现方式有多种，Deolin参考了一篇网上的文章，并选用`Valine`作为评论功能的实现。
+
+https://www.bluelzy.com/articles/use_valine_for_your_blog.html
 
 
 

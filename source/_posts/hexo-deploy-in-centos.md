@@ -3,7 +3,7 @@ title: 在CentOS中部署Hexo
 
 date: 2018-03-27 18:09:00
 
-updated: 2018-12-27 17:01:00
+updated: 2018-12-27 17:04:58
 
 tags:
 - Hexo
@@ -153,8 +153,6 @@ permalink: hexo-deploy-centos
   ~~~
 
   代表POST属于“Java”分类的“语法”子分类
-
-
 
   ~~~
   categories:

@@ -63,7 +63,7 @@ tag_map:
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 #date_format: hh:mm a MMM.DD, YYYY
-date_format: Mo.DD, YYYY
+date_format: M.D, YYYY
 time_format: hh:mm a
 
 # Pagination

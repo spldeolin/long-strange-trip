@@ -3,7 +3,7 @@ title: 常用lambda（Map相关）
 
 date: 2018-12-17 18:17:12
 
-updated: 2018-12-17 18:17:12
+updated: 2018-01-01 11:01:45
 
 tags:
 - lambda
@@ -12,8 +12,6 @@ categories: Java
 
 permalink: lambda-map
 ---
-
-
 
 
 
@@ -26,18 +24,18 @@ permalink: lambda-map
 
 // users [{id=3L, name=c, key=value1}, {id=2L, name=b, key=value2}, {id=1L, name=a, key=value3}]
 
-Map<Long, User> usersById = users.stream().collect(Collectors.toMap(User::getId, one -> one));
+Map<Long, User> usersById = Maps.uniqueIndex(users, User::getId);
 
 // usersById {1={id=1, name=a, key=value3}, 2={id=2, name=b, key=value2}, 3={id=3, name=c, key=value1}}
 ~~~
 
 
 
-其中，`Collectors.toMap`方法的第一个参数是作为Map的key来映射User对象的，key必须唯一，否则会倒是快速失败，抛出`java.lang.IllegalStateException: Duplicate key`异常
+其中，`Collectors.toMap`方法的第一个参数是作为Map的key来映射User对象的，key必须唯一，否则会倒是快速失败，抛出`java.lang.IllegalArgumentException: Multiple entries with same key:`异常
 
 
 
-## 将List分组映射
+## 将List分组映射到Map
 
 可以看到，`Collectors.toMap`要求key必须唯一，所以他的返回值是`Map<?, User>`。
 如果需要用非唯一的字段来映射，那可以换一个Collector

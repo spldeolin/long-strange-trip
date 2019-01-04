@@ -3,7 +3,7 @@ title: 分布式日志：使用Mongo收集Log4j2日志
 
 date: 2019-01-04 10:40:00
 
-updated: 2019-01-04 10:40:00
+updated: 2019-01-04 11:13:00
 
 tags:
 - Log4j2
@@ -184,3 +184,15 @@ Loggers:
 
 
 将`includeLocation`设置为`false`后，数据的整个`source`都为null了。
+
+
+
+## 使用其他的Appender
+
+当项目大到会产生海量的日志时，可以考虑用Hbase收集日志；或者对日志有强烈的分析需求时，可以考虑用Logstash收集日志，结合ES和Kibana进行管理。
+
+
+
+## 源码
+
+[spldeolin](https://github.com/spldeolin) / [log4j2mongo](https://github.com/spldeolin/log4j2mongo)

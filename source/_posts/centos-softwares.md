@@ -3,7 +3,7 @@ title: CentOS常用环境、软件
 
 date: 2018-04-16 17:01:00
 
-updated: 2018-12-08 12:28:00
+updated: 2019-01-06 10:21:00
 
 tags:
 - 总结
@@ -18,6 +18,7 @@ tags:
 - RabbitMQ
 - Elasticsearch 
 - CentOS
+- Python
 
 categories: Linux
 
@@ -53,10 +54,33 @@ $ sudo yum update
 2. 安装完成
 
    ~~~shell
-   $ sudo java -version
+   $ java -version
    ~~~
 
-      
+
+
+
+## Python 3
+
+选用yum源最新的3.6版本
+
+1. 安装
+
+   ~~~shell
+   $ sudo yum install -y centos-release-scl
+   ~~~
+
+   ~~~shell
+   $ scl enable rh-python36 bash
+   ~~~
+
+2.  安装完成
+
+   ~~~shell
+   $ python -V
+   ~~~
+
+
 
 ## MySQL
 
@@ -72,7 +96,7 @@ $ sudo yum update
    有的话则卸载
 
    ~~~shell
-   $ sudo yum -y remove ***
+   $ sudo yum remove -y ***
    ~~~
 
 2. 下载
@@ -253,7 +277,7 @@ $ sudo yum update
 2. 启动
 
    ~~~shell
-   $ sudo systemctl  restart  mongod
+   $ sudo service mongod restart
    ~~~
 
 3. 进入命令行
@@ -291,7 +315,7 @@ $ sudo yum update
 2. 启动
 
    ~~~shell
-   $ sudo systemctl start nginx
+   $ sudo service nginx start
    ~~~
 
 3. 开机启动
@@ -303,7 +327,7 @@ $ sudo yum update
 4. 重启
 
    ~~~shell
-   $ sudo systemctl restart nginx
+   $ sudo service nginx restart
    ~~~
 
 5. 配置

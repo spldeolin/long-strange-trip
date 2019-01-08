@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00:39
 
-updated: 2019-01-03 22:00:00
+updated: 2019-01-08 20:30:00
 
 tags:
 - 总结
@@ -138,6 +138,8 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 - 数据库图形化工具
 
   [Navicat 12 Premium](https://www.navicat.com/en/download/navicat-premium)
+
+  [Navicat Keygen](https://github.com/Deltafox79/Navicat_Keygen/releases)
 
   [Medis](https://github.com/x2jia/medis/releases/tag/win "Medis")
 

@@ -3,7 +3,7 @@ title: 利用Vagrant搭建本地开发环境
 
 date: 2018-11-25 07:10:00
 
-updated: 2019-01-08 09:41:00
+updated: 2019-01-08 09:45:00
 
 tags:
 - Linux
@@ -156,7 +156,7 @@ $ vagrant package --base your-box-name --out output-file-path
 
 有时我们需要在别的机器上进行开发，一项项地安装开发环境太慢，直接导入Vagrant实例是个不错的方法。
 
-由于在上一步中已经导出了box文件，所以直接初始化这个box文件即可。
+由于在上一步中已经导出了box文件，所以直接[初始化](https://spldeolin.com/posts/vagrant-centos/#%E5%88%9D%E5%A7%8B%E5%8C%96)这个box文件即可。
 
 
 

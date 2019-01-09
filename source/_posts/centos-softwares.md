@@ -3,7 +3,7 @@ title: CentOS常用环境、软件
 
 date: 2018-04-16 17:01:00
 
-updated: 2019-01-06 10:21:00
+updated: 2019-01-09 14:41:00
 
 tags:
 - 总结
@@ -16,7 +16,7 @@ tags:
 - Git
 - Zookeeper
 - RabbitMQ
-- Elasticsearch 
+- Elasticsearch
 - CentOS
 - Python
 
@@ -68,6 +68,7 @@ $ sudo yum update
 
    ~~~shell
    $ sudo yum install -y centos-release-scl
+   $ sudo yum install -y rh-python36
    ~~~
 
    ~~~shell
@@ -84,118 +85,87 @@ $ sudo yum update
 
 ## MySQL
 
-选用5.6版本
+选用8.x版本
 
-1. 卸载已安装的MySQL或MariaDB
+1. 下载
 
    ~~~shell
-   $ sudo rpm -qa |grep -i mysql 
-   $ sudo rpm -qa |grep -i mariadb 
+   $ wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
    ~~~
 
-   有的话则卸载
+2. 安装
 
    ~~~shell
-   $ sudo yum remove -y ***
+   $ sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm
+   $ sudo yum install mysql-server
    ~~~
 
-2. 下载
+3. 启动
 
    ~~~shell
-   $ cd /opt
-   $ wget http://mirror.centos.org/centos/6/os/x86_64/Packages/libaio-0.3.107-10.el6.x86_64.rpm
-   $ wget http://dev.mysql.com/Downloads/MySQL-5.6/MySQL-server-5.6.21-1.rhel5.x86_64.rpm
-   $ wget http://dev.mysql.com/Downloads/MySQL-5.6/MySQL-devel-5.6.21-1.rhel5.x86_64.rpm
-   $ wget http://dev.mysql.com/Downloads/MySQL-5.6/MySQL-client-5.6.21-1.rhel5.x86_64.rpm
+   $ sudo service mysqld start
    ~~~
 
-3. 安装
+4. 修改root密码
 
    ~~~shell
-   $ sudo rpm -ivh libaio-0.3.107-10.el6.x86_64.rpm 
-   $ sudo yum install -y perl-Module-Install.noarch
-   $ sudo rpm -ivh MySQL-server-5.6.21-1.rhel5.x86_64.rpm
-   $ sudo rpm -ivh MySQL-devel-5.6.21-1.rhel5.x86_64.rpm
-   $ sudo rpm -ivh MySQL-client-5.6.21-1.rhel5.x86_64.rpm
+   $ sudo grep 'temporary password' /var/log/mysqld.log
+   $ mysql -uroot -pTheInitPassword
    ~~~
 
-4. 初始化
-
-   ~~~shell
-   $ sudo cp /usr/share/mysql/my-default.cnf /etc/my.cnf
-   $ sudo /usr/bin/mysql_install_db
-   $ sudo chmod -R 777 /var/lib/mysql
-   ~~~
-
-5. 启动测试
-
-   ~~~shell
-   $ sudo  service mysql start
-   
-   $ sudo  service mysql stop
-   ~~~
-
-6. 修改root密码
-
-   ~~~shell
-   $ mysql -uroot -p默认的随机密码
-   
-   mysql > SET PASSWORD = PASSWORD('hey@#$');
+   ~~~mysql
+   mysql > ALTER USER 'root'@'localhost' IDENTIFIED BY 'root_r0oT';
    mysql > exit
-   
-   $ mysql -uroot -phey@#$
    ~~~
 
-   > MySQL在初次安装时会生成一个默认的随机密码，可以在`/root/.mysql_secret`中找到它
+   ~~~shell
+   $ mysql -uroot -proot_r0oT
+   ~~~
 
-   > `hey@#$`可以替换为其他内容，它将作为root的新密码
+   > MySQL在初次安装时会生成一个默认的随机密码，它记录在`/var/log/mysqld.log`中
 
-7. 创建用户
+   > `root_r0oT`可以替换为其他内容，它将作为root的新密码。由于MySQL5.6之后自带了validate_password插件，一般不允许设置过于简单的密码。
+
+5. 创建用户
 
    新建用户
 
-   ~~~shell
-   mysql > CREATE USER 'demo_db_user'@'%' IDENTIFIED BY 'hello*(&';
+   ~~~mysql
+   mysql > CREATE USER 'guest'@'%' IDENTIFIED BY 'guest_gUe5t';
    ~~~
 
-   > `demo_db_user`和`hello*(&`可以替换为其他内容，它们将分布作为新用户的用户名和密码
+   > `guest`和`guest_gUe5t`可以替换为其他内容，它们将分布作为新用户的用户名和密码
 
    授权
 
-   ~~~shell
-   mysql > GRANT INSERT, UPDATE, SELECT ON demo_app.* TO 'demo_db_user'@'%';
+   ~~~mysql
+   mysql > GRANT INSERT, UPDATE, SELECT ON demo_app.* TO 'guest'@'%';
    ~~~
 
    > `INSERT, UPDATE, SELECT`代表用户只有插入数据，更新数据，查询数据的权限
    >
-   > 如果希望该用户有全部权限，可以替换为`ALL PRIVILEGES`
+   > 如果希望该用户有全部权限，可以替换为`ALL`
 
    > `demo_app.*`代表用户只有`demo_app`数据库所有表的权限（上面指定的权限）
 
-   > `demo_db_user`代表用户名
-
    刷新授权
 
-   ~~~shell
+   ~~~mysql
    mysql > flush privileges;
    ~~~
 
-8. 字符集
+6. 字符集
 
    修改CentOS`/etc/my.cnf`文件
 
    - 在 `[mysqld]`下追加`character_set_server=utf8`
    - 追加`[mysql]`，并在其下追加`default-character-set=utf8`
 
-
-
-8. Communications link failure问题
+7. Communications link failure问题
 
    这个问题一般是在app运行期间发生的，如果app长时间不访问MySQL，下一次访问MySQL时可能会报错。
 
-   解决方式是在`/etc/my.cnf`的`[mysqld]`下追加`wait_timeout=31536000`和`interactive_timeout=31536000`，
-
-   然后重启MySQL。
+   解决方式是在`/etc/my.cnf`的`[mysqld]`下追加`wait_timeout=31536000`和`interactive_timeout=31536000`，然后重启MySQL。
 
 
 
@@ -572,4 +542,3 @@ $ sudo yum install -y maven
    ~~~shell
    $ sudo yum install -y elasticsearch
    ~~~
-

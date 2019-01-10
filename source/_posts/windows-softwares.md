@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00:39
 
-updated: 2019-01-08 20:30:00
+updated: 2019-01-10 13:52:00
 
 tags:
 - 总结
@@ -31,13 +31,17 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [Lantern](https://github.com/getlantern/forum "Lantern")
 
+- 多tab资源管理器
+
+  [XYplorer](https://www.xyplorer.com/)
+
 - 文件搜索
 
   [Everything](https://www.voidtools.com/downloads/ "Everything")
 
 - 办公软件
 
-  [Microsoft Office 2013 Pro Plus（VOL版）简体中文 64位](ed2k://|file|SW_DVD5_Office_Professional_Plus_2013_64Bit_ChnSimp_MLF_X18-55285.ISO|958879744|678EF5DD83F825E97FB710996E0BA597|/ "Microsoft Office 2013 Pro Plus（VOL版）简体中文 64位")
+  [Office 2013](ed2k://|file|SW_DVD5_Office_Professional_Plus_2013_64Bit_ChnSimp_MLF_X18-55285.ISO|958879744|678EF5DD83F825E97FB710996E0BA597|/ "Microsoft Office 2013 Pro Plus（VOL版）简体中文 64位")
 
 - 图片查看
 

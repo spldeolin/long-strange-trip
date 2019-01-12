@@ -3,7 +3,7 @@ title: CentOS常用环境、软件
 
 date: 2018-04-16 17:01:00
 
-updated: 2019-01-09 14:41:00
+updated: 2019-01-12 21:55:00
 
 tags:
 - 总结
@@ -36,7 +36,7 @@ permalink: centos-softwares
 ## yum
 
 ~~~shell
-$ sudo yum update
+$ sudo yum update -y
 ~~~
 
 
@@ -97,7 +97,7 @@ $ sudo yum update
 
    ~~~shell
    $ sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm
-   $ sudo yum install mysql-server
+   $ sudo yum install -y mysql-server
    ~~~
 
 3. 启动
@@ -180,13 +180,13 @@ $ sudo yum update
 2. 下载、安装
 
    ~~~shell
-   $ sudo  yum --enablerepo=remi install redis
+   $ sudo yum --enablerepo=remi install -y redis
    ~~~
 
 3. 配置
 
    ~~~shell
-   $ sudo  vi /etc/redis.conf
+   $ sudo vi /etc/redis.conf
    ~~~
 
    - 使Redis能够被远程访问

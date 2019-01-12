@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00:39
 
-updated: 2019-01-10 13:52:00
+updated: 2019-01-12 21:59:00
 
 tags:
 - 总结
@@ -81,8 +81,6 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [腾讯QQ](https://im.qq.com/pcqq/ "腾讯QQ")
 
-  [Tim](https://im.qq.com/ "Tim")
-
   [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6 "微信")
 
 - PDF阅读器
@@ -106,10 +104,6 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 - 思维导图
 
   [XMind ZEN](https://www.xmind.cn/)
-
-- Win10开始菜单样式
-
-  [Classic Shell](http://www.classicshell.net/ "Classic Shell")
 
 - 小工具
 
@@ -149,9 +143,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - Linux
 
-  [Xshell](https://www.netsarang.com/download/down_form.html?code=622 "Xshell")
-
-  [Xftp](https://www.netsarang.com/download/down_form.html?code=623 "Xftp")
+  [Xshell 和 Xftp](https://www.netsarang.com/en/free-for-home-school/)
 
 - 文本比较
 

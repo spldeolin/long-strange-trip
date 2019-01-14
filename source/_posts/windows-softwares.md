@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00:39
 
-updated: 2019-01-12 21:59:00
+updated: 2019-01-14 10:36:00
 
 tags:
 - 总结
@@ -79,7 +79,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 即时通讯
 
-  [腾讯QQ](https://im.qq.com/pcqq/ "腾讯QQ")
+  [QQ Light](http://dldir1.qq.com/qqfile/qq/QQ6.7Light/13466/QQ6.7Light.exe)
 
   [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6 "微信")
 

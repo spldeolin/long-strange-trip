@@ -1,0 +1,84 @@
+---
+title: 基本数据类型、包装类型的==运算结果的总结
+
+date: 2017-07-24 12:15:00
+
+updated: 2017-07-24 12:15:00
+
+tags:
+- 总结
+
+categories: Java
+
+permalink: double-equal-sign
+---
+
+## 简介
+
+这篇POST将会总结一下Java中两个包装对象`==`运算的问题。
+
+以`int`和`Integer`为例。
+
+![](/images/double-equal-sign-01.png)
+
+
+
+## new出来的对象，除非被拆箱，否则肯定不相等。
+
+![](/images/double-equal-sign-02.png)
+
+`new`关键字会先在JVM堆中申请空间，然后构造对象。
+
+示例中`a`和`b`都是new出来的，所以内存空间必然不一样，所以不相等。
+
+
+
+## 基本数据类型之间只比较值
+
+![](/images/double-equal-sign-03.png)
+
+基本数据类型的值，是常量，位于JVM规范的方法区内，
+
+示例中`c`和`d`指向的是同一个对象。
+
+
+
+## 包装对象只要“遇到”基本数据类型，它就会被拆箱
+
+![](/images/double-equal-sign-04.png)
+
+![](/images/double-equal-sign-05.png)
+
+示例中`e`和`f`把后面new出来的Integer对象给手动拆箱了，所以`e`和`f`其实已经指向基本数据类型了。
+
+`g`虽然没被手动拆箱，但它遇到了`int h`，所以被自动拆箱了，也就是说`g`和`h`在比较的时候也都指向基本数据类型了。
+
+
+
+## 装箱的本质是valueOf
+
+在Java中，Integer i = 100的本质是`Integer i = Integer.valueOf(100)`而不是`Integer i = new Integer(100)`。
+
+首先说一下两者的区别
+
+- new Integer() 每次都会事先向内存申请空间，每new一次，就会申请一片空间
+- Integer.valueOf()内部有缓存处理，当参数-128~127时，无论调用多少次这个返回，返回的都是同一个Integer对象。
+
+这种设计方法的目的是，Java推荐使用valueOf生成Integer对象，而-128~127的数字也比较常用，使用缓存比较节省内存。
+
+理解了这种设计方式，下面的两种现象也可以解释了
+
+![](/images/double-equal-sign-06.png)
+
+![](/images/double-equal-sign-07.png)
+
+
+
+
+
+
+
+
+
+
+

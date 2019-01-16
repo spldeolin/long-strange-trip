@@ -1,9 +1,9 @@
 ---
 title: Intellij IDEA使用技巧 - 搜索篇
 
-date: 2018-12-16 08:01:00
+date: 2018-12-16 08:01
 
-updated: 2018-12-16 09:30:00
+updated: 2018-12-16 09:30
 
 tags:
 - Intellij IDEA

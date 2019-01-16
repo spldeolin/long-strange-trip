@@ -1,9 +1,9 @@
 ---
 title: 阅读Spring Mvc Showcase源码后的收获
 
-date: 2018-06-28 09:56:00
+date: 2018-06-28 09:56
 
-updated: 2018-06-28 09:56:00
+updated: 2018-06-28 09:56
 
 tags:
 - Spring

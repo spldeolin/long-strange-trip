@@ -1,11 +1,12 @@
 ---
 title: IntelliJ IDEA
 
-date: 2018-02-01 13:07:44
+date: 2018-02-01 13:07
 
-updated: 2018-02-01 13:07:44
+updated: 2018-02-01 13:07
 
-tags: IntelliJ IDEA
+tags:
+- IntelliJ IDEA
 
 categories: 常用软件
 

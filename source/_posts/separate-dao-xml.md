@@ -1,9 +1,9 @@
 ---
 title: Mybatis DAO与xml文件分离
 
-date: 2018-01-04 19:51:00
+date: 2018-01-04 19:51
 
-updated: 2018-01-04 19:51:00
+updated: 2018-01-04 19:51
 
 tags:
 - Spring

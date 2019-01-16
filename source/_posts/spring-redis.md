@@ -1,9 +1,9 @@
 ---
 title: Spring Data Redis的集成与Redis API
 
-date: 2018-01-30 08:46:00
+date: 2018-01-30 08:46
 
-updated: 2018-01-30 08:46:00
+updated: 2018-01-30 08:46
 
 tags:
 - Spring

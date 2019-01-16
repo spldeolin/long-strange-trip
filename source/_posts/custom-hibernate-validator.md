@@ -1,9 +1,9 @@
 ---
 title: 自定义Hibernate Validator校验策略
 
-date: 2018-04-08 18:27:30
+date: 2018-04-08 18:27
 
-updated: 2018-04-08 18:27:30
+updated: 2018-04-08 18:27
 
 tags: Spring
 

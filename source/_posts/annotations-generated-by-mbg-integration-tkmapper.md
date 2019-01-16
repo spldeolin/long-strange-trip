@@ -1,9 +1,9 @@
 ---
 title: 关于集成通用mapper的Mybatis代码生成器产生的model类注解
 
-date: 2018-01-11 14:43:00
+date: 2018-01-11 14:43
 
-updated: 2018-01-11 14:43:00
+updated: 2018-01-11 14:43
 
 tags: Mybatis
 

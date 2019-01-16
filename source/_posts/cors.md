@@ -1,9 +1,9 @@
 ---
 title: Ajax与Spring的跨域问题
 
-date: 2018-05-03 20:06:00
+date: 2018-05-03 20:06
 
-updated: 2018-05-03 20:06:00
+updated: 2018-05-03 20:06
 
 tags:
 - Spring

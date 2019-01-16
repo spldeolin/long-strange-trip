@@ -1,9 +1,9 @@
 ---
 title: 在SpringBoot中处理404错误
 
-date: 2018-05-11 17:33:00
+date: 2018-05-11 17:33
 
-updated: 2018-12-10 08:48:00
+updated: 2018-12-10 08:48
 
 tags:
 - Spring

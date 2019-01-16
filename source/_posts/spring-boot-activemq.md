@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成activeMQ
 
-date: 2018-05-13 08:50:00
+date: 2018-05-13 08:50
 
-updated: 2018-05-13 08:50:00
+updated: 2018-05-13 08:50
 
 tags:
 - Spring Boot

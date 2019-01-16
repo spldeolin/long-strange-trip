@@ -1,9 +1,9 @@
 ---
 title: Jackson集成Guava Collection
 
-date: 2018-09-26 08:40:00
+date: 2018-09-26 08:40
 
-updated: 2018-09-26 08:40:00
+updated: 2018-09-26 08:40
 
 tags:
 - Jackson

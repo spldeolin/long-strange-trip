@@ -1,9 +1,9 @@
 ---
 title: Spring Boot自定义配置的最终解决方案
 
-date: 2018-04-18 13:09:00
+date: 2018-04-18 13:09
 
-updated: 2018-04-18 13:09:00
+updated: 2018-04-18 13:09
 
 tags:
 - Spring Boot

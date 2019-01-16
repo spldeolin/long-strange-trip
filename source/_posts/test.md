@@ -1,9 +1,13 @@
 ---
 title: test
 
-date: 2017-04-02 17:14:00
+date: 2017-04-02 17:14
 
-updated: 2017-04-02 17:14:00
+updated: 2017-04-02 17:14
+
+tags:
+
+categories:
 
 permalink: test
 ---

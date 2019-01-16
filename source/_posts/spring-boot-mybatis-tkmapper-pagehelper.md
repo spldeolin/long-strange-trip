@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成Mybatis、通用Mapper和PageHelper
 
-date: 2018-04-01 16:45:25
+date: 2018-04-01 16:45
 
-updated: 2018-04-01 16:45:25
+updated: 2018-04-01 16:45
 
 tags:
 - Spring Boot

@@ -1,11 +1,12 @@
 ---
 title: Notepad++
 
-date: 2018-02-11 13:09:11
+date: 2018-02-11 13:09
 
-updated: 2018-02-11 13:09:11
+updated: 2018-02-11 13:09
 
-tags: Notepad++
+tags:
+- Notepad++
 
 categories: 常用软件
 

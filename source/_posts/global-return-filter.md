@@ -1,9 +1,9 @@
 ---
 title: 利用ResponseWrapper使请求接口能够返回统一结构
 
-date: 2018-06-19 10:38:00
+date: 2018-06-19 10:38
 
-updated: 2018-06-19 10:38:00
+updated: 2018-06-19 10:38
 
 tags:
 - Spring

@@ -1,9 +1,9 @@
 ---
 title: 管理application.yml中树状结构的属性
 
-date: 2018-04-12 14:59:00
+date: 2018-04-12 14:59
 
-updated: 2018-04-12 14:59:00
+updated: 2018-04-12 14:59
 
 tags:
 - Spring Boot

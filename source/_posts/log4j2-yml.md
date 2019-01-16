@@ -1,11 +1,12 @@
 ---
 title: Log4j2的yaml配置
 
-date: 2018-04-05 14:28:00
+date: 2018-04-05 14:28
 
-updated: 2018-12-12 21:30:00
+updated: 2018-12-12 21:30
 
-tags: Log4j2
+tags:
+- Log4j2
 
 categories: Java
 

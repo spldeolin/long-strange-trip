@@ -1,11 +1,12 @@
 ---
 title: Spring-boot动态profiles的实践
 
-date: 2018-03-15 16:55:13
+date: 2018-03-15 16:55
 
-updated: 2018-03-15 16:55:13
+updated: 2018-03-15 16:55
 
-tags: Spring Boot
+tags:
+- Spring Boot
 
 categories: Java
 

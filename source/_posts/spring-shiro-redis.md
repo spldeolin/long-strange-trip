@@ -1,9 +1,9 @@
 ---
 title: Shiro + Redis集成思路
 
-date: 2017-11-24 14:10:00
+date: 2017-11-24 14:10
 
-updated: 2017-11-24 14:10:00
+updated: 2017-11-24 14:10
 
 tags:
 - Spring

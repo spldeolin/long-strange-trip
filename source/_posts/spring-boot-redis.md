@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成Redis
 
-date: 2018-04-19 14:42:00
+date: 2018-04-19 14:42
 
-updated: 2018-04-19 14:42:00
+updated: 2018-04-19 14:42
 
 tags:
 - Spring Boot

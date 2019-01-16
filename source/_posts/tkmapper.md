@@ -1,9 +1,9 @@
 ---
 title: Mybatis 通用Mapper增强
 
-date: 2018-01-03 08:52:00
+date: 2018-01-03 08:52
 
-updated: 2018-01-03 08:52:00
+updated: 2018-01-03 08:52
 
 tags:
 - Spring

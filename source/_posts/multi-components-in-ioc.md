@@ -1,9 +1,9 @@
 ---
 title: Spring 批量装配组件
 
-date: 2019-01-11 09:52:00
+date: 2019-01-11 09:52
 
-updated: 2019-01-11 09:52:00
+updated: 2019-01-11 09:52
 
 tags:
 - Spring

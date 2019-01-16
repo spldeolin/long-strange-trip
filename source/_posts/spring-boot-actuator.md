@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成actuator
 
-date: 2018-05-02 13:32:00
+date: 2018-05-02 13:32
 
-updated: 2018-05-02 13:32:00
+updated: 2018-05-02 13:32
 
 tags:
 - Spring Boot

@@ -1,9 +1,9 @@
 ---
 title: Spring Boot 配置、Profiles、调试、打包问题总结
 
-date: 2018-04-11 11:55:00
+date: 2018-04-11 11:55
 
-updated: 2018-04-11 11:55:00
+updated: 2018-04-11 11:55
 
 tags:
 - Spring Boot

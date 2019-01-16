@@ -1,9 +1,9 @@
 ---
 title: 常用lambda（List相关）
 
-date: 2018-05-27 09:25:00
+date: 2018-05-27 09:25
 
-updated: 2018-05-27 09:25:00
+updated: 2018-05-27 09:25
 
 tags:
 - lambda

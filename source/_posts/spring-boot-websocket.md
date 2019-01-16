@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成WebSocket
 
-date: 2018-08-17 09:35:00
+date: 2018-08-17 09:35
 
-updated: 2018-08-17 09:35:00
+updated: 2018-08-17 09:35
 
 tags:
 - Spring Boot

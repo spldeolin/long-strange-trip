@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成MongoDB
 
-date: 2018-04-05 08:10:00
+date: 2018-04-05 08:10
 
-updated: 2018-04-05 08:10:00
+updated: 2018-04-05 08:10
 
 tags: 
 - Spring Boot

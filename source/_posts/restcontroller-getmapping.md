@@ -1,9 +1,9 @@
 ---
 title: RestController注解和GetMapping注解
 
-date: 2018-01-04 21:58:00
+date: 2018-01-04 21:58
 
-updated: 2018-01-04 21:58:00
+updated: 2018-01-04 21:58
 
 tags:
 - Spring

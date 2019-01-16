@@ -1,9 +1,9 @@
 ---
 title: 使用lombok
 
-date: 2017-12-20 14:30:00
+date: 2017-12-20 14:30
 
-updated: 2017-12-20 14:30:00
+updated: 2017-12-20 14:30
 
 tags:
 - Lombok

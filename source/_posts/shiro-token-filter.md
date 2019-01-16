@@ -1,9 +1,9 @@
 ---
 title: 基于Shiro的token过滤器
 
-date: 2018-05-19 14:14:00
+date: 2018-05-19 14:14
 
-updated: 2018-05-19 14:14:00
+updated: 2018-05-19 14:14
 
 tags:
 - Shiro

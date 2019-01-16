@@ -1,9 +1,9 @@
 ---
 title: Spring Boot集成Shiro
 
-date: 2018-04-22 18:17:00
+date: 2018-04-22 18:17
 
-updated: 2018-04-22 18:17:00
+updated: 2018-04-22 18:17
 
 tags:
 - Spring Boot

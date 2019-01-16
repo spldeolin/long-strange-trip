@@ -1,9 +1,9 @@
 ---
 title: 在CentOS中部署Hexo
 
-date: 2018-03-27 18:09:00
+date: 2018-03-27 18:09
 
-updated: 2018-12-27 17:09:58
+updated: 2018-12-27 17:09
 
 tags:
 - Hexo

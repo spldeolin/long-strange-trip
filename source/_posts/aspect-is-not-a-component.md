@@ -1,9 +1,9 @@
 ---
 title: Aspect注解并不属于Component的一种
 
-date: 2018-01-07 15:38:00
+date: 2018-01-07 15:38
 
-updated: 2018-01-07 15:38:00
+updated: 2018-01-07 15:38
 
 tags: Spring
 

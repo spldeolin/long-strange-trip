@@ -25,11 +25,11 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 压缩工具
 
-  [7-zip](http://www.7-zip.org/ "7-zip")
+  [7-zip](http://www.7-zip.org/)
 
 - VPN
 
-  [Lantern](https://github.com/getlantern/forum "Lantern")
+  [Lantern](https://github.com/getlantern/forum)
 
 - 多tab资源管理器
 
@@ -37,59 +37,59 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 文件搜索
 
-  [Everything](https://www.voidtools.com/downloads/ "Everything")
+  [Everything](https://www.voidtools.com/downloads/)
 
 - 办公软件
 
-  [Office 2013](ed2k://|file|SW_DVD5_Office_Professional_Plus_2013_64Bit_ChnSimp_MLF_X18-55285.ISO|958879744|678EF5DD83F825E97FB710996E0BA597|/ "Microsoft Office 2013 Pro Plus（VOL版）简体中文 64位")
+  [Office 2013](ed2k://|file|SW_DVD5_Office_Professional_Plus_2013_64Bit_ChnSimp_MLF_X18-55285.ISO|958879744|678EF5DD83F825E97FB710996E0BA597|/)
 
 - 图片查看
 
-  [XnView](https://www.xnview.com/en/xnview/#downloads "XnView")
+  [XnView](https://www.xnview.com/en/xnview/#downloads)
 
 - 下载工具
 
-  [百度网盘](https://pan.baidu.com/download "百度网盘")
+  [百度网盘](https://pan.baidu.com/download)
 
-  [迅雷极速版366](https://pan.baidu.com/s/1dGqYiLN "迅雷极速版366")　　　　　密码：s9uq
+  [迅雷极速版366](https://pan.baidu.com/s/1dGqYiLN)　　　　　密码：s9uq
 
 - 云同步
 
-  [OneDrive](https://onedrive.live.com/about/zh-cn/download/ "OneDrive")
+  [OneDrive](https://onedrive.live.com/about/zh-cn/download/)
 
 - 垃圾清理
 
-  [CCleaner](https://www.ccleaner.com/ccleaner/download "CCleaner")
+  [CCleaner](https://www.ccleaner.com/ccleaner/download)
 
 - 网页浏览器
 
-  [Google Chrome](https://www.google.com/chrome/?system=true&standalone=1 "Google Chrome")
+  [Google Chrome](https://www.google.com/chrome/?system=true&standalone=1)
 
 - 文本编辑
 
-  [Notepad++](https://notepad-plus-plus.org/download/ "Notepad++")
+  [Notepad++](https://notepad-plus-plus.org/download/)
 
 - 音乐播放器
 
-  [网易云音乐](https://music.163.com/#/download "网易云音乐")
+  [网易云音乐](https://music.163.com/#/download )
 
 - 视频播放器
 
-  [PotPlayerSetup](https://potplayer.daum.net/ "PotPlayerSetup") （建议都用32bit）
+  [PotPlayerSetup](https://potplayer.daum.net/) （建议都用32bit）
 
 - 即时通讯
 
   [QQ Light](http://dldir1.qq.com/qqfile/qq/QQ6.7Light/13466/QQ6.7Light.exe)
 
-  [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6 "微信")
+  [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 
 - PDF阅读器
 
-  [SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html "SumatraPDF")
+  [SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html)
 
 - 拼音输入法
 
-  [RIME](http://rime.im/download/ "RIME")
+  [RIME](http://rime.im/download/)
 
 - 截图软件
 
@@ -99,7 +99,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 词典
 
-  [有道词典](http://cidian.youdao.com/multi.html "有道词典")
+  [有道词典](http://cidian.youdao.com/multi.html)
 
 - 思维导图
 
@@ -107,7 +107,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 小工具
 
-  [Hash](http://www.keir.net/hash.html "Hash") 文件校验
+  [Hash](http://www.keir.net/hash.html) 文件校验
 
 
 
@@ -115,9 +115,9 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - SDK
 
-  [Oracle JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html "Oracle JDK 8")
+  [Oracle JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-  [OpenJDK 8](https://developers.redhat.com/products/openjdk/download/ "OpenJDK 8")
+  [OpenJDK 8](https://developers.redhat.com/products/openjdk/download/)
 
   [Python 3](https://www.python.org/downloads/windows/)
 
@@ -129,9 +129,9 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - VCS
 
-  [Git](https://github.com/git-for-windows/git/releases "Git") (MinGit)
+  [Git](https://github.com/git-for-windows/git/releases) (MinGit)
 
-  [TortoiseGit](https://tortoisegit.org/download/ "TortoiseGit")
+  [TortoiseGit](https://tortoisegit.org/download/)
 
 - 数据库图形化工具
 
@@ -139,7 +139,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [Navicat Keygen](https://github.com/Deltafox79/Navicat_Keygen/releases)
 
-  [Medis](https://github.com/x2jia/medis/releases/tag/win "Medis")
+  [Medis](https://github.com/x2jia/medis/releases/tag/win)
 
 - Linux
 
@@ -147,7 +147,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 文本比较
 
-  [WinMerge](http://winmerge.org/downloads/ "WinMerge")
+  [WinMerge](http://winmerge.org/downloads/)
 
 - Markdown
 
@@ -155,7 +155,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - Web
 
-  [Postman](https://www.getpostman.com/ "Postman")
+  [Postman](https://www.getpostman.com/)
 
 - 虚拟环境
 
@@ -187,22 +187,16 @@ https://github.com/spldeolin/java-development-config
 
 - 下载工具
 
-  [迅雷极速版256](https://pan.baidu.com/s/1jKaPmdS "迅雷极速版256")　　　　　	密码：fl4o
+  [迅雷极速版256](https://pan.baidu.com/s/1jKaPmdS)　　　　　	密码：fl4o
 
 - Win7杀毒软件
 
-  [MSE](https://support.microsoft.com/zh-cn/help/14210/security-essentials-download "MSE")
+  [MSE](https://support.microsoft.com/zh-cn/help/14210/security-essentials-download)
 
 
 
 
 ## 其他技巧
-
-- Win10 卸载自带软件
-
-  - 管理员运行powershell
-
-  - 执行命令`Get-AppxPackage -allusers | Remove-AppxPackage`
 
 - 迅雷边下边播
 

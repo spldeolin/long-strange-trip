@@ -25,7 +25,7 @@ permalink: thumbnailator
 
 原图 kaneki.png (1712*962)
 
-![](/images/thumbnailator-kaneki.png)
+![](/images/thumbnailator/kaneki.png)
 
 
 
@@ -34,7 +34,7 @@ permalink: thumbnailator
 Thumbnails.of("kaneki.png").size(150, 150).toFile("smaller-size.png");
 ~~~
 
-![](/images/thumbnailator-smaller-size.png)
+![](/images/thumbnailator/smaller-size.png)
 
 
 
@@ -43,7 +43,7 @@ Thumbnails.of("kaneki.png").size(150, 150).toFile("smaller-size.png");
 Thumbnails.of("kaneki.png").size(2048, 1536).toFile("larger-size.png");
 ~~~
 
-![](/images/thumbnailator-larger-size.png)
+![](/images/thumbnailator/larger-size.png)
 
 
 
@@ -53,7 +53,7 @@ Thumbnails.of("kaneki.png").size(150, 150).outputQuality(1F)
                 .toFile("smaller-size-with-high-quality.png");
 ~~~
 
-![](/images/thumbnailator-smaller-size-with-high-quality.png)
+![](/images/thumbnailator/smaller-size-with-high-quality.png)
 
 
 
@@ -63,7 +63,7 @@ Thumbnails.of("kaneki.png").size(150, 150).outputQuality(1F)
 Thumbnails.of("kaneki.png").size(150, 300).keepAspectRatio(false).toFile("fixed-size.png");
 ~~~
 
-![](/images/thumbnailator-fixed-size.png)
+![](/images/thumbnailator/fixed-size.png)
 
 
 
@@ -72,7 +72,7 @@ Thumbnails.of("kaneki.png").size(150, 300).keepAspectRatio(false).toFile("fixed-
 Thumbnails.of("kaneki.png").scale(0.5D).toFile("smaller-scaled.png");
 ~~~
 
-![](/images/thumbnailator-smaller-scaled.png)
+![](/images/thumbnailator/smaller-scaled.png)
 
 
 
@@ -81,4 +81,4 @@ Thumbnails.of("kaneki.png").scale(0.5D).toFile("smaller-scaled.png");
 Thumbnails.of("lemon.bmp").scale(1D).outputFormat("jpg").toFile(lemon.jpg");
 ~~~
 
-![](/images/thumbnailator-lemon.jpg)
+![](/images/thumbnailator/lemon.jpg)

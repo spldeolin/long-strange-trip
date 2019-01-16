@@ -69,7 +69,7 @@ public class DemoController {
 
 
 
-结果![](/images/1aaa.png)
+结果![](/images/try-spring-boot-01.png)
 
 
 
@@ -109,7 +109,7 @@ Deolin打算沿用Log4j2，在pom中追加spring-boot-starter-log4j2。
 
 通过刚刚写的控制器测试一下
 
-结果![](/images/S7ZY.png)
+结果![](/images/try-spring-boot-02.png)
 
 可以看到，不光得到想要的结果，而且Spring Boot的启动日志的格式也遵循了log4j2.xml中定义的日志Layout，这是因为`spring-boot-starter-log4j2`中包含了适配器依赖。
 
@@ -203,7 +203,7 @@ public class BeginningMindApplicationTests {
 }
 ~~~
 
-结果![](/images/7EE.png)
+结果![](/images/try-spring-boot-03.png)
 
 ## 项目打包
 

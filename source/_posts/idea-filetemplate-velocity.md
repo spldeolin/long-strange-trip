@@ -28,7 +28,7 @@ permalink: idea-filetemplate-velocity
 
 下面这张图能够最大程度上介绍什么是File Templates——
 
-![](/images/idea-filetemplate-velocity-1.gif)
+![](/images/idea-filetemplate-velocity-01.gif)
 
 
 
@@ -36,7 +36,7 @@ permalink: idea-filetemplate-velocity
 
 可以在`Settings...` 中找到关于File Template的设置
 
-![](/images/idea-filetemplate-velocity-2.png)
+![](/images/idea-filetemplate-velocity-02.png)
 
 
 
@@ -52,7 +52,7 @@ IDEA在File Template功能中预置了一些占位符，用于获取环境信息
 
 - `${NAME}` 代表这里填入的值
 
-  ![](/images/idea-filetemplate-velocity-3.png)
+  ![](/images/idea-filetemplate-velocity-03.png)
 
 - `${USER}` 代表操作系统当前登录用户
 

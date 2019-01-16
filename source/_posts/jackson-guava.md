@@ -109,7 +109,7 @@ log.info(defaultObjectMapper.writeValueAsString(multimap));
 
 
 
-![](/images/jackson-guava-1.png)
+![](/images/jackson-guava-01.png)
 
 
 
@@ -152,4 +152,4 @@ public class TestController {
 
 
 
-![](/images/jackson-guava-2.png)
+![](/images/jackson-guava-02.png)

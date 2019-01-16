@@ -21,7 +21,7 @@ permalink: idea-auto-import
 
 这个时候，IDEA会提示一个`Map`类的全限定名列表，让开发者来决定究竟想要哪个`Map`，如下所示
 
-![](/images/idea-auto-import-1.png)
+![](/images/idea-auto-import-01.png)
 
 每次都要手动选择，未免太麻烦了。
 
@@ -35,7 +35,7 @@ permalink: idea-auto-import
 
 首先，通过Find Action功能打开`Auto Import`
 
-![](/images/idea-auto-import-2.png)
+![](/images/idea-auto-import-02.png)
 
 
 
@@ -45,7 +45,7 @@ permalink: idea-auto-import
 
 或者，你可以在`Class to Import`的类上按右方向键，排除它。
 
-![](/images/idea-auto-import-3.png)
+![](/images/idea-auto-import-03.png)
 
 
 

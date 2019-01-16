@@ -145,6 +145,6 @@ public class Swagger2Configuration {
 
 Swagger被禁用的情况下会显示这样的画面
 
-![](/images/spring-swagger2.png)
+![](/images/spring-swagger2-01.png)
 
 比较萌。

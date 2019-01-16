@@ -23,4 +23,4 @@ Deolin花了点时间重读了《深入理解Java虚拟机 第二版》的“虚
 
 ## XMind
 
-![](/images/mindmapping-jvm-classload-1.png)
+![](/images/mindmapping-jvm-classload-01.png)

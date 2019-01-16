@@ -112,11 +112,11 @@ Java程序在运行时，可以指定一些参数，对应的是main方法的那
 
 对于一个main方法，在IntelliJ IDEA的指定`VM Options`即可，格式如下
 
-![](/images/2018041101.png)
+![](/images/spring-boot-summary-01.png)
 
 对于一个Maven启动命令，直接在命令后面追加参数就可以了
 
-![](/images/2018041102.png)
+![](/images/spring-boot-summary-02.png)
 
 ### 动态指定application.yml内属性
 

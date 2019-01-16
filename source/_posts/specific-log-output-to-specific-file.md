@@ -76,13 +76,13 @@ Deolin将会介绍如何利用Log4j2做到这件事。
 
 ## 最终效果
 
-![](/images/specific-log-output-to-specific-file-1.png)
+![](/images/specific-log-output-to-specific-file-01.png)
 
 
 
 显然，完全看不清（指的是格式看不请），解决方法是复制到Excel。
 
-![](/images/specific-log-output-to-specific-file-2.png)
+![](/images/specific-log-output-to-specific-file-02.png)
 
 
 

@@ -70,11 +70,11 @@ public class SessionTestController {
 
 首先启动项目，请求`/ses/set`——
 
-![](/images/spring-boot-spring-session-1.png)
+![](/images/spring-boot-spring-session-01.png)
 
 请求成功，并且通过`RedisDesktopManager`，可以看到会话已经存储到了`Redis`——
 
-![](/images/spring-boot-spring-session-2.png)
+![](/images/spring-boot-spring-session-02.png)
 
 会话在`Redis`中的失效时间由`@EnableRedisHttpSession`注解的`maxInactiveIntervalInSeconds`属性决定，默认为`1800秒`
 
@@ -82,7 +82,7 @@ public class SessionTestController {
 
 然后，停止项目后重启，请求`/ses/get`——
 
-![](/images/spring-boot-spring-session-3.png)
+![](/images/spring-boot-spring-session-03.png)
 
 请求成功，并且与预想的结果完全一致。
 

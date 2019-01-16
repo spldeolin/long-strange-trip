@@ -48,7 +48,7 @@ public class ServletRequestProcessingTimeLogListener implements
 
 ## 效果
 
-![](/images/processing-time-log-listener-1.png)
+![](/images/processing-time-log-listener-01.png)
 
-![](/images/processing-time-log-listener-2.png)
+![](/images/processing-time-log-listener-02.png)
 

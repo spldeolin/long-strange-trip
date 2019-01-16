@@ -192,13 +192,13 @@ public class UrlForwardToExceptionController {
 
 首先，使用`dev`环境启动项目——
 
-![](/images/shiro-token-filter-1.png)
+![](/images/shiro-token-filter-01.png)
 
 
 
 访问`/actuator/beans`
 
-![](/images/shiro-token-filter-2.png)
+![](/images/shiro-token-filter-02.png)
 
 
 
@@ -206,25 +206,25 @@ public class UrlForwardToExceptionController {
 
 然后使用`prod`环境启动项目——
 
-![](/images/shiro-token-filter-3.png)
+![](/images/shiro-token-filter-03.png)
 
 
 
 记录一下token
 
-![](/images/shiro-token-filter-4.png)
+![](/images/shiro-token-filter-04.png)
 
 
 
 不带token直接请求`/actuator/beans`
 
-![](/images/shiro-token-filter-5.gif)
+![](/images/shiro-token-filter-05.gif)
 
 
 
 带正确的token请求`/actuator/beans`
 
-![](/images/shiro-token-filter-6.png)
+![](/images/shiro-token-filter-06.png)
 
 
 

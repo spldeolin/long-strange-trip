@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: 
+permalink: send-email
 ---
 
 
@@ -25,7 +25,7 @@ permalink:
 
 首先要准备一个开启了`POP3/SMTP`服务的邮箱，比如163邮箱。
 
-![](/images/send-email-1.png)
+![](/images/send-email-01.png)
 
 
 

@@ -17,7 +17,7 @@ permalink: distributed-transaction
 
 - 采用**可靠消息最终一致性**这样的方案
 
-![](/images/distributed-transaction-01.jpg)
+![](/images/distributed-transaction-01.png)
 
 
 

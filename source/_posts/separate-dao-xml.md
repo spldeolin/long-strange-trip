@@ -115,4 +115,4 @@ permalink: separate-dao-xml
 </configuration>
 ~~~
 
-至此，分离完成。完成后的项目目录结构将会是这样的——![](/images/1139226-20180105095728471-1807856072.png)
+至此，分离完成。完成后的项目目录结构将会是这样的——![](/images/separate-dao-xml-01.png)

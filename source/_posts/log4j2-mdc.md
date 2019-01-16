@@ -77,7 +77,7 @@ permalink: log4j2-mdc
 
 首先是匿名可访问接口的日志
 
-![](/images/log4j2-mdc-1.png)
+![](/images/log4j2-mdc-01.png)
 
 和原先没加`X`的时候一样，因为这时候`ThreadContext` 中不存在`username`
 
@@ -85,7 +85,7 @@ permalink: log4j2-mdc
 
 接着是登录接口的日志
 
-![](/images/log4j2-mdc-2.png)
+![](/images/log4j2-mdc-02.png)
 
 一旦登录成功，`username`就在日志中显示出来了。另外，`ControllerAspect`是个环绕切面，`开始处理...`前的日志不显示`username`，这也符合语义，毕竟只有处理完毕，用户才算登录了。
 
@@ -93,7 +93,7 @@ permalink: log4j2-mdc
 
 然后是认证才能访问接口的日志
 
-![](/images/log4j2-mdc-3.png)
+![](/images/log4j2-mdc-03.png)
 
 非常清晰，无论是切面中的日志，还是业务代码中的日志，都能显示`username`
 
@@ -101,6 +101,6 @@ permalink: log4j2-mdc
 
 最后是退出登录的日志
 
-![](/images/log4j2-mdc-4.png)
+![](/images/log4j2-mdc-04.png)
 
 跟登录接口同理，`...处理完毕`之后才不显示`username`

@@ -25,7 +25,7 @@ permalink: idea-exception-breakpoint
 
 首先用`Find Action...`找到并打开`View Breakpoints`
 
-![](/images/idea-exception-breakpoint-1.png)
+![](/images/idea-exception-breakpoint-01.png)
 
 
 
@@ -35,7 +35,7 @@ permalink: idea-exception-breakpoint
 
 以空指针为例（毕竟它是最难不借助stacktrack定位到案发现场的异常了），我们追加一个空指针异常断点。
 
-![](/images/idea-exception-breakpoint-2.png)
+![](/images/idea-exception-breakpoint-02.png)
 
 
 
@@ -60,9 +60,9 @@ permalink: idea-exception-breakpoint
 
 有时候会这样...
 
-![](/images/idea-exception-breakpoint-3.png)
+![](/images/idea-exception-breakpoint-03.png)
 
 而有时候会这样...
 
-![](/images/idea-exception-breakpoint-4.png)
+![](/images/idea-exception-breakpoint-04.png)
 

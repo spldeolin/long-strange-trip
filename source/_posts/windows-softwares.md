@@ -79,6 +79,8 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 即时通讯
 
+  [QQ 9](https://im.qq.com/pcqq/)
+
   [QQ Light](http://dldir1.qq.com/qqfile/qq/QQ6.7Light/13466/QQ6.7Light.exe)
 
   [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
@@ -112,6 +114,10 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 
 ## 开发用软件
+
+- 字体
+
+  [Microsoft YaHei Mono](https://www.onlinewebfonts.com/download/9798f64007ae3426b2336e57dae4149c)
 
 - SDK
 
@@ -171,7 +177,7 @@ https://github.com/spldeolin/java-development-config
 
 
 
-## 系统安装相关软件
+## 系统相关软件
 
 - PE、驱动、Windows补丁、.net库、vc++库、DX9.0
 
@@ -181,28 +187,3 @@ https://github.com/spldeolin/java-development-config
 
   [MSDN, 我告诉你](https://msdn.itellyou.cn/)
 
-
-
-## Win7
-
-- 下载工具
-
-  [迅雷极速版256](https://pan.baidu.com/s/1jKaPmdS)　　　　　	密码：fl4o
-
-- Win7杀毒软件
-
-  [MSE](https://support.microsoft.com/zh-cn/help/14210/security-essentials-download)
-
-
-
-
-## 其他技巧
-
-- 迅雷边下边播
-
-  - 在安装目录的program目录下新建xmp.ini
-
-  - ~~~ini
-    [global]
-    Path=C:\Program Files (x86)\DAUM\PotPlayer\PotPlayerMini.exe
-    ~~~

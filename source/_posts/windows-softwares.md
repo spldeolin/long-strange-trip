@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00
 
-updated: 2019-01-14 10:36
+updated: 2019-01-22 17:45
 
 tags:
 - 总结
@@ -27,11 +27,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [7-zip](http://www.7-zip.org/)
 
-- VPN
-
-  [Lantern](https://github.com/getlantern/forum)
-
-- 多tab资源管理器
+- 资源管理器
 
   [XYplorer](https://www.xyplorer.com/)
 

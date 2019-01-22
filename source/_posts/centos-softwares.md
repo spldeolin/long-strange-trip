@@ -3,7 +3,7 @@ title: CentOS常用环境、软件
 
 date: 2018-04-16 17:01
 
-updated: 2019-01-12 21:55
+updated: 2019-01-22 17:48
 
 tags:
 - 总结
@@ -19,6 +19,7 @@ tags:
 - Elasticsearch
 - CentOS
 - Python
+- 7Zip
 
 categories: Linux
 
@@ -180,7 +181,7 @@ $ sudo yum update -y
 2. 下载、安装
 
    ~~~shell
-   $ sudo yum --enablerepo=remi install -y redis
+   $ sudo yum install -y --enablerepo=remi redis
    ~~~
 
 3. 配置
@@ -542,3 +543,15 @@ $ sudo yum install -y maven
    ~~~shell
    $ sudo yum install -y elasticsearch
    ~~~
+
+
+
+## 7 Zip
+
+1. 安装
+
+   ~~~shell
+   $ sudo yum install -y p7zip
+   ~~~
+
+   

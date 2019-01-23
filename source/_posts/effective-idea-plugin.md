@@ -1,5 +1,5 @@
 ---
-title: Intellij IDEA使用技巧 - 插件篇
+title: IntelliJ IDEA使用技巧 - 插件篇
 
 date: 2019-01-23 17:10
 

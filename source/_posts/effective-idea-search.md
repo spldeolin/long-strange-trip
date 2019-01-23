@@ -1,5 +1,5 @@
 ---
-title: Intellij IDEA使用技巧 - 搜索篇
+title: IntelliJ IDEA使用技巧 - 搜索篇
 
 date: 2018-12-16 08:01
 

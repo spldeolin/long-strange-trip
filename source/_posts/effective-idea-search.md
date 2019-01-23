@@ -6,7 +6,7 @@ date: 2018-12-16 08:01
 updated: 2018-12-16 09:30
 
 tags:
-- Intellij IDEA
+- IntelliJ IDEA
 
 categories: Java
 

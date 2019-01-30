@@ -1,0 +1,24 @@
+---
+title: Lemon - 米津玄師
+
+date: 2019-01-26 17:43:00
+
+updated: 2019-01-26 17:43:00
+
+tags:
+- 歌詞
+
+categories: 日本語
+
+permalink: lyric-lemon
+---
+
+
+
+# Lemon - 米津玄師
+
+> 应该是Deolin在2018年听得最多的一首歌了
+
+
+
+![](/images/lyric-lemon-01.png)

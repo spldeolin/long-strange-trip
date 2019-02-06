@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-websocket
+permalink: springboot-websocket
 ---
 
 

@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-active-profiles
+permalink: springboot-active-profiles
 ---
 
 ### Spring Boot的Profiles属性

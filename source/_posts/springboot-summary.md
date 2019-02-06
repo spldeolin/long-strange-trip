@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-summary
+permalink: springboot-summary
 ---
 
 ## 简介

@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-activemq
+permalink: springboot-activemq
 ---
 
 ## 简介

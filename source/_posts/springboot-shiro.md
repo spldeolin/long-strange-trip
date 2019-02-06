@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-shiro
+permalink: springboot-shiro
 ---
 
 ## 简介

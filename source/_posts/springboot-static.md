@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-static
+permalink: springboot-static
 ---
 
 

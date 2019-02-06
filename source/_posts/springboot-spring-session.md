@@ -12,7 +12,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-spring-session
+permalink: springboot-spring-session
 ---
 
 ## 简介

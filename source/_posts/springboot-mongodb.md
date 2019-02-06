@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-mongodb
+permalink: springboot-mongodb
 ---
 
 

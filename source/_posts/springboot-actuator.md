@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-actuator
+permalink: springboot-actuator
 ---
 
 ## 简介

@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-mybatis-tkmapper-pagehelper
+permalink: springboot-mybatis-tkmapper-pagehelper
 ---
 
 ## pom追加所有的依赖

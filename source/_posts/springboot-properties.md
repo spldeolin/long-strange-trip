@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-properties
+permalink: springboot-properties
 ---
 
 ## 简介

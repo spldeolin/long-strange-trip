@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-schedule
+permalink: springboot-schedule
 ---
 
 ## 简介

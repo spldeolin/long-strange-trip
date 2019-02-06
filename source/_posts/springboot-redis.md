@@ -11,7 +11,7 @@ tags:
 
 categories: Java
 
-permalink: spring-boot-redis
+permalink: springboot-redis
 ---
 
 ## 简介

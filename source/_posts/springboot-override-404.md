@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: spring-custom-404
+permalink: springboot-override-404
 ---
 
 ## 简介

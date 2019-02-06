@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00
 
-updated: 2019-01-22 17:45
+updated: 2019-02-06 15:02
 
 tags:
 - 总结
@@ -75,9 +75,9 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 即时通讯
 
-  [QQ 9](https://im.qq.com/pcqq/)
+  [钉钉](https://tms.dingtalk.com/markets/dingtalk/download)
 
-  [QQ Light](http://dldir1.qq.com/qqfile/qq/QQ6.7Light/13466/QQ6.7Light.exe)
+  [QQ](https://im.qq.com/pcqq/)
 
   [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 
@@ -91,7 +91,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 截图软件
 
-  [Snipaste](https://zh.snipaste.com/) （类似QQ截图，功能比QQ丰富、好用，支持拾色，不支持滚动截图和GIF录制。）
+  [Snipaste](https://zh.snipaste.com/)
 
   [GifCam](http://blog.bahraniapps.com/gifcam/#download)
 
@@ -169,7 +169,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 ## 开发配置
 
-https://github.com/spldeolin/java-development-config
+https://github.com/spldeolin/development-settings
 
 
 
@@ -177,9 +177,9 @@ https://github.com/spldeolin/java-development-config
 
 - PE、驱动、Windows补丁、.net库、vc++库、DX9.0
 
-  [IT天空](https://www.itsk.com/)
+  [IT天空](https://www.itsk.com/topic-software.html)
 
-- Win10、Win7官方镜像
+- Windows官方镜像
 
   [MSDN, 我告诉你](https://msdn.itellyou.cn/)
 

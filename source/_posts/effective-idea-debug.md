@@ -1,9 +1,9 @@
 ---
 title: IntelliJ IDEA使用技巧 - DEBUG篇
 
-date: 2019-02-06 16:09
+date: 2019-02-06 16:19
 
-updated: 2019-02-06 16:09
+updated: 2019-02-06 16:19
 
 tags:
 - IntelliJ IDEA
@@ -41,7 +41,7 @@ userService.createBatch(users);
 
 
 
-这个`Evaluate Expression`窗口，可以在代码编辑区右键打开，或者你可以去为这个窗口指定一个快捷键（Keymap）
+这个`Evaluate Expression`窗口，可以在代码编辑区右键打开，或者你可以去为这个窗口指定一个快捷键（`Keymap`）
 
 
 
@@ -49,3 +49,16 @@ userService.createBatch(users);
 
 ![](/images/effective-idea-debug-03.png)
 
+
+
+`Debug`视窗的`Variables`，右键对象，选择`View/Edit Text`
+
+
+
+## 断点跳到指定行
+
+![](/images/effective-idea-debug-04.png)
+
+
+
+位于`Debug`视窗的`Debugger`，同样这个功能也能指定一个快捷键

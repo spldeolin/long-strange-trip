@@ -137,7 +137,13 @@ dash
 
 
 
-### 版本管理
+### 终端
+
+iTerm2
+
+
+
+### Git
 
 git
 
@@ -197,27 +203,22 @@ postman
 
 
 
-### MySQL
+### Docker
 
 ~~~shell
-$ brew install mysql
+$ brew cask install docker
 ~~~
 
+https://yeasy.gitbooks.io/docker_practice/install/mac.html
 
 
-### NoSQL
 
-1. Redis
+### Service管理
 
-   ~~~shell
-   $ brew install redis
-   ~~~
+~~~shell
+$ brew tap jimbojsb/launchrocket
+$ brew cask install launchrocket
+~~~
 
-2. MongoDB
-
-   ~~~shell
-   $ brew install mongodb
-   $ brew install mongodb --devel
-   ~~~
 
 

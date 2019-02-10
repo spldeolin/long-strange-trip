@@ -3,7 +3,7 @@ title: 组合注解
 
 date: 2019-02-10 08:35
 
-updated: 2019-02-10 08:35
+updated: 2019-02-10 09:13
 
 tags:
 
@@ -86,29 +86,6 @@ public class DemoController {
 ~~~
 
 
-
-## 切面表达式
-
-虽然`DemoController`不再使用`@RestController`，而是使用了`@RestMapping`，但是`DemoController`**依然可以作为基于@RestController注解的切点**，如下所示
-
-~~~java
-@Component
-@Aspect
-@Log4j2
-public class ControllerAspect {
-
-    // 这个切点依然可以切到DemoController中
-    @Pointcut("@within(org.springframework.web.bind.annotation.RestController)")
-    public void controllerMethod() {
-    }
-
-    @Before("controllerMethod()")
-    public void before() {
-        log.info("hi there.");
-    }
-
-}
-~~~
 
 
 

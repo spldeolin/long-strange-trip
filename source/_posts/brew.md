@@ -3,7 +3,7 @@ title: Homebrew 常用命令
 
 date: 2019-02-14 15:16
 
-updated: 2019-02-14 15:16
+updated: 2019-02-15 10:41
 
 tags:
 - Homebrew
@@ -163,4 +163,55 @@ cask可以认为是Homebrew的一个模块
    ~~~shell
    $ brew cask uninstall software-name
    ~~~
+
+
+
+## brew serivces 相关命令
+
+`brew services`开头的命令一般是用于管理通过Homebrew安装的各类服务的。
+
+1. 查看所有服务及其它们各自的运行状态
+
+   ~~~sh
+   $ brew services list
+   ~~~
+
+
+
+2. 启动服务
+
+   ~~~shell
+   $ brew services start redis
+   ~~~
+
+   ~~~shell`
+   $ brew services start --all
+   ~~~
+   
+   
+   ~~~
+
+3. 重启服务
+
+   ~~~shell
+   $ brew services restart redis
+   ~~~
+
+   ~~~shell
+   $ brew services restart --all
+   ~~~
+
+   
+
+4. 停止服务
+
+   ~~~shell
+   $ brew services stop redis
+   ~~~
+
+   ~~~shell
+   $ brew services stop --all
+   ~~~
+
+   
 

@@ -3,7 +3,7 @@ title: Homebrew 常用命令
 
 date: 2019-02-14 15:16
 
-updated: 2019-02-15 10:41
+updated: 2019-02-20 13:24
 
 tags:
 - Homebrew
@@ -84,15 +84,27 @@ permalink: brew
 
 
 
-5. 更新通过`brew install`安装的软件
+5. 查看可更新的软件
+
+   ~~~shell
+   $ brew outdated
+   ~~~
+
+   
+
+6. 更新通过`brew install`安装的软件
 
    ~~~shell
    $ brew upgrade software-name
    ~~~
 
+   ~~~shell
+   $ brew upgrade
+   ~~~
+
    
 
-6. 卸载通过`brew install`安装的软件
+7. 卸载通过`brew install`安装的软件
 
    ~~~shell
    $ brew uninstall software-name
@@ -100,7 +112,7 @@ permalink: brew
 
 
 
-7. 更新Homebrew自身
+8. 更新Homebrew自身
 
    ~~~shell
    $ brew update
@@ -108,10 +120,10 @@ permalink: brew
 
 
 
-8. 清除缓存
+9. 清除缓存
 
    ~~~shell
-   $ brew cache clean
+   $ brew cleanup
    ~~~
 
    

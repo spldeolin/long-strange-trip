@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-21 09:52
+updated: 2019-02-21 10:12
 
 tags:
 - 总结
@@ -29,6 +29,17 @@ permalink: macos-softwares
 
 
 
+## 说明
+
+名字前面出现*****的软件，代表以下情况的其中一种
+
+- App Store需要付费安装，如Microsoft Office
+
+- 这个软件在购买正版前只能试用，如iStat Menus
+- 购买正版或是拓展能大幅度提高效率，如Alfred 3
+
+
+
 ## Homebrew
 
 ~~~shell
@@ -48,7 +59,7 @@ brew相当于centOS的yum，ubuntu的apt。
 
 ## 一般软件
 
-### Alfred 3 （代替spotlight）
+### * Alfred 3 （代替spotlight）
 
 ~~~shell
 $ brew cask install alfred
@@ -86,7 +97,7 @@ $ brew cask install onedrive
 
 
 
-### Office （Word、Excel等）
+### * Microsoft Office
 
 通过App Store安装
 
@@ -196,11 +207,25 @@ $ brew cask install squirrel
 
 
 
-### iStat Menus （硬件指标实时监控）
+### * iStat Menus （硬件指标实时监控）
 
 ~~~shell
 $ brew cask install istat-menus
 ~~~
+
+
+
+### * Timing 2 （统计使用每种软件的时间，分析使用者的效率）
+
+~~~shell
+$ brew cask install timing
+~~~
+
+
+
+### Irvue （壁纸）
+
+通过App Store安装
 
 
 
@@ -254,7 +279,7 @@ $ brew cask install visual-studio-code
 
 
 
-### Navicat
+### * Navicat
 
 ~~~shell
 $ brew cask install navicat-premium

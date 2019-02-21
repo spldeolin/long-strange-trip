@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-14 13:39
+updated: 2019-02-21 09:52
 
 tags:
 - 总结
@@ -48,7 +48,7 @@ brew相当于centOS的yum，ubuntu的apt。
 
 ## 一般软件
 
-### Alfred
+### Alfred 3 （代替spotlight）
 
 ~~~shell
 $ brew cask install alfred
@@ -64,7 +64,7 @@ $ brew cask install p7zip
 
 
 
-### Google Chrome 
+### Google Chrome
 
 ~~~shell
 $ brew cask install google-chrome
@@ -86,13 +86,13 @@ $ brew cask install onedrive
 
 
 
-### Office
+### Office （Word、Excel等）
 
-*TODO*
+通过App Store安装
 
 
 
-### 思维导图
+### MindMaster （思维导图）
 
 ~~~shell
 $ brew cask install mindmaster
@@ -100,7 +100,7 @@ $ brew cask install mindmaster
 
 
 
-### Markdown
+### Typora
 
 ~~~shell
 $ brew cask install typora
@@ -108,7 +108,7 @@ $ brew cask install typora
 
 
 
-### 视频播放器
+### IINA （视频播放器）
 
 ~~~shell
 $ brew cask install iina
@@ -120,6 +120,14 @@ $ brew cask install iina
 
 ~~~shell
 $ brew cask install neteasemusic
+~~~
+
+
+
+### 有道词典
+
+~~~shell
+$ brew cask install youdaodict
 ~~~
 
 
@@ -148,7 +156,7 @@ $ brew cask install dingtalk
 
 
 
-### PDF阅读器
+### Skim （PDF阅读器）
 
 ~~~shell
 $ brew cask install skim
@@ -156,7 +164,7 @@ $ brew cask install skim
 
 
 
-### Snipaste
+### Snipaste （截图工具）
 
 ~~~shell
 $ brew cask install snipaste
@@ -188,9 +196,17 @@ $ brew cask install squirrel
 
 
 
+### iStat Menus （硬件指标实时监控）
+
+~~~shell
+$ brew cask install istat-menus
+~~~
+
+
+
 ## 开发用软件
 
-### 文档查询
+### Dash （文档查询）
 
 ~~~shell
 $ brew cask install dash
@@ -198,7 +214,7 @@ $ brew cask install dash
 
 
 
-### 终端
+### iTerm 2 （代替macOS自带的终端）
 
 ~~~
 $ brew cask install iterm2
@@ -214,10 +230,10 @@ $ brew install git
 
 
 
-### Sourcetree
+### GitKraken （Git客户端）
 
 ~~~shell
-$ brew cask install sourcetree
+$ brew cask install gitkraken
 ~~~
 
 
@@ -289,26 +305,17 @@ $ brew cask install postman
 
 
 
-### MySQL
+### 各种服务
 
-~~~shell
-$ brew install mysql
-~~~
-
-
-
-### Redis
-
-~~~shell
-$ brew install redis
-~~~
-
-
-
-### Mongo
-
-~~~shell
+~~~bash
+$ brew install elasticsearch
+$ brew install kibana
+$ brew install logstash
 $ brew install mongodb
+$ brew install mysql
+$ brew install rabbitmq
+$ brew install redis
+$ brew install zookeeper
 ~~~
 
 

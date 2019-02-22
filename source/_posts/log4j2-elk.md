@@ -3,7 +3,7 @@ title: ELK收集Log4j2日志
 
 date: 2019-02-22 10:17
 
-updated: 2019-02-22 10:25
+updated: 2019-02-22 10:51
 
 tags:
 - Log4j2
@@ -110,10 +110,10 @@ ELK代表3种技术，是一种的流行的日志收集解决方案
 
    ~~~yaml
    Gelf:
-   	name: logstash
-   	host: 127.0.0.1
-   	port: 4560
-   	includeFullMdc: true # 收集每条日志的Log MCD数据
+     name: logstash
+     host: 127.0.0.1
+     port: 4560
+     includeFullMdc: true # 收集每条日志的Log MCD数据
    ~~~
 
 

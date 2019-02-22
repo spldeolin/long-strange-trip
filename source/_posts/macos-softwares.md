@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-21 10:12
+updated: 2019-02-21 14:10
 
 tags:
 - 总结
@@ -301,7 +301,7 @@ $ brew cask install postman
 
 
 
-## 开发环境
+## 开发用软件
 
 ### Oracle JDK
 
@@ -342,6 +342,17 @@ $ brew install rabbitmq
 $ brew install redis
 $ brew install zookeeper
 ~~~
+
+
+
+### sshpass
+
+~~~shell
+$ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
+
+~~~
+
+> 直接使用`brew install sshpass`会报错，因为这个软件会令人养成不好的安全习惯，所以需要通过github地址安装
 
 
 

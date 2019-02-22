@@ -3,7 +3,7 @@ title: ELK收集Log4j2日志
 
 date: 2019-02-22 10:17
 
-updated: 2019-02-22 10:17
+updated: 2019-02-22 10:25
 
 tags:
 - Log4j2
@@ -33,7 +33,7 @@ ELK代表3种技术，是一种的流行的日志收集解决方案
 
 简单来说，Logstash用于接受来自不同微服务的日志，并保存到Elasticsearch；Elasticsearch用于持久化日志；Kibana是Elasticsearch的可视化工具。
 
-可见将3者粗暴地理解为JDBC+MySQL+Navicat
+可以将3者粗暴地理解为JDBC+MySQL+Navicat
 
 
 
@@ -116,7 +116,18 @@ ELK代表3种技术，是一种的流行的日志收集解决方案
    	includeFullMdc: true # 收集每条日志的Log MCD数据
    ~~~
 
-   
+
+
+
+## 效果
+
+![](https://raw.githubusercontent.com/spldeolin/log4j2elk/master/sample/console.png)
+
+
+
+![](https://raw.githubusercontent.com/spldeolin/log4j2elk/master/sample/kibana.png)
+
+
 
 ## 源码
 

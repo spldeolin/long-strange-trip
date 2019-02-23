@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-22 14:10
+updated: 2019-02-23 19:07
 
 tags:
 - 总结
@@ -290,6 +290,14 @@ $ brew cask install navicat-premium
 ### Redis Desktop Manager
 
 通过从[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装
+
+
+
+### * Charles（抓取Web请求）
+
+~~~shell
+$ brew cask install charles
+~~~
 
 
 

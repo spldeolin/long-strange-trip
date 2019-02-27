@@ -1,10 +1,10 @@
 ---
 
-title: Spring Boot 2集成Elasticsearch
+title: Spring Boot 2 集成 Elasticsearch
 
 date: 2019-02-27 17:16
 
-updated: 2019-02-27 17:21
+updated: 2019-02-27 17:56
 
 tags:
 - Spring Boot
@@ -81,7 +81,7 @@ spring:
 1. 实体
 
    ~~~java
-   @Document(indexName = "oneDatabase", type = "book")
+   @Document(indexName = "one-database", type = "book")
    @Data
    public class Book {
        
@@ -132,7 +132,7 @@ spring:
        public void create() {
            SearchQuery query = new NativeSearchQueryBuilder().build();
            
-           elasticsearchTemplate.queryForList(query, Book.class).forEach(log::info);
+           template.queryForList(query, Book.class).forEach(log::info);
            
            log.info("结束");
        }
@@ -145,3 +145,20 @@ spring:
 ## 源码
 
 [spldeolin](https://github.com/spldeolin) / [springboot-elasticsearch-with-template](https://github.com/spldeolin/springboot-elasticsearch-with-template) 
+
+
+
+## 其他问题
+
+如果启动服务的过程中抛出异常
+
+~~~
+java.lang.IllegalStateException: availableProcessors is already set to [4], rejecting [4]
+~~~
+
+解决方法是在加上
+
+~~~java
+System.setProperty("es.set.netty.runtime.available.processors", "false");
+~~~
+

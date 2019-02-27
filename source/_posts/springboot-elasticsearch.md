@@ -4,7 +4,7 @@ title: Spring Boot 2集成Elasticsearch
 
 date: 2019-02-27 17:16
 
-updated: 2019-02-27 17:16
+updated: 2019-02-27 17:21
 
 tags:
 - Spring Boot
@@ -18,7 +18,7 @@ permalink: springboot-elasticsearch
 
 ## 简介
 
-Deolin最近打算学习Elasticsearch，这里将记录一下Spring Boot集成Elasticsearch的流程。
+Deolin最近打算学习ES，正好在这里把集成的过程做个记录。
 
 
 

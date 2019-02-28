@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-23 19:07
+updated: 2019-02-28 10:46
 
 tags:
 - 总结
@@ -25,7 +25,7 @@ permalink: macos-softwares
 
 ## 简介
 
-事情的起因是Deolin买了人生中的第一台MacBook Pro...
+事情的起因，是Deolin买了人生中的第一台MacBook Pro...
 
 
 
@@ -33,10 +33,10 @@ permalink: macos-softwares
 
 名字前面出现*****的软件，代表以下情况的其中一种
 
-- App Store需要付费安装，如Microsoft Office
+- App Store需要付费购买后才能安装，如Microsoft Office
 
-- 这个软件在购买正版前只能试用，如iStat Menus
-- 购买正版或是拓展能大幅度提高效率，如Alfred 3
+- 这个软件在购买正版前只能试用若干天，如iStat Menus
+- 购买正版或拓展包能大幅度提高效率，如Alfred 3
 
 
 
@@ -53,7 +53,7 @@ macOS一般通过以下3个方式安装软件
 - App Store
 - dmg文件
 
-brew相当于centOS的yum，ubuntu的apt。
+Homebrew相当于centOS的yum，ubuntu的apt。
 
 
 
@@ -64,6 +64,20 @@ brew相当于centOS的yum，ubuntu的apt。
 ~~~shell
 $ brew cask install alfred
 ~~~
+
+
+
+### CheatSheet （长按⌘显示快捷键）
+
+~~~shell
+$ brew cask install cheatsheet
+~~~
+
+
+
+## * Magnet （快速调整当前窗口的大小和位置）
+
+通过App Store安装
 
 
 
@@ -97,7 +111,7 @@ $ brew cask install onedrive
 
 
 
-### * Microsoft Office
+### * Microsoft Office 2019
 
 通过App Store安装
 
@@ -231,14 +245,6 @@ $ brew cask install timing
 
 ## 开发用软件
 
-### Dash （文档查询）
-
-~~~shell
-$ brew cask install dash
-~~~
-
-
-
 ### iTerm 2 （代替macOS自带的终端）
 
 ~~~
@@ -290,14 +296,6 @@ $ brew cask install navicat-premium
 ### Redis Desktop Manager
 
 通过从[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装
-
-
-
-### * Charles（抓取Web请求）
-
-~~~shell
-$ brew cask install charles
-~~~
 
 
 
@@ -357,19 +355,8 @@ $ brew install zookeeper
 
 ~~~shell
 $ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
-
 ~~~
 
 > 直接使用`brew install sshpass`会报错，因为这个软件会令人养成不好的安全习惯，所以需要通过github地址安装
 
 
-
-## 其他
-
-### 键盘映射
-
-~~~shell
-$ brew install karabiner-elements
-~~~
-
-使键盘默认不按下`fn`键

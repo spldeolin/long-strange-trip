@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-02-28 10:46
+updated: 2019-03-03 20:04
 
 tags:
 - 总结
@@ -293,9 +293,9 @@ $ brew cask install navicat-premium
 
 
 
-### Redis Desktop Manager
+### * Keylord （代替RDM作为Redis的客户端，优点是支持命令行）
 
-通过从[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装
+通过[官网](https://protonail.com/)下载的dmg文件安装
 
 
 

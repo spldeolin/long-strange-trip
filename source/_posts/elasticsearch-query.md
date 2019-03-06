@@ -4,7 +4,7 @@ title: Elasticsearch常用查询备忘
 
 date: 2019-03-06 11:36
 
-updated: 2019-03-06 11:36
+updated: 2019-03-06 11:42
 
 tags:
 - Elasticsearch
@@ -17,11 +17,13 @@ permalink: elasticsearch-query
 
 ## 简介
 
-整理、备忘
+整理、备忘。
+
+Elasticsearch版本为`6.6.1`
 
 
 
-##演示数据
+## 演示数据
 
 演示数据来自
 

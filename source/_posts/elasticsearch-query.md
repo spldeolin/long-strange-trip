@@ -4,7 +4,7 @@ title: Elasticsearch常用查询备忘
 
 date: 2019-03-06 11:36
 
-updated: 2019-03-06 11:42
+updated: 2019-03-07 09:20
 
 tags:
 - Elasticsearch
@@ -38,7 +38,7 @@ $ curl "localhost:9200/_cat/indices?v"
 
 
 
-## ”字符串“类型说明
+## “字符串”类型说明
 
 elasticsearch中有2种字符串，一类叫text，一类叫keyword。
 keyword类似与一般关系型数据库中的”字符串”，可以精准匹配(match)，左右模糊查询(wildcard)，排序(sort)等等，而且区别大小写。

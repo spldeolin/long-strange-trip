@@ -4,7 +4,7 @@ title: 你真的需要去破解IntelliJ IDEA吗？
 
 date: 2019-03-08 09:37
 
-updated: 2019-03-08 09:37
+updated: 2019-03-08 09:42
 
 tags:
 - IntelliJ IDEA
@@ -37,6 +37,8 @@ Ultimate比起Community，多提供以下的功能：
     4. 对`XSL`、`XPath`的支持
     5. 对`Ruby`、`JRuby`、`PHP`、`Go`的支持（需要安装对应plugin）
 
+    
+
 - 框架层面
   1. **Spring全家桶**
   2. Java EE
@@ -44,19 +46,30 @@ Ultimate比起Community，多提供以下的功能：
   4. 其他语言各种前端框架
   5. **`Thymeleaf`、`Freemarker`、`Velocity`等模板引擎**
 
+  
+
 - 版本控制
+
   1. Team Foundation Server
   2. Perforce
 
+  
+
 - 部署环境
+
   1. **对Tomcat的支持**
   2. 对其他各种Web容器的支持
 
+  
+
 - 构建工具
+
   1. nodejs NPM
   2. Webpack
   3. Gulp
   4. Grunt
+
+  
 
 - 其他
   1. UML
@@ -65,7 +78,9 @@ Ultimate比起Community，多提供以下的功能：
 
 
 
-这些内容来自官方https://www.jetbrains.com/idea/features/editions_comparison_matrix.html，Deolin仅仅对它进行了一些简单的翻译
+> 这些内容来自官方https://www.jetbrains.com/idea/features/editions_comparison_matrix.html
+>
+> Deolin仅仅对它进行了一些简单的翻译
 
 
 

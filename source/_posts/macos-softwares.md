@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-03 20:04
+updated: 2019-03-10 14:58
 
 tags:
 - 总结
@@ -75,7 +75,7 @@ $ brew cask install cheatsheet
 
 
 
-## * Magnet （快速调整当前窗口的大小和位置）
+### * Magnet （快速调整当前窗口的大小和位置）
 
 通过App Store安装
 
@@ -117,10 +117,10 @@ $ brew cask install onedrive
 
 
 
-### MindMaster （思维导图）
+### Xmind ZEN
 
 ~~~shell
-$ brew cask install mindmaster
+$ brew cask install xmind-zen
 ~~~
 
 
@@ -269,10 +269,10 @@ $ brew cask install gitkraken
 
 
 
-### IntelliJ IDEA
+### IntelliJ IDEA Community
 
 ~~~shell
-$ brew cask install intellij-idea
+$ brew cask install intellij-idea-ce
 ~~~
 
 

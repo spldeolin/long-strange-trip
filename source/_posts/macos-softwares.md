@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-13 13:32
+updated: 2019-03-13 14:14:27
 
 tags:
 - 总结
@@ -263,6 +263,14 @@ $ brew cask install imazing
 
 
 
+### Sublime 3
+
+~~~shell
+$ brew cask install sublime-text
+~~~
+
+
+
 ### Bartender （管理macOS顶部菜单栏的图标）
 
 ~~~shell
@@ -337,9 +345,11 @@ $ brew cask install postman
 
 ## 开发用软件
 
-### Oracle JDK
+### OpenJDK
 
-通过从[官网](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下载的dmg文件安装
+~~~shell
+$ brew cask install adoptopenjdk
+~~~
 
 
 

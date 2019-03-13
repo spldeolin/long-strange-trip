@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-10 14:58
+updated: 2019-03-13 13:32
 
 tags:
 - 总结
@@ -229,7 +229,7 @@ $ brew cask install istat-menus
 
 
 
-### * Timing 2 （统计使用每种软件的时间，分析使用者的效率）
+### * Timing 2 （统计使用每种软件的时间，分析工作效率）
 
 ~~~shell
 $ brew cask install timing
@@ -240,6 +240,34 @@ $ brew cask install timing
 ### Irvue （壁纸）
 
 通过App Store安装
+
+
+
+### * Word Clock （屏保）
+
+通过从[官网](https://www.simonheys.com/wordclock/)下载dmg安装
+
+
+
+### Imazing （比iTune更方便管理iOS的文件）
+
+```shell
+$ brew cask install imazing
+```
+
+
+
+###  * Inpaint （消除图片水印）
+
+通过从[官网](https://www.theinpaint.com/)下载dmg安装
+
+
+
+### Bartender （管理macOS顶部菜单栏的图标）
+
+~~~shell
+$ brew cask install bartender
+~~~
 
 
 
@@ -293,9 +321,9 @@ $ brew cask install navicat-premium
 
 
 
-### * Keylord （代替RDM作为Redis的客户端，优点是支持命令行）
+### * RedisDesktopManager
 
-通过[官网](https://protonail.com/)下载的dmg文件安装
+通过[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装（0.7.6.18是最后一个免费版）
 
 
 
@@ -336,7 +364,7 @@ $ brew cask install postman
 
 
 
-### 各种服务
+### 各种服务与中间件
 
 ~~~bash
 $ brew install elasticsearch

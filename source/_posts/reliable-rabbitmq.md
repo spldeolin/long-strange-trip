@@ -4,7 +4,7 @@ title: RabbitMQ可靠消息落地方案
 
 date: 2019-03-05 16:27
 
-updated: 2019-03-05 16:27
+updated: 2019-03-16 16:50
 
 tags:
 - RabbitMQ
@@ -17,11 +17,11 @@ permalink: reliable-rabbitmq
 
 ## 简介
 
-这篇POST将会介绍让RabbitMQ消息可靠投递的解决方案。
+本篇POST介绍了**RabbitMQ消息可靠投递、可靠消费的解决方案**。
 
-方案采用方式是，消息入库，结合定时任务重发异常消息。
+采用方式是，消息入库，结合重发机制。
 
-最终能达到的效果是消息迟早能进入消息队列，或是被标记，以供人工处理。
+最终效果是，消息一定能在MQ中持久化，再不济也能记录下来进行人工补偿。
 
 
 
@@ -33,6 +33,7 @@ permalink: reliable-rabbitmq
 4. 消息落到队列后，rabbitmq会回调producer
 5. producer confirm_call_back将数据库中消息的状态改为“成功”
 6. 定时扫描“投递中”的消息，重发，记录重发次数，到达阈值后状态改为“失败”
+7. consumer 设置为手动ack，消息一旦在consumer入库，就ack，也能以此确保幂等性
 
 其他： consumer幂等（通过消费端消息入库来实现）
 
@@ -42,15 +43,15 @@ permalink: reliable-rabbitmq
 
 1. 消息表的表结构
 
-   | 字段名        | 类型     | 备注                                             |
-   | ------------- | -------- | ------------------------------------------------ |
-   | id            | bigint   |                                                  |
-   | exchange      | varchar  |                                                  |
-   | routing_key   | varchar  |                                                  |
-   | message       | varchar  | 业务实体的序列化或JSON，用于消息重发             |
-   | retried_count | int      | 已经重发的次数，超过某个值时会被被标记为投递失败 |
-   | status        | tinyint  | 1投递中，2投递成功，3投递失败等待人工补偿        |
-   | next_retry_at | datetime | 下一次重发的时间                                 |
+   | 字段名        | 类型     | 备注                                                         |
+   | ------------- | -------- | ------------------------------------------------------------ |
+   | id            | bigint   |                                                              |
+   | exchange      | varchar  |                                                              |
+   | routing_key   | varchar  |                                                              |
+   | message       | varchar  | 业务实体的序列化或JSON，用于消息重发                         |
+   | retried_count | int      | 已经重发的次数，超过某个值时会被被标记为投递失败             |
+   | status        | tinyint  | 1投递中，2投递成功，3投递失败等待人工补偿，4消息已在custom入库 |
+   | next_retry_at | datetime | 下一次重发的时间                                             |
 
 2. producer采用消息确认模式
 
@@ -110,14 +111,14 @@ permalink: reliable-rabbitmq
    }
    ~~~
 
-5. customer采用自动ack
+5. customer采用手动ack
 
    ~~~yaml
    spring:
      rabbitmq:
        listener:
          simple:
-           acknowledge-mode: auto
+           acknowledge-mode: manual
    ~~~
 
 6. customer接受消息
@@ -127,9 +128,33 @@ permalink: reliable-rabbitmq
            value = @Queue(OrderConstant.MessageConstant.queueName),
            exchange = @Exchange(name = OrderConstant.MessageConstant.exchange, type = "topic"),
            key = OrderConstant.MessageConstant.routingKey))
-   public void receiverOrder(Message message) {
+   public void receiverOrder(Message message, Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag) {
        OrderEntity orderEntity = Jsons.toObject(new String(message.getBody()), OrderEntity.class);
-       log.info("消费订单 {}", orderEntity);
+   
+       // 消息实体
+       Long orderMessageId = orderEntity.getOrderMessageId();
+       OrderMessageEntity orderMessage = orderMessageMapper.selectById(orderMessageId);
+       if (null == orderMessage) {
+           throw new RuntimeException("impossible, unless bug.");
+       }
+       Byte orderMessageStatus = orderMessage.getStatus();
+       log.info("收到orderMessage {} {}", orderMessageId, orderMessageStatus);
+     
+       // 判断消息是否已入库
+       if (MessageStatusEnum.CUSTOM_ACK.getValue().equals(orderMessage.getStatus())) {
+           // 这条是已在消费者这边入库的消息，直接ACK掉，确保幂等性
+           ack(channel, tag);
+           return;
+       } else {
+           // 这条是没有在消费者这边入库的消息，入库，ack
+           orderMessage.setStatus(MessageStatusEnum.CUSTOM_ACK.getValue());
+           orderMessageMapper.updateById(new OrderMessageEntity(orderMessageId,
+                   MessageStatusEnum.CUSTOM_ACK.getValue()));
+           ack(channel, tag);
+       }
+   
+       // 模拟消费
+       log.info("消费成功 {}", orderMessageId);
    }
    ~~~
 

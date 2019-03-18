@@ -3,7 +3,7 @@ title: Homebrew 常用命令
 
 date: 2019-02-14 15:16
 
-updated: 2019-02-20 13:24
+updated: 
 
 tags:
 - Homebrew
@@ -32,7 +32,9 @@ permalink: brew
 
    
 
-   如果返回`No formula or cask found for …`，可能代表关键词错误，例如，阿里的钉钉在Homebrew的软件名为`dingtalk`，而不是`dingding`
+   如果返回`No formula or cask found for …`，可能代表关键词错误。
+
+   例如，阿里的钉钉在Homebrew的软件名为`dingtalk`，而不是`dingding`。
 
    ~~~shell
    $ brew search dingding
@@ -84,7 +86,7 @@ permalink: brew
 
 
 
-5. 查看可更新的软件
+5. 查看通过`brew install`安装的可更新的软件
 
    ~~~shell
    $ brew outdated
@@ -96,10 +98,6 @@ permalink: brew
 
    ~~~shell
    $ brew upgrade software-name
-   ~~~
-
-   ~~~shell
-   $ brew upgrade
    ~~~
 
    
@@ -160,9 +158,18 @@ cask可以认为是Homebrew的一个模块
    $ brew cask info software-name
    ~~~
 
+
+
+
+4. 查看通过`brew cask install`安装的可更新的软件
+
+   ~~~shell
+   $ brew cask outdated
+   ~~~
+
    
 
-4. 更新通过`brew cask install`安装的软件的详细信息
+5. 更新通过`brew cask install`安装的软件的详细信息
 
    ~~~shell
    $ brew cask upgrade software-name
@@ -170,7 +177,7 @@ cask可以认为是Homebrew的一个模块
 
    
 
-5. 卸载通过`brew cask install`安装的软件的详细信息
+6. 卸载通过`brew cask install`安装的软件的详细信息
 
    ~~~shell
    $ brew cask uninstall software-name
@@ -196,12 +203,11 @@ cask可以认为是Homebrew的一个模块
    $ brew services start redis
    ~~~
 
-   ~~~shell`
+   ~~~shell
    $ brew services start --all
    ~~~
+
    
-   
-   ~~~
 
 3. 重启服务
 

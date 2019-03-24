@@ -3,7 +3,7 @@ title: Windows 常用软件
 
 date: 2018-02-14 10:00
 
-updated: 2019-02-06 15:02
+updated: 2019-03-24 10:54
 
 tags:
 - 总结
@@ -125,9 +125,9 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - IDE
 
-  [IntelliJ IDEA 2018.3](https://www.jetbrains.com/idea/download/#section=windows)
+  [IntelliJ IDEA 2018.3 Community](https://www.jetbrains.com/idea/download/#section=windows)
 
-  [Rover12421](https://plus.google.com/+Rover12421)
+  [Visual Studio Code](https://code.visualstudio.com/)
 
 - VCS
 
@@ -161,9 +161,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 虚拟环境
 
-  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
-  [Vagrant](https://www.vagrantup.com/downloads.html)
+  [Docker](https://www.docker.com/get-started)
 
 
 
@@ -173,7 +171,7 @@ https://github.com/spldeolin/development-settings
 
 
 
-## 系统相关软件
+## 系统相关
 
 - PE、驱动、Windows补丁、.net库、vc++库、DX9.0
 

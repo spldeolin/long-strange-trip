@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-13 14:14:27
+updated: 2019-03-24 11:16
 
 tags:
 - 总结
@@ -33,10 +33,10 @@ permalink: macos-softwares
 
 名字前面出现*****的软件，代表以下情况的其中一种
 
-- App Store需要付费购买后才能安装，如Microsoft Office
+- 这个软件在App Store需要付费购买，如Microsoft Office
 
 - 这个软件在购买正版前只能试用若干天，如iStat Menus
-- 购买正版或拓展包能大幅度提高效率，如Alfred 3
+- 这个软件本身是免费的，但购买正版或拓展包后能大幅度提高效率，如Alfred 3
 
 
 
@@ -54,6 +54,8 @@ macOS一般通过以下3个方式安装软件
 - dmg文件
 
 Homebrew相当于centOS的yum，ubuntu的apt。
+
+Deolin将下面清单中所有的Homebrew命令行作成了sh文件，方便大家使用。[Github地址](https://github.com/spldeolin/mac-os-settings/blob/master/homebrew.sh)
 
 
 
@@ -313,10 +315,18 @@ $ brew cask install intellij-idea-ce
 
 
 
-### VS Code
+### Visual Studio Code
 
 ~~~shell
 $ brew cask install visual-studio-code
+~~~
+
+
+
+### 微信开发者工具
+
+~~~shell
+$ brew cask install wechatwebdevtools
 ~~~
 
 
@@ -329,7 +339,7 @@ $ brew cask install navicat-premium
 
 
 
-### * RedisDesktopManager
+### * Redis Desktop Manager
 
 通过[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装（0.7.6.18是最后一个免费版）
 
@@ -385,6 +395,7 @@ $ brew install mysql
 $ brew install rabbitmq
 $ brew install redis
 $ brew install zookeeper
+$ brew install docker
 ~~~
 
 

@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-24 11:16
+updated: 2019-03-24 15:08
 
 tags:
 - 总结
@@ -277,6 +277,14 @@ $ brew cask install sublime-text
 
 ~~~shell
 $ brew cask install bartender
+~~~
+
+
+
+### Kawa （为每个输入法设置快捷键，方便切换）
+
+~~~shell
+$ brew cask install kawa
 ~~~
 
 

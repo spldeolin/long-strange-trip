@@ -3,7 +3,7 @@ title: macOS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-24 15:08
+updated: 2019-03-28 09:13
 
 tags:
 - 总结
@@ -54,8 +54,6 @@ macOS一般通过以下3个方式安装软件
 - dmg文件
 
 Homebrew相当于centOS的yum，ubuntu的apt。
-
-Deolin将下面清单中所有的Homebrew命令行作成了sh文件，方便大家使用。[Github地址](https://github.com/spldeolin/mac-os-settings/blob/master/homebrew.sh)
 
 
 
@@ -416,4 +414,9 @@ $ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Libr
 
 > 直接使用`brew install sshpass`会报错，因为这个软件会令人养成不好的安全习惯，所以需要通过github地址安装
 
+
+
+## 备份
+
+Deolin将清单中通过brew命令导出成了[Brewfile](https://github.com/spldeolin/mac-os-settings/blob/master/Brewfile)了，方便使用。
 

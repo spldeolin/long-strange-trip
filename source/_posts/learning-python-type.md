@@ -3,8 +3,7 @@ title: 学习Python（1） 常用类型
 
 date: 2019-03-29 09:32
 
-updated: 2019-03-29 09:32
-
+updated: 2019-03-31 13:22
 tags:
 - Python
 
@@ -27,6 +26,6 @@ permalink: learning-python-type
 
 
 
-## 常用类型
+## 正文
 
 ![](/images/learning-python-type-01.png)

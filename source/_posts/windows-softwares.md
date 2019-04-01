@@ -29,7 +29,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 资源管理器
 
-  [XYplorer](https://www.xyplorer.com/)
+  [Clover 3.0.406](https://www.softpedia.com/get/Tweak/System-Tweak/Clover-EJIE.shtml) （原作者的最后一个版本）
 
 - 文件搜索
 
@@ -63,7 +63,7 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
 - 文本编辑
 
-  [Notepad++](https://notepad-plus-plus.org/download/)
+  [Sublime Text 3](https://www.sublimetext.com/3)
 
 - 音乐播放器
 
@@ -119,27 +119,21 @@ Deolin把自己在Windows下常用软件全部整理出来，作成了这份清�
 
   [Oracle JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-  [OpenJDK 8](https://developers.redhat.com/products/openjdk/download/)
-
   [Python 3](https://www.python.org/downloads/windows/)
 
 - IDE
 
-  [IntelliJ IDEA 2018.3 Community](https://www.jetbrains.com/idea/download/#section=windows)
+  [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) （Community）
 
-  [Visual Studio Code](https://code.visualstudio.com/)
+  [Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)（Community）
 
 - VCS
 
-  [Git](https://github.com/git-for-windows/git/releases) (MinGit)
-
-  [TortoiseGit](https://tortoisegit.org/download/)
+  [GitKraken](https://www.gitkraken.com/)
 
 - 数据库图形化工具
 
-  [Navicat 12 Premium](https://www.navicat.com/en/download/navicat-premium)
-
-  [Navicat Keygen](https://github.com/Deltafox79/Navicat_Keygen/releases)
+  [DataGrip](https://www.jetbrains.com/datagrip/download/#section=windows)
 
   [Medis](https://github.com/x2jia/medis/releases/tag/win)
 

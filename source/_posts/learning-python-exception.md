@@ -1,9 +1,9 @@
 ---
-title: 学习Python（6） 
+title: 学习Python（6） 异常
 
 date: 2019-04-03 11:06
 
-updated: 2019-04-03 11:06
+updated: 2019-04-06 19:00
 
 tags:
 - Python

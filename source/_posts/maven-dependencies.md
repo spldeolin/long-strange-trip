@@ -29,7 +29,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
+		<version>2.1.4.RELEASE</version>
 		<relativePath/>
 	</parent>
 
@@ -37,37 +37,37 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 		<java.version>1.8</java.version>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-data-redis -->
-		<spring-session.version>2.1.3.RELEASE</spring-session.version>
+		<spring-session.version>2.1.5.RELEASE</spring-session.version>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-nosql -->
-		<log4j2-nosql.version>2.9.1</log4j2-nosql.version>
+		<!-- https://mvnrepository.com/artifact/biz.paluch.logging/logstash-gelf -->
+		<logstash-gelf.version>1.13.0</logstash-gelf.version>
 
 		<!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
 		<disruptor.version>3.4.2</disruptor.version>
 
 		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
-		<mybatis.version>2.0.0</mybatis.version>
+		<mybatis.version>2.0.1</mybatis.version>
 
 		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-		<mybatis-plus.version>3.0.7.1</mybatis-plus.version>
+		<mybatis-plus.version>3.1.0</mybatis-plus.version>
 
 		<!-- https://mvnrepository.com/artifact/com.spring4all/swagger-spring-boot-starter -->
-		<swagger.version>1.8.0.RELEASE</swagger.version>
+		<swagger.version>1.9.0.RELEASE</swagger.version>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<commons-lang3.version>3.8.1</commons-lang3.version>
 
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-		<guava.version>27.0.1-jre</guava.version>
+		<guava.version>27.1-jre</guava.version>
 
 		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
-		<okhttp.version>3.12.1</okhttp.version>
+		<okhttp.version>3.14.1</okhttp.version>
 
 		<!-- https://mvnrepository.com/artifact/com.dyuproject.protostuff/protostuff-core -->
 		<protostuff.version>1.1.3</protostuff.version>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-		<poi.version>4.0.1</poi.version>
+		<poi.version>4.1.0</poi.version>
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<commons-io.version>2.6</commons-io.version>
@@ -79,7 +79,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 		<zxing.version>3.3.3</zxing.version>
 
 		<!-- https://mvnrepository.com/artifact/org.simplejavamail/simple-java-mail -->
-		<simple-java-mail.version>5.1.3</simple-java-mail.version>
+		<simple-java-mail.version>5.1.4</simple-java-mail.version>
 
 		<!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
 		<pinyin4j.version>2.5.1</pinyin4j.version>
@@ -97,7 +97,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 		<commons-dbutils.version>1.7</commons-dbutils.version>
 
 		<!-- https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss -->
-		<oss.version>3.4.1</oss.version>
+		<oss.version>3.4.2</oss.version>
 	</properties>
 
 	<dependencies>
@@ -148,20 +148,15 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-		<!-- springboot mongo -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
+        <!-- springboot elasticsearch -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
 		<!-- springboot rabbitmq -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-		<!-- springboot actuator -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- spring session -->
 		<dependency>
@@ -169,7 +164,7 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 			<artifactId>spring-session-data-redis</artifactId>
 			<version>${spring-session.version}</version>
 		</dependency>
-		<!-- jackson datatype (guava, yaml) -->
+		<!-- jackson datatype (guava, yaml, csv) -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-guava</artifactId>
@@ -195,16 +190,11 @@ Deolin使用的技术栈，比较琐碎所以记录一下。
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-jul</artifactId>
 		</dependency>
-		<!-- log4j2 nosql -->
+		<!-- logstash -->
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-nosql</artifactId>
-			<version>${log4j2-nosql.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j2-nosql.version}</version><!-- core模块的版本需要降至与nosql模块一致 -->
+			<groupId>biz.paluch.logging</groupId>
+			<artifactId>logstash-gelf</artifactId>
+			<version>${logstash-gelf.version}</version>
 		</dependency>
 		<!-- disruptor -->
 		<dependency>

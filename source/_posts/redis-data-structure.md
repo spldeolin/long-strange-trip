@@ -1,0 +1,202 @@
+---
+title: Redis底层数据结构
+
+date: 2019-05-06 10:28
+
+updated: 2019-05-06 10:28
+
+tags:
+- Redis
+- 数据结构
+
+categories: 数据结构
+
+permalink: redis-data-structure
+---
+
+## 简介
+
+Deolin花了几天时间，详细地整理一下Redis底层用到的数据结构
+
+
+
+## SDS
+
+1. Redis使用SDS而不是C语言原生的字符串作为字符串的存储方式
+
+2. SDS的结构
+
+   ~~~c
+   struct sdshdr {
+       int len; // 记录了buf[]已使用的数量，等于字符串的长度
+       int free; // 记录了buf[]未使用的数量
+       char buf[]; // 用于保存字符串的每个字符
+   }
+   ~~~
+
+   注意，`buf[]`遵循了C语言字符串的惯例，以`'\0'`作为数组的最后一个元素，`'\0'`不计算在len中。
+
+   这样做的好处是，SDS可以**复用**很大一部分C语言现成的字符串的函数。
+
+3. SDS比起C字符串的优势
+
+   - 获取字符串长度的时间复杂度是O(1)
+
+     原因是C字符串不记录长度，想要获取长度只能遍历，时间复杂度是O(N)
+
+   - 由于`free`属性的存在，数组不会溢出
+
+   - 修改字符串时，会采用**空间预分配**、**惰性空间释放**等机制，以空间换时间。
+
+   - 可以保存图片、音频、视频等二进制文件
+
+     C字符串以`'/0'`作为结束，一旦二进制文件出现了`'/0'`，就认为字符串结束了，所以只能保存文本数据
+
+
+
+## 链表
+
+1. 链表是Redis的LIST键的实现之一，C语言没有提供链表的实现，所以由Redis自己实现
+
+2. 链表和链表结点的结构
+
+   ~~~c
+   typedef struct listNode {
+       struct listNode *prev; // 前指针域
+       struct listNode *next; // 后指针域
+       void *value; // 数据域
+   }	
+   ~~~
+
+   ~~~c
+   typedef struct list {
+       listNode *head; // 表头指针
+       listNode *tail; // 表尾指针
+       unsigned long len; // 链表长度
+       
+       void *(*dup) (void *ptr); // 复制一个Node
+       void *(*free) (void *ptr) // 释放一个Node
+       int (*match) (void *ptr, void *key); // 比较两个Node（的数据域）
+   }
+   ~~~
+
+3. 特性
+
+   - 由于`表头指针`和`表尾指针`，Redis的链表是双端的，获取头尾结点的时间复杂度是O(1)
+   - 由于头结点的`*prev`和尾结点的`*next`都指向NULL，Redis的链表是无环的
+   - 由于`len`属性，获取表长度的时间复杂度是O(1)
+
+
+
+## 字典
+
+1. 整个Redis数据库的底层实现就是字典，Redis的HASH键的底层实现也是字典
+
+2. 字典是基于Hash表实现的，与Java的HashMap类似，每个键都是唯一的
+3. 注意区分**HASH键**、**字典**、**Hash表**这3个概念
+
+3. Hash表的结构
+
+   ~~~c
+   typedef struct dictht {
+       dictEntry **table; // Hash表数组
+       unsigned long size; // Hash表的大小，永远是2的n次幂
+       unsigned long sizemask; // Hash掩码，永远是size - 1
+       unsigned long used; // Hash表结点数
+   }
+   ~~~
+
+   ~~~c
+   typedef struct dictEntry {
+       void *key; // Hash表的key
+       union { // Hash表的value，可以是个指针，或是unit64_t整数，或是int64_t整数
+           void *val; 
+           uint64_tu64; 
+           int64_ts64;
+       } v;
+       struct dictEntry *next; // Hash冲突时线程链表（跟Java很像）
+   } 
+   ~~~
+
+4. 字典的实现
+
+   ~~~c
+   typedef struct dict {
+       dictType *type; // 这个属性是为了支持多种数据类型，不用关注c语言细节，参考Java的泛型
+       void *privdata; // 这个属性是为了支持多种数据类型，不用关注c语言细节，参考Java的泛型
+       dictht ht[2]; // ht[1]大部分时候是空表，rehash才会用到ht[1]
+   
+     	int rehashindex; // 标志位，大部分时候为-1
+   }
+   ~~~
+
+5. Hash算法
+
+   - 通过字段内部的`hashFunction`计算key的Hash值
+   - Hash值与Hash表中的`sizemask`进行**与运算**，算出下标
+
+6. rehash过程
+
+   - 为`ht[1]`分配空间，需要的空间基于`ht[0]`的`used`，一般扩大操作取第一个大于`used*2`的**2的n次幂**，收缩操作取第一个大于`used*2`的**2的n次幂**
+   - 重新使用`ht[1]`的`sizemask`，重新算出每个key在`ht[1]`的下标，逐个迁移每个entry
+   - 迁移完毕后，`ht[0]`变成空表，释放`ht[0]`，将`ht[1]`设置为`ht[0]`，`ht[1]`新建一个空表，rehash完毕
+
+7. 渐进式rehash
+
+   - 为`ht[1]`分配空间，让字典同时持有`ht[0]`和`ht[1]`，并把`rehashindex`从`-1`设为`0`，表示开始rehash
+   - rehash期间，`ht[0]`添加、删除、更新操作时，操作也会顺带同步到`ht[1]`，当rehash完毕后，`rehashindex`从`0`设为`1`
+   - 当`ht[0]`与`ht[1]`一致时，`rehashindex`从`1`设为`-1`
+   - 渐进式rehash期间，新的kv只会添加到`ht[1]`，`ht[0]`只减不增，直至变为空表
+
+   
+
+## 跳跃表
+
+1. 跳跃表是Redis中ZSET的底层实现
+
+2. 跳跃表的结构
+
+   可以结合这个图来理解跳跃表的结构
+
+   ![](/images/redis-data-structure-01.png)
+
+   ~~~c
+   typedef struct zskiplist {
+     
+       zskiplistNode *header; // 头指针
+     
+       zskiplistNode *tail; // 尾指针
+     
+       int level; // 层数最大结点的层数（不计表头结点）
+     
+       int len; // 结点个数（不计表头结点）
+   }
+   ~~~
+
+   ~~~c
+   typedef struct zskiplistNode {
+     
+       struct zskiplistLevel {
+           struct zskiplistNode *forward; // 前进指针
+           unsigned int span; // 跨度，指距前一个结点跳过了几个结点
+       } level[];
+     
+       struct zskiplistNode *backward; // 后退指针
+     
+       double score; // 分值
+       
+       robj *obj; // 数据域
+   }
+   ~~~
+
+3. 跨度`span`的作用
+
+   - 两个结点之间跃过的结点越多，跨度越大
+
+   - 指向null的接口的跨度为0
+
+   - 跨度不是用来遍历的，想要遍历跳表有前进指针就行了
+
+   - 跨度是用来计算某个结点的排位的，在寻找结点时，把沿途的跨度都累加起来，代表了该结点的排位
+
+     

@@ -1,9 +1,9 @@
 ---
-title: Redis底层数据结构
+title: Redis底层数据结构 上
 
-date: 2019-05-06 10:28
+date: 2019-05-07 16:32
 
-updated: 2019-05-06 10:28
+updated: 2019-05-07 16:32
 
 tags:
 - Redis
@@ -11,7 +11,7 @@ tags:
 
 categories: 数据结构
 
-permalink: redis-data-structure
+permalink: redis-data-structure-1
 ---
 
 ## 简介
@@ -158,7 +158,7 @@ Deolin花了几天时间，详细地整理一下Redis底层用到的数据结构
 
    可以结合这个图来理解跳跃表的结构
 
-   ![](/images/redis-data-structure-01.png)
+   ![](/images/redis-data-structure-1-01.png)
 
    ~~~c
    typedef struct zskiplist {

@@ -4,7 +4,7 @@ title: Java8 time包指南
 
 date: 2019-06-06 22:25
 
-updated: 2019-06-06 22:25
+updated: 2019-06-07 22:50
 
 tags:
 - Java
@@ -19,13 +19,18 @@ permalink: java8-time-guide
 
 这次，Deolin将会全面整理一份关于Java8新的time包的使用指南。
 
+在此之前，对time包做过两次简单的整理，在这篇POST出现后，它们将会被废弃。
+
+[过时1](https://github.com/spldeolin/long-strange-trip/blob/master/deprecated/java8-time.md) [过时2](https://github.com/spldeolin/long-strange-trip/blob/master/deprecated/java8-time-ex.md)
 
 
-##新的类型
+
+## 新的类型
 
 ### LocalDate与LocalTime
 
 - 类如其名，它们分别代表“年月日”这样的**日期**与“时分秒”这样的**时间**
+
 - 这两个类型都实现了`Temporal`接口
 
 - 构建对象
@@ -41,7 +46,7 @@ permalink: java8-time-guide
   LocalTime localTime3 = LocalTime.parse("12:12:12", dateTimeFormatter);
   ~~~
 
-- 读取值
+- 解析时间
 
   ~~~java
   // 方式一：通过API
@@ -50,10 +55,17 @@ permalink: java8-time-guide
   // ...
   
   // 方式二：通过TemporalField
-  int month = localDate.get(ChronoField.MONTH_OF_YEAR); // 枚举实现了TemporalField
+  int month = localDate.get(ChronoField.MONTH_OF_YEAR); // ChronoField枚举实现了TemporalField
   int minute = localTime.get(ChronoField.MINUTE_OF_HOUR);
   // ...
   ~~~
+  
+  示例中提到的`TemporalField`接口值得被关注，它有许多实现类，这意味着Java提供了许多种解析时间的方式，例如
+  
+  - get(IsoFields.DAY_OF_QUARTER) 返回该时间是所在季度的第几天
+  - get(ChronoField.MINUTE_OF_HOUR) 返回该时间的分钟数
+  
+  多查`TemporalField`的实现类，并善用它们，可以让原本复杂的时间解析变得非常简单。
 
 
 
@@ -71,9 +83,9 @@ permalink: java8-time-guide
   LocalDateTime ldt5 = localTime.atDate(localDate); 
   ~~~
 
-  可以看到方式非常多
+  不得不说，真的设计地非常灵活。
 
-- LocalDateTime的API与LocalDate和LocalTime很类似
+- `LocalDateTime`的API与`LocalDate`和`LocalTime`很类似
 
 
 
@@ -88,6 +100,7 @@ permalink: java8-time-guide
 ### Duration与Period
 
 - 它们分别表示两个`Temporal`之间的时间间隔
+
 - 这两个类都没有实现`Temporal`接口
 
 - 构建对象
@@ -102,11 +115,15 @@ permalink: java8-time-guide
   Period period = Period.between(LocalDate.now(), LocalDate.of(2019, 12, 31));
   ~~~
 
+- 解析**时间间隔**
+
+  `Duration`与`Period`对象都支持使用`get`方法进行解析，这个方法支持所有`TemporalUnit`的实现类
+
   
 
 ## 操作Temporal
 
-这里以LocalDate为例，介绍一下如何操作Temporal对象
+这里以`LocalDate`为例，介绍一下如何操作`Temporal`对象
 
 - 直接修改值
 
@@ -119,7 +136,7 @@ permalink: java8-time-guide
   LocalDate newDate2 = date.with(TemporalAdjuster.lastDayOfMonth()); // 2014-12-31
   ~~~
 
-  注意，LocalDate是不可变对象
+  注意，`LocalDate`是不可变对象
 
 - 相对修改值
 

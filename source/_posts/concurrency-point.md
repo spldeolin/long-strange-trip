@@ -4,7 +4,7 @@ title: Java并发 知识点
 
 date: 2019-06-21 15:32
 
-updated: 2019-06-21 15:32
+updated: 2019-06-21 15:42
 
 tags:
 - Java知识点
@@ -61,7 +61,6 @@ permalink: concurrency-point
 
 1. 公平锁 and 非公平锁？
 2. 可重入锁（递归锁）
-
 3. 自旋锁
 4. 自旋锁的缺点
 5. 手写自旋锁

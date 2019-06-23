@@ -4,7 +4,7 @@ title: 手臂动作
 
 date: 2019-06-23 10:42
 
-updated: 2019-06-23 10:42
+updated: 2019-06-23 10:56
 
 tags:
 - 健身动作要点
@@ -27,7 +27,7 @@ permalink: arm
 
 ### 绳索弯举
 
-![](images/绳索弯举（直杆）.jpg)
+![](/images/绳索弯举（直杆）.jpg)
 
 - 握距与肩同宽，手肘贴近身体
 
@@ -35,7 +35,7 @@ permalink: arm
 
 ### 绳索锤式弯举（拉绳）
 
-![](images/绳索锤式弯举（拉绳）.jpg)
+![](/images/绳索锤式弯举（拉绳）.jpg)
 
 - 手肘贴近身体
 
@@ -43,7 +43,7 @@ permalink: arm
 
 ### 绳索弯举（反握）
 
-![](images/绳索弯举（反握）.jpg)
+![](/images/绳索弯举（反握）.jpg)
 
 
 
@@ -59,16 +59,16 @@ permalink: arm
 
 ### 下压
 
-![](images/下压.jpg)
+![](/images/下压.jpg)
 
 
 
 ### “拧毛巾”
 
-![](images/“拧毛巾”.jpg)
+![](/images/“拧毛巾”.jpg)
 
 
 
 ### 过头顶屈伸
 
-![](images/过头顶屈伸.jpg)
+![](/images/过头顶屈伸.jpg)

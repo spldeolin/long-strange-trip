@@ -8,6 +8,7 @@ updated: 2017-12-20 14:30
 tags:
 - Lombok
 - IntelliJ IDEA
+- 初次尝试
 
 categories: Java
 

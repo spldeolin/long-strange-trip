@@ -6,7 +6,7 @@ date: 2019-02-21 11:10
 updated: 2019-02-21 11:10
 
 tags:
-- 配置
+- 初次尝试
 
 categories: Mac OS
 

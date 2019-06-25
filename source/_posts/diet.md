@@ -9,7 +9,7 @@ updated: 2019-03-24 12:15
 tags:
 - 饮食
 
-categories: 生活
+categories: 健康
 
 permalink: diet
 

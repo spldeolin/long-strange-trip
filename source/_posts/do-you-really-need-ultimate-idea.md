@@ -109,7 +109,7 @@ Ultimate比起Community，多提供以下的功能：
 
 1. 少了很多功能，代表IDEA的系统占用也会小很多，启动速度也会快不少
 
-2. 不用承担购买Ultimate的开销，或是不用承担破解Ultimate的心理负担
+2. 不用承担购买Ultimate的开销，或是不用承担破解Ultimate带来的心理负担
 
    
 

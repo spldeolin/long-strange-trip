@@ -53,7 +53,7 @@ http://localhost:8080/spring-mvc-showcase
 
 ~~~~java
 @GetMapping
-void get(@RequestParam List<Integer> ) {
+void get(@RequestParam List<Integer> values) {
     
 }
 ~~~~

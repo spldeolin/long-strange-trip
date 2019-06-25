@@ -6,7 +6,7 @@ date: 2019-02-21 11:37
 updated: 2019-02-21 11:37
 
 tags:
-- 配置
+- Alfred
 
 categories: Mac OS
 

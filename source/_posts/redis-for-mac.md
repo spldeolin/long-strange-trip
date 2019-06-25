@@ -1,5 +1,5 @@
 ---
-title: macOS安装Redis
+title: Mac OS安装Redis
 
 date: 2019-02-15 09:26
 
@@ -8,7 +8,7 @@ updated: 2019-02-15 09:26
 tags:
 - Redis
 
-categories: macOS
+categories: Mac OS
 
 permalink: redis-for-mac
 ---

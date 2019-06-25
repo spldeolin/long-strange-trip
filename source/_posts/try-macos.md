@@ -1,5 +1,5 @@
 ---
-title: 初次使用macOS时遇到的各种问题
+title: 初次使用Mac OS时遇到的各种问题
 
 date: 2019-02-21 11:10
 
@@ -8,20 +8,20 @@ updated: 2019-02-21 11:10
 tags:
 - 配置
 
-categories: macOS
+categories: Mac OS
 
 permalink: try-macos
 ---
 
 ## 简介
 
-这篇POST将会介绍Deolin使用macOS时的一些偏好。
+这篇POST将会介绍Deolin使用Mac OS时的一些偏好。
 
 这里将会不断追加新内容，请善用检索功能
 
 
 
-## 改变macOS的桌面壁纸
+## 改变Mac OS的桌面壁纸
 
 1. alfred打开“桌面与屏幕保护程序“
 2. 选择”桌面“选项卡
@@ -50,7 +50,7 @@ permalink: try-macos
 
 
 
-## macOS下Google Chrome的快捷键
+## Mac OS下Google Chrome的快捷键
 
 | 组合键   | 说明           |
 | -------- | -------------- |
@@ -60,7 +60,7 @@ permalink: try-macos
 
 
 
-## macOS如何锁定屏幕
+## Mac OS如何锁定屏幕
 
 按键为`⌃⌘Q`
 
@@ -95,7 +95,7 @@ permalink: try-macos
 
 ## iTerm 2 集成zsh和oh my zsh
 
-1. macOS一般默认安装了zsh
+1. Mac OS一般默认安装了zsh
 
    ~~~shell
    $ zsh --version
@@ -123,7 +123,7 @@ permalink: try-macos
 
 
 
-## 一般macOS软件 到顶部、到底部 的快捷键
+## 一般Mac OS软件 到顶部、到底部 的快捷键
 
 | 组合键 | 说明   |
 | ------ | ------ |
@@ -134,7 +134,7 @@ permalink: try-macos
 
 ## 禁用rootless
 
-rootless可以理解为macOS防止用户误操作的保护措施。
+rootless可以理解为Mac OS防止用户误操作的保护措施。
 
 例如，开启rootless的情况下，用户即便是sudo，也无法删除系统根目录。
 

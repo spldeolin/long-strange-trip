@@ -9,7 +9,7 @@ updated: 2019-03-01 13:09
 tags:
 - 7Zip
 
-categories: macOS
+categories: Mac OS
 
 permalink: 7zip-command
 
@@ -48,4 +48,3 @@ $ 7z a -v512m large-folder/ large-achievement.7z
 ~~~
 
 这个命令演示了将`large-folder`文件夹进行分卷压缩，生成`large-achievement.7z.001`、`large-achievement.7z.002`……每个分卷最大`512M`
-

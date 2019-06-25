@@ -1,5 +1,5 @@
 ---
-title: macOS安装RabbitMQ
+title: Mac OS安装RabbitMQ
 
 date: 2019-02-17 08:08
 
@@ -8,7 +8,7 @@ updated: 2019-02-17 08:08
 tags:
 - RabbitMQ
 
-categories: macOS
+categories: Mac OS
 
 permalink: rabbitmq-for-mac
 ---

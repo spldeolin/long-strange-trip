@@ -1,5 +1,5 @@
 ---
-title: macOS常用环境、软件
+title: Mac OS常用环境、软件
 
 date: 2019-02-14 13:39
 
@@ -12,13 +12,13 @@ tags:
 - MongoDB
 - Nginx
 - Git
-- macOS
+- Mac OS
 - Python
 - 7Zip
 
-categories: macOS
+categories: Mac OS
 
-permalink: macos-softwares
+permalink: Mac OS-softwares
 ---
 
 
@@ -46,7 +46,7 @@ permalink: macos-softwares
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ~~~
 
-macOS一般通过以下3个方式安装软件
+Mac OS一般通过以下3个方式安装软件
 
 - Homebrew
 
@@ -271,7 +271,7 @@ $ brew cask install sublime-text
 
 
 
-### Bartender （管理macOS顶部菜单栏的图标）
+### Bartender （管理Mac OS顶部菜单栏的图标）
 
 ~~~shell
 $ brew cask install bartender
@@ -289,7 +289,7 @@ $ brew cask install kawa
 
 ## 开发用软件
 
-### iTerm 2 （代替macOS自带的终端）
+### iTerm 2 （代替Mac OS自带的终端）
 
 ~~~
 $ brew cask install iterm2

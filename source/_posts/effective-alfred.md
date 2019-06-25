@@ -8,14 +8,14 @@ updated: 2019-02-21 11:37
 tags:
 - 配置
 
-categories: macOS
+categories: Mac OS
 
 permalink: effective-alfred
 ---
 
 ## 简介
 
-Alfred是个非常高效的工具，用过macOS的都懂
+Alfred是个非常高效的工具，用过Mac OS的都懂
 
 
 

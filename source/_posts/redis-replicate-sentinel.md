@@ -9,7 +9,7 @@ updated: 2019-05-15 16:01
 tags:
 - Redis
 
-categories: Java
+categories: Redis
 
 permalink: redis-replicate-sentinel
 

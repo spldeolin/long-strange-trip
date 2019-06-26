@@ -1,5 +1,5 @@
 ---
-title: Spring-boot动态profiles的实践
+title: Spring Boot动态profiles的实践
 
 date: 2018-03-15 16:55
 

@@ -94,3 +94,23 @@ if (b != null) {
 Long a = NumberUtils.createLong(user.getValue());
 ~~~
 
+
+
+## 字符串拼接
+
+原来的做法
+
+~~~java
+throw new Exception("第" + invalidSheet + "个sheet，第" + invalidRow + "行数据格式不正确。错误信息：" + e.getMessage());
+~~~
+
+
+
+更好的做法
+
+~~~java
+throw new Exception(Joiner.join("第", invalidSheet, "个sheet，第", invalidRow, "行数据格式不正确。错误信息：", e.getMessage()))
+~~~
+
+
+

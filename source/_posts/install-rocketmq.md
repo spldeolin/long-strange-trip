@@ -1,10 +1,10 @@
 ---
 
-title: *nix安装RocketMQ及其控制台
+title: 安装RocketMQ及其控制台
 
 date: 2019-06-27 19:15
 
-updated: 2019-06-27 19:15
+updated: 2019-06-28 08:15
 
 tags:
 - RocketMQ

@@ -3,7 +3,7 @@ title: Mac OS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-28 09:13
+updated: 2019-07-05 17:54
 
 tags:
 - 总结
@@ -18,7 +18,7 @@ tags:
 
 categories: Mac OS
 
-permalink: Mac OS-softwares
+permalink: macos-softwares
 ---
 
 
@@ -63,14 +63,6 @@ Homebrew相当于centOS的yum，ubuntu的apt。
 
 ~~~shell
 $ brew cask install alfred
-~~~
-
-
-
-### CheatSheet （长按⌘显示快捷键）
-
-~~~shell
-$ brew cask install cheatsheet
 ~~~
 
 
@@ -249,14 +241,6 @@ $ brew cask install timing
 
 
 
-### Imazing （比iTune更方便管理iOS的文件）
-
-```shell
-$ brew cask install imazing
-```
-
-
-
 ###  * Inpaint （消除图片水印）
 
 通过从[官网](https://www.theinpaint.com/)下载dmg安装
@@ -313,10 +297,12 @@ $ brew cask install gitkraken
 
 
 
-### IntelliJ IDEA Community
+### IntelliJ IDEA、PyCharm、DataGrip
 
 ~~~shell
-$ brew cask install intellij-idea-ce
+$ brew cask install intellij-idea
+$ brew cask install pycharm
+$ brew cask install datagrip
 ~~~
 
 
@@ -329,14 +315,6 @@ $ brew cask install visual-studio-code
 
 
 
-### 微信开发者工具
-
-~~~shell
-$ brew cask install wechatwebdevtools
-~~~
-
-
-
 ### * Navicat
 
 ~~~shell
@@ -345,9 +323,9 @@ $ brew cask install navicat-premium
 
 
 
-### * Redis Desktop Manager
+### * Medis
 
-通过[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装（0.7.6.18是最后一个免费版）
+通过App Store安装
 
 
 
@@ -359,8 +337,6 @@ $ brew cask install postman
 
 
 
-## 开发用软件
-
 ### OpenJDK
 
 ~~~shell
@@ -369,7 +345,7 @@ $ brew cask install adoptopenjdk
 
 
 
-### Python 3 和 pip
+### Python 3、pip
 
 1. 安装
 

@@ -247,14 +247,6 @@ $ brew cask install timing
 
 
 
-### Sublime 3
-
-~~~shell
-$ brew cask install sublime-text
-~~~
-
-
-
 ### Bartender （管理Mac OS顶部菜单栏的图标）
 
 ~~~shell
@@ -297,9 +289,18 @@ $ brew cask install gitkraken
 
 
 
-### IntelliJ IDEA、PyCharm、DataGrip
+### Dash
 
 ~~~shell
+$ brew cask install dash
+~~~
+
+
+
+### Jetbrains
+
+~~~shell
+$ brew cask install jetbrains-toolbox
 $ brew cask install intellij-idea
 $ brew cask install pycharm
 $ brew cask install datagrip
@@ -389,6 +390,12 @@ $ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Libr
 ~~~
 
 > 直接使用`brew install sshpass`会报错，因为这个软件会令人养成不好的安全习惯，所以需要通过github地址安装
+
+
+
+## 字体
+
+[Microsoft YaHei Mono](https://www.onlinewebfonts.com/download/9798f64007ae3426b2336e57dae4149c)
 
 
 

@@ -1,7 +1,7 @@
 ---
 
 
-title: 学习Python（8） “时间”
+title: 学习Python（12） “时间”
 
 date: 2019-08-19 16:39
 
@@ -20,7 +20,7 @@ permalink: learning-python-time
 
 “时间”类的数据类型，一般在高级编程语言中都是内置的，Python也不例外。
 
-系列的第8篇将会介绍Python中的两个时间类库——`time`和`datetime`
+系列的第12篇将会介绍Python中的两个时间类库——`time`和`datetime`
 
 
 

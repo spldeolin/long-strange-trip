@@ -4,7 +4,7 @@ title: Javaparser类型简析
 
 date: 2019-11-01 21:46
 
-updated: 2019-11-01 21:46
+updated: 2019-11-01 22:22
 
 tags:
 - Java
@@ -242,14 +242,23 @@ permalink: javaparser-type
 
 ###  LiteralExpr “字面量”
 
-1. BooleanLiteralExpr
-2. CharLiteralExpr
-3. DoubleLiteralExpr
-4. IntegerLiteralExpr
-5. LongLiteralExpr
-6. NullLiteralExpr
-7. StringLiteralExpr
-8. TextBlockLiteralExpr
+1. `BooleanLiteralExpr`
+
+2. `CharLiteralExpr`
+
+3. `DoubleLiteralExpr`
+
+4. `IntegerLiteralExpr`
+
+5. `LongLiteralExpr`
+
+6. `NullLiteralExpr`
+
+7. `StringLiteralExpr`
+
+8. `TextBlockLiteralExpr`
+
+   Java13的多行字符串，类似于Python中`'''`包裹的字符串
 
 
 

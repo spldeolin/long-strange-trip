@@ -253,7 +253,7 @@ permalink: javaparser-type
 
 
 
-##Statement “语句/代码块”
+## Statement “语句/代码块”
 
 难以找到一个中文词语来描述`Statement`，但可以看看它们的一些共性
 

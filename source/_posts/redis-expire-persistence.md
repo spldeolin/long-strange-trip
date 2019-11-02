@@ -9,7 +9,7 @@ updated: 2019-05-08 11:00
 tags:
 - Redis
 
-categories: Java
+categories: Redis
 
 permalink: redis-expire-persistence
 

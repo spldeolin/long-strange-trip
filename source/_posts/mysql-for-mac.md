@@ -1,5 +1,5 @@
 ---
-title: macOS安装MySQL
+title: Mac OS安装MySQL
 
 date: 2019-02-15 09:08
 
@@ -8,7 +8,7 @@ updated: 2019-02-15 09:08
 tags:
 - MySQL
 
-categories: macOS
+categories: Mac OS
 
 permalink: mysql-for-mac
 ---

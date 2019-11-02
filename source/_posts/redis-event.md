@@ -9,7 +9,7 @@ updated: 2019-05-13 16:25
 tags:
 - Redis
 
-categories: Java
+categories: Redis
 
 permalink: redis-event
 

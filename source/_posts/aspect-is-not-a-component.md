@@ -5,7 +5,8 @@ date: 2018-01-07 15:38
 
 updated: 2018-01-07 15:38
 
-tags: Spring
+tags:
+- Spring
 
 categories: Java
 

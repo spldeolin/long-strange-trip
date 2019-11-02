@@ -1,9 +1,9 @@
 ---
-title: macOS常用环境、软件
+title: Mac OS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-03-28 09:13
+updated: 2019-07-05 17:54
 
 tags:
 - 总结
@@ -12,11 +12,11 @@ tags:
 - MongoDB
 - Nginx
 - Git
-- macOS
+- Mac OS
 - Python
 - 7Zip
 
-categories: macOS
+categories: Mac OS
 
 permalink: macos-softwares
 ---
@@ -46,7 +46,7 @@ permalink: macos-softwares
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ~~~
 
-macOS一般通过以下3个方式安装软件
+Mac OS一般通过以下3个方式安装软件
 
 - Homebrew
 
@@ -63,14 +63,6 @@ Homebrew相当于centOS的yum，ubuntu的apt。
 
 ~~~shell
 $ brew cask install alfred
-~~~
-
-
-
-### CheatSheet （长按⌘显示快捷键）
-
-~~~shell
-$ brew cask install cheatsheet
 ~~~
 
 
@@ -249,29 +241,13 @@ $ brew cask install timing
 
 
 
-### Imazing （比iTune更方便管理iOS的文件）
-
-```shell
-$ brew cask install imazing
-```
-
-
-
 ###  * Inpaint （消除图片水印）
 
 通过从[官网](https://www.theinpaint.com/)下载dmg安装
 
 
 
-### Sublime 3
-
-~~~shell
-$ brew cask install sublime-text
-~~~
-
-
-
-### Bartender （管理macOS顶部菜单栏的图标）
+### Bartender （管理Mac OS顶部菜单栏的图标）
 
 ~~~shell
 $ brew cask install bartender
@@ -289,7 +265,7 @@ $ brew cask install kawa
 
 ## 开发用软件
 
-### iTerm 2 （代替macOS自带的终端）
+### iTerm 2 （代替Mac OS自带的终端）
 
 ~~~
 $ brew cask install iterm2
@@ -313,10 +289,21 @@ $ brew cask install gitkraken
 
 
 
-### IntelliJ IDEA Community
+### Dash
 
 ~~~shell
-$ brew cask install intellij-idea-ce
+$ brew cask install dash
+~~~
+
+
+
+### Jetbrains
+
+~~~shell
+$ brew cask install jetbrains-toolbox
+$ brew cask install intellij-idea
+$ brew cask install pycharm
+$ brew cask install datagrip
 ~~~
 
 
@@ -329,14 +316,6 @@ $ brew cask install visual-studio-code
 
 
 
-### 微信开发者工具
-
-~~~shell
-$ brew cask install wechatwebdevtools
-~~~
-
-
-
 ### * Navicat
 
 ~~~shell
@@ -345,9 +324,9 @@ $ brew cask install navicat-premium
 
 
 
-### * Redis Desktop Manager
+### * Medis
 
-通过[Github](https://github.com/uglide/RedisDesktopManager/releases?after=0.8.1)下载的dmg文件安装（0.7.6.18是最后一个免费版）
+通过App Store安装
 
 
 
@@ -359,8 +338,6 @@ $ brew cask install postman
 
 
 
-## 开发用软件
-
 ### OpenJDK
 
 ~~~shell
@@ -369,7 +346,7 @@ $ brew cask install adoptopenjdk
 
 
 
-### Python 3 和 pip
+### Python 3、pip
 
 1. 安装
 
@@ -413,6 +390,12 @@ $ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Libr
 ~~~
 
 > 直接使用`brew install sshpass`会报错，因为这个软件会令人养成不好的安全习惯，所以需要通过github地址安装
+
+
+
+## 字体
+
+[Microsoft YaHei Mono](https://www.onlinewebfonts.com/download/9798f64007ae3426b2336e57dae4149c)
 
 
 

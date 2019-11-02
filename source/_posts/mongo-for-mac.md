@@ -1,5 +1,5 @@
 ---
-title: macOS安装MongoDB
+title: Mac OS安装MongoDB
 
 date: 2019-02-15 10:08
 
@@ -8,7 +8,7 @@ updated: 2019-02-15 10:08
 tags:
 - MongoDB
 
-categories: macOS
+categories: Mac OS
 
 permalink: mongo-for-mac
 ---

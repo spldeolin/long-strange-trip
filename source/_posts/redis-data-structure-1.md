@@ -9,7 +9,7 @@ tags:
 - Redis
 - 数据结构
 
-categories: 数据结构
+categories: Redis
 
 permalink: redis-data-structure-1
 ---

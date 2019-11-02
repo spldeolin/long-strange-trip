@@ -7,9 +7,9 @@ date: 2019-06-23 10:42
 updated: 2019-06-23 10:56
 
 tags:
-- 健身动作要点
+- 健身动作
 
-categories: 健身
+categories: 健康
 
 permalink: arm
 

@@ -8,7 +8,7 @@ updated: 2019-03-19 13:19
 tags:
 - Homebrew
 
-categories: macOS
+categories: Mac OS
 
 permalink: brew
 
@@ -16,7 +16,7 @@ permalink: brew
 
 ## 简介
 
-经历了若干次尝试，Deolin已经掌握了如何在macOS安装软件了。
+经历了若干次尝试，Deolin已经掌握了如何在Mac OS安装软件了。
 
 通过Homebrew大概是安装软件最方便的方式了，这篇POST将会介绍Brew相关的命令。
 

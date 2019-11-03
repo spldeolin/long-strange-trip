@@ -4,7 +4,7 @@ title: Javaparser类型简析
 
 date: 2019-11-01 21:46
 
-updated: 2019-11-01 22:22
+updated: 2019-11-03 15:32
 
 tags:
 - Java
@@ -382,7 +382,7 @@ permalink: javaparser-type
 
 ## Javadoc “Java Doc”
 
-`Javadoc`是一个与`JavadocComment`的不同的类，前者不是`Comment`的派生类，甚至不是`Node`的派生类。
+`Javadoc`是一个与`JavadocComent`的不同的类，前者不是`Comment`的派生类，甚至不是`Node`的派生类。
 
 两者的区别，可以以下面两个例子说明——
 
@@ -402,7 +402,6 @@ permalink: javaparser-type
  * </pre>
  *
  * @author Deolin
- * @see Javadoc
  */
 ~~~
 
@@ -412,5 +411,13 @@ permalink: javaparser-type
 
 
 
+举个详细点的例子
 
+![](/images/javaparser-type-02.png)
+
+![](/images/javaparser-type-03.png)
+
+可以看出，Java是由内容描述和tags组成的，每个tag是由name、type与内容组成的，内容里的元素又分普通文本与inline标签。
+
+有了例子以后，还是比较直观的
 

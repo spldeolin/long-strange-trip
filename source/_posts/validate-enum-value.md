@@ -125,7 +125,7 @@ public class SimpleUserDTO {
     @Size(max = 6)
     private String name;
 
-    @@ValidEnumValue(enumType = VipTypeEnum.class)
+    @ValidEnumValue(enumType = VipTypeEnum.class)
     private Integer vipType;
 }
 ~~~

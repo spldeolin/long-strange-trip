@@ -4,7 +4,7 @@ title: Spring 组件参数校验
 
 date: 2019-12-05 08:16
 
-updated: 2019-12-05 09:27
+updated: 2019-12-05 10:20
 
 tags:
 - Spring
@@ -56,6 +56,8 @@ permalink: spring-component-validated
   接口的方法声明指定了所有的校验策略，`@NotNull`、`@Valid`、`@NotBlank`等等
 
   实现的类决定了校验实现，即通过`@Validated`注解
+
+  > 想象一下，这些校验如果在方法实现中，通过if-throw来实现，一旦field较多，会有多么的麻烦。
 
 
 

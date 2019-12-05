@@ -4,7 +4,7 @@ title: Spring 组件参数校验
 
 date: 2019-12-05 08:16
 
-updated: 2019-12-05 08:16
+updated: 2019-12-05 09:27
 
 tags:
 - Spring
@@ -17,9 +17,9 @@ permalink: spring-component-validated
 
 ## 简介
 
-这篇POST将会介绍如何给一个注册到Spring容器中的组件中的方法，进行参数校验。
+这篇POST将会介绍如何为Spring组件中的方法，进行参数校验。
 
-这里只介绍非**控制器**的组件，如果想要了解控制层参数校验，可以参考[这篇POST](https://spldeolin.com/posts/spring-controller-validated/)
+这里“组件”，不包含“控制器”，如果想要了解控制层参数校验，可以参考[这篇POST](https://spldeolin.com/posts/spring-controller-validated/)
 
 
 

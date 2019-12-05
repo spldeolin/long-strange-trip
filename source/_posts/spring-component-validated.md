@@ -72,7 +72,6 @@ permalink: spring-component-validated
           try {
           	  userApi.doSomething(null, null);
           } catch (ConstraintViolationException case1) {
-            	// ...解析case1对象省略
               log.error("实际参数未通过Api的参数校验规则");
           }
         

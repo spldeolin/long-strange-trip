@@ -1,5 +1,5 @@
 ---
-title: Spring Web 数据校验
+title: Spring WebMVC 控制层参数校验
 
 date: 2018-05-23 16:54
 
@@ -10,7 +10,7 @@ tags:
 
 categories: Java
 
-permalink: valid
+permalink: spring-controller-validated
 ---
 
 ## 简介

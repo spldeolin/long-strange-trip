@@ -1,10 +1,9 @@
 ---
-
 title: 让Java代码变得好看些（持续更新）
 
 date: 2019-05-27 09:20
 
-updated: 2019-06-25 16:48
+updated: 2019-12-22 13:53
 
 tags:
 - 总结
@@ -17,13 +16,11 @@ permalink: beautiful-java
 
 ## 简介
 
-这篇POST将会收录一些技巧，这些技巧能够使Java代码看上去更漂亮些。
-
-Deolin假定了你的项目都依赖 `Java 8` 、 `Google Guava`和`Apache Commons Lang3`。
+收录一些技巧，它们能够使Java代码看上去更漂亮些。
 
 
 
-##防止下标越界
+## 1. 防止下标越界
 
 原来的做法
 
@@ -41,26 +38,23 @@ if (users.size() > 0) {
 更好的做法
 
 ~~~java
+import com.google.common.collect.Iterables;
+
 User user = Iterables.getFirst(users, null);
 ~~~
 
 
 
-`Iterables`还提供了`getLast()`方法，与`getFirst()`同理
+同理还有`Iterables.getLast()`
 
 
 
-## 为空时的默认值
+## 2. null-to-default
 
 原来的做法
 
 ~~~java
-Integer age1 = user.getAge() != null ? user.getAge() : DEFAULT_AGE;
-
-Integer age2 = user.getAge();
-if (age2 == null) {
-    age2 = DEFAULT_AGE;
-}
+Integer age = user.getAge() != null ? user.getAge() : DEFAULT_USER.getAge();
 ~~~
 
 
@@ -68,18 +62,23 @@ if (age2 == null) {
 更好的做法
 
 ~~~java
-Integer age = com.google.common.base.Objects.firstNonNull(user.getAge(), DEFAULT_AGE)
+import com.google.common.base.MoreObjects;
+
+Integer age = MoreObjects.firstNonNull(user, DEFAULT_USER).getAge();
 ~~~
 
 
 
-## String -> Long时的null-safe
+在早期版本的Guava中，`firstNonNull`是声明在`com.google.common.base.Objects`中的，这容易与`java.util.Objects`产生冲突，所以不推荐使用过于早版本的Guava
+
+
+
+## 3. String -> Long时的null-safe
 
 原来的做法
 
 ~~~java
 String b = user.getValue();
-
 Long a = null;
 if (b != null) {
     a = Long.valueOf(b);
@@ -91,17 +90,24 @@ if (b != null) {
 更好的做法
 
 ~~~java
+import org.apache.commons.lang3.math.NumberUtils;
 Long a = NumberUtils.createLong(user.getValue());
 ~~~
 
 
 
-## 字符串拼接
+## 4. 字符串拼接
 
 原来的做法
 
 ~~~java
-throw new Exception("第" + invalidSheet + "个sheet，第" + invalidRow + "行数据格式不正确。错误信息：" + e.getMessage());
+if (userIds.size() > 0) {
+    StringBuilder msg = new StringBuilder("这些用户已被禁用：");
+    userIds.forEach(userId -> msg.append(userId).append("、"));
+    msg.deleteCharAt(msg.length() - 1);
+    msg.append("。")
+    throw new Exception(msg.toString()); // e.g.: 这些用户已被禁用：1、2、3。
+}
 ~~~
 
 
@@ -109,8 +115,68 @@ throw new Exception("第" + invalidSheet + "个sheet，第" + invalidRow + "行�
 更好的做法
 
 ~~~java
-throw new Exception(Joiner.join("第", invalidSheet, "个sheet，第", invalidRow, "行数据格式不正确。错误信息：", e.getMessage()))
+import com.google.common.base.Joiner;
+
+if (userIds.size() > 0) {
+    StringBuilder msg = Joiner.on("、").appendTo(new StringBuilder("这些用户已被禁用："), userIds).append("。");
+    throw new Exception(msg.toString()); // e.g.: 这些用户已被禁用：1、2、3。
+}
 ~~~
 
 
 
+## 5. 判断Optional里的value
+
+原来的做法
+
+~~~java
+boolean isKilled(Long studentId) {
+    Optional<Student> opt = studentService.get(studentId);
+    if (opt.isPresent()) {
+        return opt.get().getKillFlag();
+    }
+    return false;
+}
+~~~
+
+
+
+更好的做法
+
+~~~java
+boolean isKilledV2(Long studentId) {
+    Optional<Student> opt = studentService.get(studentId);
+    return opt.filter(Student::getKillFlag).isPresent();
+}
+~~~
+
+
+
+## 6. 获取容器中唯一的元素
+
+原来的做法
+
+~~~java
+Foo foo;
+if (foos.size == 0) {
+    throw new OneRuntimeException();
+} else if (foos.size > 1) {
+    throw new AnotherRuntimeException();
+} else {
+    foo = foos.get(0);
+}
+~~~
+
+
+
+更好的做法
+
+~~~java
+import com.google.common.collect.Iterables;
+
+Foo foo = Iterables.getOnlyElement(foos);
+~~~
+
+
+
+如果数据异常，`Iterables.getOnlyElement`会自己抛出`NoSuchElementException`或是`IllegalArgumentException`

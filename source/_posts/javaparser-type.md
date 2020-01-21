@@ -4,7 +4,7 @@ title: Javaparser类型简析
 
 date: 2019-11-01 21:46
 
-updated: 2019-11-03 15:32
+updated: 2020-01-21 21:54
 
 tags:
 - Java
@@ -145,15 +145,21 @@ permalink: javaparser-type
 
 4. `AssignExpr`
 
-   整个赋值语句
+   ~~~java
+   a = 5
+   ~~~
 
 5. `BinaryExpr`
 
-   有运算符参与的运算语句
+   ~~~java
+   a + 1
+   ~~~
 
 6. `CastExpr`
 
-   类型强转
+   ~~~java
+   (long) 15
+   ~~~
 
 7. `ClassExpr`
 
@@ -161,7 +167,9 @@ permalink: javaparser-type
 
 8. `ConditionalExpr`
 
-   三目表达式
+   ~~~java
+   if (a)
+   ~~~
 
 9. `EnclosedExpr`
 
@@ -181,7 +189,7 @@ permalink: javaparser-type
 
 13. `MethodCallExpr`
 
-    方法调用（链式调用一整句话算一个MethodCallExpr对象）
+    方法调用（链式调用一整句话算一个`MethodCallExpr`对象）
 
 14. `NameExpr`
 
@@ -193,11 +201,13 @@ permalink: javaparser-type
 
 15. `NormalAnnotationExpr`
 
-    例如：`@NotNull(message = "用户名不能为空")`
+    ~~~java
+    @Max(value = 1, message = "不能超过1")
+    ~~~
 
 16. `ObjectCreationExpr`
 
-    任何new东西的语句
+    new对象
 
 17. `SingleMemberAnnotationExpr`
 
@@ -213,7 +223,7 @@ permalink: javaparser-type
 
 20. `UnaryExpr`
 
-    取反表达式，感叹号和负号都算
+    一元表达式，包括非运算、取反、自增、自减等
 
 21. `VariableDeclarationExpr`
 
@@ -338,11 +348,11 @@ permalink: javaparser-type
 
 17. `TryStmt`
 
-    try-catch语句，内部有`tryBlock`、`catchClauses`、`finallyBlock`，以及代表Java7的auto-close的`resources`
+    try-catch语句，内部有`tryBlock`、`catchClause`、`finallyBlock`，以及代表Java7的auto-close的`resources`
 
 18. `LocalClassDeclarationStmt`
 
-    Java11的方法内类声明
+    方法内的Local类声明
 
 19. `WhileStmt`
 

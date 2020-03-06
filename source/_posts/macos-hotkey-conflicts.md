@@ -1,10 +1,10 @@
 ---
 
-title: Mac OS 按键冲突情况收集
+title: Mac OS 快捷键冲突情况的收集
 
 date: 2020-03-06 09:10
 
-updated: 2020-03-06 09:10
+updated: 2020-03-06 09:17
 
 tags:
 - Mac OS

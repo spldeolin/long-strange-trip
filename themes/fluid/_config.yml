@@ -316,7 +316,7 @@ tag:
 about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
   banner_img: /images/rijksmuseum_jan_lievens_1627.jpg
   banner_img_height: 80  # available: 0 - 100
-  subtitle:  about Deolin
+  subtitle:  hey there, i am Deolin.
   avatar: /images/avatar.jpg # 头像
   name: Deolin Yim
   introduce: 'Java / ACG / 健身 / 日本語 / 写作<br>「面白いたましいになりたい。」' # 支持 HTML

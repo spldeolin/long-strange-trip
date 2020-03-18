@@ -4,7 +4,7 @@ title: Spring事务的传播级别
 
 date: 2020-03-18 11:06
 
-updated: 2020-03-18 11:20
+updated: 2020-03-18 11:21
 
 tags:
 - Spring
@@ -125,7 +125,7 @@ InnerService {
 
 
 
-##NEVER级别
+## NEVER级别
 
 - “如果外层不存在事务，不新建事务”版的`PROPAGATION_MANDATORY`
 

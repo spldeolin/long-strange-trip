@@ -4,7 +4,7 @@ title: Spring事务的传播级别
 
 date: 2020-03-18 11:06
 
-updated: 2020-03-18 11:21
+updated: 2020-03-18 11:23
 
 tags:
 - Spring
@@ -25,7 +25,9 @@ Spring事务管理一共有7种传播级别，这篇POST将会详细地介绍它
 
 
 
-## REQUIRED级别
+
+
+## 1. REQUIRED级别
 
 - 如果没有专门指定，`REQUIRED`会是默认的传播级别
 - 如果外层存在一个事务，则加入到外层事务中；否则自己新建一个事务
@@ -52,7 +54,9 @@ InnerService {
 
 
 
-## SUPPORTS级别
+
+
+## 2. SUPPORTS级别
 
 - 如果外层存在一个事务，则加入到外层事务中；否则非事务执行，就当没这个注解
 
@@ -77,11 +81,15 @@ InnerService {
 
 
 
-## MANDATORY级别
+
+
+## 3. MANDATORY级别
 
 - 如果外层存在一个事务，则加入到外层事务中；否则一调用就抛出异常，执行不到内层方法
 
   `org.springframework.transaction.IllegalTransactionStateException: No existing transaction found for transaction marked with propagation 'mandatory'`
+
+
 
 
 
@@ -91,7 +99,9 @@ InnerService {
 
 
 
-## REQUIRES_NEW级别
+
+
+## 4. REQUIRES_NEW级别
 
 - 如果外层不存在事务，新建事务
 - 如果外层存在事务，挂起外层事务，本层新建一个事务，执行完返回后直接提交，外层如果后续再抛异常，不回滚内层。
@@ -119,19 +129,25 @@ InnerService {
 
 
 
-## NOT_SUPPORTED级别
+
+
+## 5. NOT_SUPPORTED级别
 
 - “如果外层不存在事务，不新建事务”版的`PROPAGATION_REQUIRES_NEW`
 
 
 
-## NEVER级别
+
+
+## 6. NEVER级别
 
 - “如果外层不存在事务，不新建事务”版的`PROPAGATION_MANDATORY`
 
 
 
-## NESTED级别
+
+
+## 7. NESTED级别
 
 - 如果外层不存在事务，新建事务
 - 如果外层存在事务，也是单独提交单独回滚，不过内层会利用外层的`savepoint`来进行回滚，内层需要回滚时，只需回滚到指定`log`的位置，不需要新建连接，开销很低
@@ -166,9 +182,13 @@ InnerService {
 
 
 
+
+
 ## 总结
 
 `NEW`和`NESTED`比较特殊，都是外层异常不回滚内层的传播级别，区别在于开销的高低
+
+
 
 
 

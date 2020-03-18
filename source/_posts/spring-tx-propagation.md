@@ -231,7 +231,7 @@ InnerService {
 
 在这个示例中，数据`演示1`被回滚了，而`演示2`没有被回滚，因为notWorking方法的事务注解没有生效。
 
-#### 为什么会出现这个问题？
+### 为什么会出现这个问题？
 
 Spring的声明式事务是通过AOP实现，有一个名为`AbstractAutoProxyCreator`的`BeanPostProcessor`，是用来专门生成代理对象的组件，他会对所有声明了@Transactional的类进行动态代理。
 
@@ -241,6 +241,6 @@ Spring AOP有一个原则，如果被代理类实现接口，那么使用JDK Pro
 
 CGlib想要能够Override一个package-private的方法，必须要将派生类生成在被代理类所在的包，这对CGlib而言是可以做到的，但它没有那么设计，因为代理模式的理念是“外部”调用内部才会被“拦截”，package-private算是一个内部的方法，所以protected方法不会被拦截，这样的设计与JDK Proxy代理时的结果也是一致的。
 
-#### 怎么解决和避免这个问题？
+### 怎么解决和避免这个问题？
 
 永远把`@Transactional`声明在一个`public`方法上而不是其他访问权限的方法上。

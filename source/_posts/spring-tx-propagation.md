@@ -4,7 +4,7 @@ title: Spring事务的传播级别
 
 date: 2020-03-18 11:06
 
-updated: 2020-03-18 11:06
+updated: 2020-03-18 11:20
 
 tags:
 - Spring
@@ -17,13 +17,17 @@ permalink: spring-tx-propagation
 
 ## 简介
 
-这篇POST将会介绍Spring事务管理中，传播级别相关的特性
+**传播级别**是一个Spring在对事务管理的非常重要的特性。指定一个事务方法的传播级别可以对这个事务的作用范围进行控制。
+
+Spring事务管理一共有7种传播级别，这篇POST将会详细地介绍它们。
+
+而这篇POST将会介绍Spring事务管理中的7种传播级别。
 
 
 
-##REQUIRED级别
+## REQUIRED级别
 
-- 如果没有专门指定，这个级别是默认的传播级别
+- 如果没有专门指定，`REQUIRED`会是默认的传播级别
 - 如果外层存在一个事务，则加入到外层事务中；否则自己新建一个事务
 
 ~~~java
@@ -83,7 +87,7 @@ InnerService {
 
 ## 阶段性总结
 
-PROPAGATION_REQUIRED、PROPAGATION_SUPPORTS、PROPAGATION_MANDATORY这三个传播级别碰到外层存在事务时处理方式是一致的，都是加入到外层事务；区别在于外层没事务时的处理方式。
+`PROPAGATION_REQUIRED`、`PROPAGATION_SUPPORTS`、`PROPAGATION_MANDATORY`这三个传播级别碰到外层存在事务时处理方式是一致的，都是加入到外层事务；区别在于外层没事务时的处理方式。
 
 
 
@@ -117,21 +121,21 @@ InnerService {
 
 ## NOT_SUPPORTED级别
 
-- “如果外层不存在事务，不新建事务”版的PROPAGATION_REQUIRES_NEW
+- “如果外层不存在事务，不新建事务”版的`PROPAGATION_REQUIRES_NEW`
 
 
 
 ##NEVER级别
 
-- “如果外层不存在事务，不新建事务”版的PROPAGATION_MANDATORY
+- “如果外层不存在事务，不新建事务”版的`PROPAGATION_MANDATORY`
 
 
 
 ## NESTED级别
 
 - 如果外层不存在事务，新建事务
-- 如果外层存在事务，也是单独提交单独回滚，不过内层会利用外层的savepoint来进行回滚，内层需要回滚时，只需回滚到指定log的位置，不需要新建连接，开销很低
-- 适用场景：批量处理数据时，有一趟失败了，只回滚这一趟，不影响其他。这个场景不使用PROPAGATION_REQUIRES_NEW的原因是后者开销比较大
+- 如果外层存在事务，也是单独提交单独回滚，不过内层会利用外层的`savepoint`来进行回滚，内层需要回滚时，只需回滚到指定`log`的位置，不需要新建连接，开销很低
+- 适用场景：批量处理数据时，有一趟失败了，只回滚这一趟，不影响其他。这个场景不使用`PROPAGATION_REQUIRES_NEW`的原因是后者开销比较大
 
 ~~~java
 OuterService {

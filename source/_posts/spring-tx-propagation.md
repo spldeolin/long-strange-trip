@@ -4,7 +4,7 @@ title: Spring事务的传播级别
 
 date: 2020-03-18 11:06
 
-updated: 2020-03-18 11:23
+updated: 2020-03-18 11:25
 
 tags:
 - Spring
@@ -241,6 +241,6 @@ Spring AOP有一个原则，如果被代理类实现接口，那么使用JDK Pro
 
 CGlib想要能够Override一个package-private的方法，必须要将派生类生成在被代理类所在的包，这对CGlib而言是可以做到的，但它没有那么设计，因为代理模式的理念是“外部”调用内部才会被“拦截”，package-private算是一个内部的方法，所以protected方法不会被拦截，这样的设计与JDK Proxy代理时的结果也是一致的。
 
-####怎么解决和避免这个问题？
+#### 怎么解决和避免这个问题？
 
 永远把`@Transactional`声明在一个`public`方法上而不是其他访问权限的方法上。

@@ -4,6 +4,8 @@ title: 个人向命名用词
 
 date: 2020-03-28 13:37
 
+updated: 2020-04-01 08:57
+
 tags:
 - Java
 
@@ -49,9 +51,13 @@ permalink: naming-words
 
   new一个对象，初始化后返回
 
-- `convert`
+- `from`
 
-  参数是一个DTO，返回类型是另外的DTO，内部包含了若干次setXx(getXx())
+  构造一个对象，参数是一个DTO，内部可以包含了若干次setXx(getXx())
+
+- `of`
+
+  构造一个对象，参数有多个，内部可以包含若干次setXx(...)
 
 - `begin`、`end`
 

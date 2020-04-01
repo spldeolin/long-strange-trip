@@ -116,7 +116,7 @@ banner_parallax: true  # 头图滚动视差
 #---------------------------
 footer:
   statistics:  # 统计网站 PV、UV，使用的是不蒜子，显示在页脚  *不蒜子近期连接不稳定，谨慎开启
-    enable: true
+    enable: false
     pv_format: "PV: {}, "  # 显示的文本，{}是数字的占位符（必须包含)，下同
     uv_format: "UV: {}"
 
@@ -316,7 +316,7 @@ tag:
 about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
   banner_img: /images/rijksmuseum_jan_lievens_1627.jpg
   banner_img_height: 80  # available: 0 - 100
-  subtitle:  hey there, i am Deolin.
+  subtitle:  Hey there, i am Deolin.
   avatar: /images/avatar.jpg # 头像
   name: Deolin Yim
   introduce: 'Java / ACG / 健身 / 日本語 / 写作<br>「面白いたましいになりたい。」' # 支持 HTML

@@ -4,7 +4,7 @@ title: 个人向命名用词
 
 date: 2020-03-28 13:37
 
-updated: 2020-04-01 08:57
+updated: 2020-04-10 13:24
 
 tags:
 - Java
@@ -86,3 +86,7 @@ permalink: naming-words
 - `increment`、`decrement`
 
   增减量，均为正数
+  
+- `result`
+
+  在方法内部声明用于表示返回值，最后一次调用一定是return result;

@@ -3,7 +3,7 @@ title: 让Java代码变得好看些（持续更新）
 
 date: 2019-05-27 09:20
 
-updated: 2020-04-14 10:13
+updated: 2020-04-14 14:31
 
 tags:
 - 总结
@@ -105,7 +105,7 @@ https://docs.oracle.com/javase/tutorial/datetime/iso/legacy.html
 
 前者的具体用法可以参考Deolin的这篇POST
 
-[Java8 time包指南]: https://spldeolin.com/posts/java8-time-guide/
+[Java8 time包指南](https://spldeolin.com/posts/java8-time-guide/)
 
 
 
@@ -121,7 +121,7 @@ https://docs.oracle.com/javase/tutorial/datetime/iso/legacy.html
 
 参考Deolin的这篇POST
 
-[如何校验枚举值]: https://spldeolin.com/posts/validate-enum-value/
+[如何校验枚举值]( https://spldeolin.com/posts/validate-enum-value/ )
 
 
 
@@ -170,7 +170,7 @@ public UserDto getUserOrElseNew(Long userId) {
 
 原理以及设计思路可以参考Deolin的这篇POST
 
-[Spring 组件参数校验]: https://spldeolin.com/posts/spring-component-validated/
+[Spring 组件参数校验](https://spldeolin.com/posts/spring-component-validated/)
 
 
 

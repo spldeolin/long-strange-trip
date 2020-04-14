@@ -117,7 +117,7 @@ https://docs.oracle.com/javase/tutorial/datetime/iso/legacy.html
 
 
 
-##4. 建议使用`ValidEnumValue`注解
+## 4. 建议使用`ValidEnumValue`注解
 
 参考Deolin的这篇POST
 
@@ -231,7 +231,7 @@ public UserDto getUserOrElseNew(Long userId) {
 
 
 
-##9. 本应该查询到1个但是查到多个时，考虑抛出异常
+## 9. 本应该查询到1个但是查到多个时，考虑抛出异常
 
  ~~~java
 /**

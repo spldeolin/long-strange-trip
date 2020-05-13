@@ -3,7 +3,7 @@ title: 高并发下的单例模式
 
 date: 2019-06-15 10:30
 
-updated: 2019-06-15 11:33
+updated: 2020-05-13 10:42
 
 tags:
 - Java
@@ -107,7 +107,7 @@ class DclSingleton {
     private DclSingleton() {
     }
 
-    public static synchronized DclSingleton getInstance() {
+    public static DclSingleton getInstance() {
         if (instance == null) {                          // 第一次校验
             synchronized (DclSingleton.class) {          // 锁
                 if (instance == null) {					 // 第二次校验
@@ -152,7 +152,7 @@ public class VolatileDclSingleton {
     private VolatileDclSingleton() {
     }
 
-    public static synchronized VolatileDclSingleton getInstance() {
+    public static VolatileDclSingleton getInstance() {
         if (instance == null) {
             synchronized (VolatileDclSingleton.class) {
                 if (instance == null) {

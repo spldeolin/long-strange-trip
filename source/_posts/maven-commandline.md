@@ -1,0 +1,77 @@
+---
+
+title: Maven常用命令
+
+date: 2020-05-22 08:09
+
+updated: 2020-05-22 08:09
+
+tags:
+- Maven
+
+categories: Java
+
+permalink: maven-commandline
+
+---
+
+## 简介
+
+这篇POST将会收录并经常更新一些常用的Maven命令
+
+## 1. 把Maven项目发布到本地仓库
+
+~~~shell
+mvn clean install source:jar install -DskipTests -Dmaven.javadoc.skip=true \
+-s /Users/deolin/OneDrive/secret/xxx-settings.xml \
+-f /Users/deolin/Documents/project-repo/xxx-org/yyy-project/pom.xml
+~~~
+
+#### 简要说明
+
+- `install source:jar install`代表了对`install`和`source:jar install`两个命令的组合，`source:jar install`代表了将代码打包成jar文件并发布到本地
+
+- `-DskipTests`代表跳过测试阶段
+- `-Dmaven.javadoc.skip=true`代表不生成Javadoc文档
+- `-s path`的path代表maven全局settings.xml文件
+- `-f path`的path代表需要被发布项目的pom.xml文件
+
+#### 适用场景
+
+如果对一个被依赖的项目A进行了一些代码的修改，这些修改commit&push了但需要调试后才能发布到私服。
+
+此时如果想要让依赖了项目A的项目B能够应用到这些改动，那么可以使用这个命令
+
+## 2. 下载所有依赖的源码
+
+~~~
+mvn dependency:sources \
+-s /Users/deolin/OneDrive/secret/xxx-settings.xml \
+-f /Users/deolin/Documents/project-repo/xxx-org/yyy-project/pom.xml
+~~~
+
+#### 简要说明
+
+- “所有”只的是pom文件中声明的所有依赖，“下载”指的是从私服下载到本地仓库
+- `-s path`的path代表maven全局settings.xml文件
+- `-f path`的path代表目标项目的pom.xml文件
+
+#### 适用场景
+
+这个命令可以代替IntelliJ IDEA的`右键项目` -> `Maven` -> `Download Sources`操作，好处是可以看到下载日志，而且项目多时可以在命令行批量操作，无需依次用IDEA打开
+
+## 3. 将依赖的jar从本地仓库拷贝出来
+
+~~~
+mvn dependency:copy-dependencies \
+-DoutputDirectory=/Users/deolin/Documents/project-repo/jars -DincludeScope=compile=runtime \
+-s /Users/deolin/OneDrive/secret/xxx-settings.xml \
+-f /Users/deolin/Documents/project-repo/xxx-org/yyy-project/pom.xml
+~~~
+
+#### 简要说明
+
+- 这个命令的所用是在本地仓库找出所有目标项目依赖的jar文件，并拷贝出来
+- `-DoutputDirectory=`代表jar会被拷贝到这个目录
+- `-s path`的path代表maven全局settings.xml文件
+- `-f path`的path代表目标项目的pom.xml文件

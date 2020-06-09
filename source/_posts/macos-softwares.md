@@ -3,7 +3,7 @@ title: Mac OS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2019-07-05 17:54
+updated: 2020-06-09 16:13
 
 tags:
 - 总结
@@ -29,37 +29,17 @@ permalink: macos-softwares
 
 
 
-## 说明
-
-名字前面出现*****的软件，代表以下情况的其中一种
-
-- 这个软件在App Store需要付费购买，如Microsoft Office
-
-- 这个软件在购买正版前只能试用若干天，如iStat Menus
-- 这个软件本身是免费的，但购买正版或拓展包后能大幅度提高效率，如Alfred 3
-
-
-
 ## Homebrew
 
 ~~~shell
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ~~~
 
-Mac OS一般通过以下3个方式安装软件
-
-- Homebrew
-
-- App Store
-- dmg文件
-
-Homebrew相当于centOS的yum，ubuntu的apt。
-
 
 
 ## 一般软件
 
-### * Alfred 3 （代替spotlight）
+### Alfred （代替spotlight）
 
 ~~~shell
 $ brew cask install alfred
@@ -67,9 +47,7 @@ $ brew cask install alfred
 
 
 
-### * Magnet （快速调整当前窗口的大小和位置）
-
-通过App Store安装
+### Magnet （快速调整当前窗口的大小和位置）
 
 
 
@@ -103,9 +81,7 @@ $ brew cask install onedrive
 
 
 
-### * Microsoft Office 2019
-
-通过App Store安装
+### Microsoft Office 2019
 
 
 
@@ -213,19 +189,7 @@ $ brew cask install squirrel
 
 
 
-### * iStat Menus （硬件指标实时监控）
-
-~~~shell
-$ brew cask install istat-menus
-~~~
-
-
-
-### * Timing 2 （统计使用每种软件的时间，分析工作效率）
-
-~~~shell
-$ brew cask install timing
-~~~
+### iStat Menus （硬件指标实时监控）
 
 
 
@@ -235,40 +199,34 @@ $ brew cask install timing
 
 
 
-### * Word Clock （屏保）
-
-通过从[官网](https://www.simonheys.com/wordclock/)下载dmg安装
+### Word Clock （屏保）
 
 
 
-###  * Inpaint （消除图片水印）
-
-通过从[官网](https://www.theinpaint.com/)下载dmg安装
+###  Inpaint
 
 
 
 ### Bartender （管理Mac OS顶部菜单栏的图标）
 
-~~~shell
-$ brew cask install bartender
-~~~
-
-
-
-### Kawa （为每个输入法设置快捷键，方便切换）
-
-~~~shell
-$ brew cask install kawa
-~~~
-
 
 
 ## 开发用软件
 
-### iTerm 2 （代替Mac OS自带的终端）
+### iTerm （代替Mac OS自带的终端）
 
-~~~
+~~~shell
 $ brew cask install iterm2
+~~~
+
+
+
+## Zsh、Oh my zsh
+
+~~~shell
+$ zsh --version
+$ chsh -s /bin/zsh
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ~~~
 
 
@@ -281,10 +239,26 @@ $ brew install git
 
 
 
-### GitKraken （Git客户端）
+### Maven
 
 ~~~shell
-$ brew cask install gitkraken
+$ brew install maven
+~~~
+
+
+
+### VisualVM
+
+~~~shell
+$ brew cask install visualvm
+~~~
+
+
+
+### Sourcetree
+
+~~~shell
+$ brew cask install sourcetree
 ~~~
 
 
@@ -301,9 +275,6 @@ $ brew cask install dash
 
 ~~~shell
 $ brew cask install jetbrains-toolbox
-$ brew cask install intellij-idea
-$ brew cask install pycharm
-$ brew cask install datagrip
 ~~~
 
 
@@ -316,20 +287,6 @@ $ brew cask install visual-studio-code
 
 
 
-### * Navicat
-
-~~~shell
-$ brew cask install navicat-premium
-~~~
-
-
-
-### * Medis
-
-通过App Store安装
-
-
-
 ### Postman
 
 ~~~shell
@@ -338,32 +295,31 @@ $ brew cask install postman
 
 
 
-### OpenJDK
+### Medis
+
+
+
+### TextLab
+
+
+
+### Oracle JDK
+
+https://www.oracle.com/java/technologies/javase-downloads.html
 
 ~~~shell
-$ brew cask install adoptopenjdk
+$ vi ~/.zshrc
+
+source ~/.bash_profile;
+
+$ source ~/.bash_profile
 ~~~
 
 
 
 ### Python 3、pip
 
-1. 安装
-
-   ~~~shell
-   $ brew install python3
-   $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-   $ python3 get-pip.py
-   ~~~
-
-2. 安装完毕
-
-   ~~~shell
-   $ python --version
-   $ pip --version
-   $ python3 --version
-   $ pip3 --version
-   ~~~
+https://www.python.org/downloads/
 
 
 
@@ -396,10 +352,4 @@ $ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Libr
 ## 字体
 
 [Microsoft YaHei Mono](https://www.onlinewebfonts.com/download/9798f64007ae3426b2336e57dae4149c)
-
-
-
-## 备份
-
-Deolin将清单中通过brew命令导出成了[Brewfile](https://github.com/spldeolin/mac-os-settings/blob/master/Brewfile)了，方便使用。
 

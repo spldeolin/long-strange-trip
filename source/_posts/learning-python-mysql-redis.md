@@ -1,9 +1,9 @@
 ---
 title: 学习Python（8） MySQL与Redis
 
-date: 2019-04-12 17:34:15
+date: 2019-04-12 17:34
 
-updated: 2019-04-12 17:34:15
+updated: 2020-06-25 13:14
 
 tags:
 - Python
@@ -26,65 +26,33 @@ permalink: learning-python-mysql-redis
 示例代码如下
 
 ~~~python
-#!/usr/bin/python3
+# coding=utf-8
+
 import pymysql
 
 
-# 建立数据库连接
-def connect_mysql():
-    """
-    连接MySQL，返回数据库连接对象
-    """
-    # help(pymysql.connect)
-    help(pymysql.connections.Connection.__init__)
-    connection = pymysql.connect(host='127.0.0.1',
-                                 user='root',
-                                 password='root_r0oT',
-                                 database='beginning_mind',
-                                 charset='utf8')
-    return connection
+# 建立MySQL连接
+connection = pymysql.connect(host='127.0.0.1',
+                             port=3306,
+                             database='beginning_mind',
+                             user='root',
+                             password='root_r0oT',
+                             charset='utf8')
 
+cur = connection.cursor(pymysql.cursors.DictCursor)
 
-def write(sql, *param_tuple):
-    """
-    入库操作
-    """
-    db = connect_mysql()
-    cur = db.cursor()
-    try:
-        help(cur.execute)
-        cur.execute(sql, param_tuple)
-        db.commit()
-    except:
-        db.rollback()
-    finally:
-        db.close()
+try:
+    cur.execute('insert into biz_demo (id,name) values (%s, %s)', (2, 'a'))
+    connection.commit()
+except:
+    db.rollback()
 
-
-def read(sql, *param_tuple):
-    """
-    查询数据库
-    """
-    db = connect_mysql()
-    cur = db.cursor()
-    try:
-        help(cur.execute)
-        cur.execute(sql, param_tuple)
-        result = cur.fetchmany(2)
-
-        # print(type(result))   # 是个tuple，取值的时候会有点难受
-        for one in result:
-            print(one[1])
-    finally:
-        db.close()
-
-
-if __name__ == '__main__':
-    write('insert into biz_demo (id,name) values (%s, %s)', 2, 'a')
-    read("select * from biz_demo")
+cur.execute('select * from biz_demo')
+for one in cur.fetchAll():
+    print(one)
+    
+db.close()
 ~~~
-
-
 
 `pymysql`库类似与Java中的`apache-dbutils`，简单业务场景下使用起来没问题，业务复杂时应该还是要上ORM框架
 
@@ -95,29 +63,16 @@ if __name__ == '__main__':
 示例代码如下
 
 ~~~python
-#!/usr/bin/python3
+# coding=utf-8
+
 import redis
 
+connection = redis.Redis(host='127.0.0.1',
+                         password='root_r0oT',
+                         decode_responses=True) # decode_responses=True用来确保取值时中文不乱码
 
-# 建立数据库连接
-def connect_redis():
-    """
-    连接Redis，返回连接对象
-    """
-    # help(redis.Redis)
-    connection = redis.Redis(host='127.0.0.1',
-                             password='root_r0oT',
-                             decode_responses=True) # decode_responses=True用来确保取值时中文不乱码
-    return connection
-
-
-if __name__ == '__main__':
-    conn = connect_redis()
-    # help(conn)
-    conn.hset('a', 'b', '汉字')
-    print(conn.hget('a', 'b'))
+connection.hset('a', 'b', '汉字')
+print(connection.hget('a', 'b'))
 ~~~
-
-
 
 `redis`是Redis官方提供的Python类库

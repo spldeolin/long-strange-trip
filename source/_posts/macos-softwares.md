@@ -3,14 +3,12 @@ title: Mac OS常用环境、软件
 
 date: 2019-02-14 13:39
 
-updated: 2020-06-09 16:13
+updated: 2020-06-25 14:27
 
 tags:
 - 总结
 - MySQL
 - Redis
-- MongoDB
-- Nginx
 - Git
 - Mac OS
 - Python
@@ -239,14 +237,6 @@ $ brew install git
 
 
 
-### Maven
-
-~~~shell
-$ brew install maven
-~~~
-
-
-
 ### VisualVM
 
 ~~~shell
@@ -259,14 +249,6 @@ $ brew cask install visualvm
 
 ~~~shell
 $ brew cask install sourcetree
-~~~
-
-
-
-### Dash
-
-~~~shell
-$ brew cask install dash
 ~~~
 
 
@@ -326,15 +308,8 @@ https://www.python.org/downloads/
 ### 各种服务与中间件
 
 ~~~bash
-$ brew install elasticsearch
-$ brew install kibana
-$ brew install logstash
-$ brew install mongodb
 $ brew install mysql
-$ brew install rabbitmq
 $ brew install redis
-$ brew install zookeeper
-$ brew install docker
 ~~~
 
 

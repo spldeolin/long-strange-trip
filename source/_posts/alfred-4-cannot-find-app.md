@@ -1,0 +1,43 @@
+---
+
+title: Alfred 4 无法搜索到应用的解决方式
+
+date: 2020-09-25 09:35
+
+updated: 2020-09-25 09:35
+
+tags:
+- Mac OS
+
+categories: Mac OS
+
+permalink: alfred-4-cannot-find-app
+
+---
+
+
+
+## 背景
+
+1. 由于有了Alfred，Mac OS自带的hotspot已经被Deolin禁用了
+2. 一开始的现象是部分app搜不到
+3. 尝试在Alfred偏好中，点击了`Advanced`- `Rebuild macOS Metadata`并重启，结果是所有app都搜不到了....
+4. 经过网上搜索，找到了一个解放方式
+
+
+
+## 解决方式
+
+~~~shell
+$ sudo mdutil -a -i on
+
+Password:
+/:
+	Indexing enabled.
+/System/Volumes/Data:
+	Indexing enabled.
+~~~
+
+
+
+命令执行完毕后就好了，无需重启

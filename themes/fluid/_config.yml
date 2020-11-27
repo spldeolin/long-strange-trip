@@ -323,7 +323,6 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
   icons: # 更多图标可从 https://fontawesome.com/v5.10.0/icons?d=gallery 查找，并以 "图标名: url" 的格式添加在下方
     "fab fa-github": https://github.com/spldeolin
     "fas fa-envelope": mailto:splendid.deolin@gmail.com
-    "fab fa-weixin qrcode":  /images/wechat-qrcode.jpg
 
 
 #---------------------------

@@ -14,6 +14,8 @@ categories: Java
 permalink: enum-in-requestbody
 ---
 
+过时原因：教学类文章，没有独特性，不适合放在个人网站
+
 ## 简介
 
 演示一下如何在handler的@RequestBody中使用枚举类型field

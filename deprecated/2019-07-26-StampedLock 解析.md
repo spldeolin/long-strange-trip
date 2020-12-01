@@ -15,6 +15,8 @@ permalink: stampedlock
 
 ---
 
+过时原因：教学类文章
+
 ## 简介
 
 `StampedLock`是1.8新提供的读写锁

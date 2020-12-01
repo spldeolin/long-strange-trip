@@ -2,6 +2,8 @@
 
 title: 如何删除Github上的commit历史？
 
+excerpt: 最好永远没机会用上这个
+
 date: 2020-06-18 17:42
 
 updated: 2020-06-18 17:42

@@ -15,6 +15,8 @@ permalink: docker-install-rocketmq
 
 ---
 
+过时原因：安装软件类软件，网上都有
+
 ## namesrv和broker
 
 1. 下载Docker镜像

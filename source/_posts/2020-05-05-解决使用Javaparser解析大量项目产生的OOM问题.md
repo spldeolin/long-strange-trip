@@ -2,6 +2,8 @@
 
 title: 解决使用Javaparser解析大量项目产生的OOM问题
 
+excerpt: 体量大了，直觉上不考虑的问题会逐渐暴露
+
 date: 2020-05-05 08:46
 
 updated: 2020-05-05 08:46

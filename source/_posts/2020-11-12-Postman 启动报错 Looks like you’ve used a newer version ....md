@@ -2,7 +2,7 @@
 
 title: Postman 启动报错 Looks like you’ve used a newer version ...
 
-excerpt: 记录一个非自然问题
+excerpt: 记录一个软件的非自然问题
 
 date: 2020-11-12 08:34
 

@@ -1,6 +1,7 @@
 ---
-
 title: 在Python中使用数据传输类（DTO）
+
+excerpt: 不要太“动态”
 
 date: 2020-05-18 09:36
 
@@ -12,7 +13,6 @@ tags:
 categories: Python
 
 permalink: python-dto
-
 ---
 
 ## 简介

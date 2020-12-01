@@ -2,7 +2,7 @@
 
 title: 获取RequestBody的JSON中未知的字段
 
-excerpt: 帮助联调阶段，可能用得上
+excerpt: 总会出现恶劣的联调环境
 
 date: 2020-11-01 09:26
 

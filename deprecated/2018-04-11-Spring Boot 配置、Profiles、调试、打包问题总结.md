@@ -14,6 +14,8 @@ categories: Java
 permalink: springboot-summary
 ---
 
+过时原因：一般不在启动时指定profile，而是结合maven pom配置，打包时直接指定使用什么profile，一般是结合maven pom
+
 ## 简介
 
 这篇POST汇总了Spring Boot开发过程中*配置*、*Profiles*、*调试*、*打包*几个方面的各种问题。

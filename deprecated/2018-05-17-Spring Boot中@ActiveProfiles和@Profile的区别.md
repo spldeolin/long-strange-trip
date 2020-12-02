@@ -13,7 +13,7 @@ categories: Java
 permalink: profile-activeprofiles
 ---
 
-
+过时原因：内容太简单
 
 ## @ActiveProfiles
 

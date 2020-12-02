@@ -13,6 +13,8 @@ categories: Java
 permalink: springboot-properties
 ---
 
+过时原因：全会了，内容太简单了
+
 ## 简介
 
 这篇POST介绍了以下问题的最终解决方案

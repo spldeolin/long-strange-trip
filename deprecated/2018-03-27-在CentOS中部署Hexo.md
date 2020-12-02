@@ -14,6 +14,8 @@ categories: Linux
 permalink: hexo-deploy-centos
 ---
 
+过时原因：网上类似的文章太多了
+
 ## 事前准备
 
 确保服务器安装了`nginx`、`nodejs`和`git`

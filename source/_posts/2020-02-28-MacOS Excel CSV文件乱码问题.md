@@ -2,7 +2,7 @@
 
 title: MacOS Excel CSV文件乱码问题
 
-excerpt: 错的可能不是你
+excerpt: 可能真的不是你的错
 
 date: 2020-02-28 16:26
 

@@ -2,7 +2,7 @@
 
 title: Javaparser类型简析
 
-excerpt: 每次解析AST都要查
+excerpt: 解析AST经常会来查
 
 date: 2019-11-01 21:46
 

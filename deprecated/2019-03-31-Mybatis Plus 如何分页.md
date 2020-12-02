@@ -13,6 +13,8 @@ categories: Java
 permalink: mybatis-plus-page
 ---
 
+过时原因：教学类
+
 ## 简介
 
 Mybatis Plus提供了2种分页方式。

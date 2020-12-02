@@ -1,6 +1,8 @@
 ---
 title: 图片压缩（Google Thumbnailator）
 
+excerpt: 拿来直接用
+
 date: 2018-11-29 13:42
 
 updated: 2018-12-21 17:53

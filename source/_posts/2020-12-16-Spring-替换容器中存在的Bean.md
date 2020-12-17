@@ -2,11 +2,11 @@
 
 title: Spring 替换容器中存在的Bean
 
-excerpt: 偶尔需要重写一些别人的提供的组件
+excerpt: 不得已的时候，需要重写一些别人的提供的组件
 
 date: 2020-12-16 18:59
 
-updated: 2020-12-16 18:59
+updated: 2020-12-17 08:49
 
 tags:
 - Spring
@@ -49,17 +49,13 @@ public class SomeServiceImpl implements SomeService {
 @Component
 public class SomeServiceBpp implements BeanPostProcessor {
 
-    @Autowired
-    private SomeServiceImpl someServiceImpl;
-
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof SomeService) {
-            return new SomeService() {
+            return new SomeServiceImpl() {
                 @Override
                 public int doSth() {
-                    int i = someServiceImpl.doSth();
-                    return -i; // 演示一下 修饰被替换实现类的返回值
+                    return 100 - super.doSth();// 演示一下 修饰被替换实现类的返回值
                 }
             };
         }
@@ -72,6 +68,10 @@ public class SomeServiceBpp implements BeanPostProcessor {
     }
 }
 ~~~
+
+
+
+> 「危」 Bpp中不能@Autowired被替换的对象及其接口
 
 
 

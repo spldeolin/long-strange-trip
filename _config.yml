@@ -98,4 +98,6 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repository: https://github.com/spldeolin/spldeolin.github.io
+  branch: main

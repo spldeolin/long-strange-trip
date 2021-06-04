@@ -1,6 +1,6 @@
 ---
 
-title: 批量clone / pull Gitlab中所有项目
+title: 批量clone或pull Gitlab中所有项目
 
 excerpt: 实用的Python脚本
 
